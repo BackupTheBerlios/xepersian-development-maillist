@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r169 - trunk/tex
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-March/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r169%20-%20trunk/tex&In-Reply-To=%3C201003031353.o23DrXch023179%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000137.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r169 - trunk/tex</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r169%20-%20trunk/tex&In-Reply-To=%3C201003031353.o23DrXch023179%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r169 - trunk/tex">vafa at mail.berlios.de
+       </A><BR>
+    <I>Wed Mar  3 14:53:33 CET 2010</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000137.html">[Xepersian-development] r170 - trunk/tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-03-03 14:53:19 +0100 (Wed, 03 Mar 2010)
+New Revision: 169
+
+Modified:
+   trunk/tex/hyperref-xepersian.def
+   trunk/tex/xepersian.sty
+Log:
+removed the buggy code
+
+Modified: trunk/tex/hyperref-xepersian.def
+===================================================================
+--- trunk/tex/hyperref-xepersian.def	2010-02-18 21:35:17 UTC (rev 168)
++++ trunk/tex/hyperref-xepersian.def	2010-03-03 13:53:19 UTC (rev 169)
+@@ -8,7 +8,7 @@
+ %%   License information appended.
+ %% 
+ %% 
+-\ProvidesFile{hyperref-xepersian.def}[2010/07/25 v0.2 bilingual captions for hyperref package]
++\ProvidesFile{hyperref-xepersian.def}[2010/07/25 v0.3 bilingual captions for hyperref package]
+   \def\equationautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1605;&#1593;&#1575;&#1583;&#1604;&#1607;\else Equation\fi}%
+   \def\footnoteautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1606;&#1608;&#1740;&#1587;\else footnote\fi}%
+   \def\itemautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1602;&#1585;&#1607;\else item\fi}%
+@@ -25,15 +25,6 @@
+   \def\FancyVerbLineautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1587;&#1591;&#1585;\else line\fi}%
+   \def\theoremautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1602;&#1590;&#1740;&#1607;\else Theorem\fi}%
+   \def\pageautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1589;&#1601;&#1581;&#1607;\else page\fi}%
+-\AtBeginDocument{%
+-\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">HyOrg at appendix</A>\appendix
+-\def\appendix{%
+-  \@ifundefined{chapter}%
+-    {\gdef\theHsection{\arabic{section}}}%
+-    {\gdef\theHchapter{\arabic{chapter}}}%
+-  \xdef\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">Hy at chapapp</A>{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">Hy at appendixstring</A>}%
+-  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">HyOrg at appendix</A>
+-}}
+ %% 
+ %% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+ %% 
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-02-18 21:35:17 UTC (rev 168)
++++ trunk/tex/xepersian.sty	2010-03-03 13:53:19 UTC (rev 169)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 168}
++\def\xepersianrevision{revision 169}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000137.html">[Xepersian-development] r170 - trunk/tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

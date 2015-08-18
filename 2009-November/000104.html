@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r137 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-November/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r137%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911171106.nAHB6Vbr002240%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000103.html">
+   <LINK REL="Next"  HREF="000105.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r137 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r137%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911171106.nAHB6Vbr002240%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r137 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Tue Nov 17 12:06:31 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000103.html">[Xepersian-development] r136 - trunk/tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000105.html">[Xepersian-development] r138 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#104">[ date ]</a>
+              <a href="thread.html#104">[ thread ]</a>
+              <a href="subject.html#104">[ subject ]</a>
+              <a href="author.html#104">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-11-17 12:06:24 +0100 (Tue, 17 Nov 2009)
+New Revision: 137
+
+Added:
+   trunk/tex/xelatex/xepersian/flowfram-xepersian.def
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+doing the required changes for xepersian-doc.cls
+
+Added: trunk/tex/xelatex/xepersian/flowfram-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/flowfram-xepersian.def	2009-11-15 11:25:01 UTC (rev 136)
++++ trunk/tex/xelatex/xepersian/flowfram-xepersian.def	2009-11-17 11:06:24 UTC (rev 137)
+@@ -0,0 +1,58 @@
++%%
++%% This is file `flowfram-xepersian.def',
++%% generated with the docstrip utility.
++%%
++%% The original source files were:
++%%
++%% xepersian.dtx  (with options: `flowfram-xepersian.def')
++%% 
++%%   __________________________________
++%%   Copyright &#169; 2009-2010 Vafa Khalighi
++%% 
++%%   License information appended.
++%% 
++%% 
++\ProvidesFile{flowfram-xepersian.def}[2010/03/01 v0.1 adaptations for flowfram package]
++\def\@outputpage{%
++\begingroup
++  \let\protect\noexpand
++  \@resetactivechars
++  \global\let\@@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at newlist</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at newlist</A>
++  \global\@newlistfalse\@parboxrestore
++  \shipout\vbox{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">set at typeset</A>@protect
++    \aftergroup
++    \endgroup
++    \aftergroup
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">set at typeset</A>@protect
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\normalsize\normalsfcodes
++    \let\label\@gobble
++    \let\index\@gobble
++    \let\glossary\@gobble
++    \baselineskip\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">z at skip</A>
++    \lineskip\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">z at skip</A>
++    \lineskiplimit\z@
++    \vskip\topmargin\moveright\@themargin
++    \vbox{%
++      \vskip\headheight
++      \vskip\headsep
++      \box\@outputbox
++    }}%
++  \global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at newlist</A>\@@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at newlist</A>
++  \stepcounter{page}%
++  \setcounter{displayedframe}{0}%
++  \let\firstmark\botmark}
++%% 
++%% Copyright &#169; 2009-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
++%% 
++%% Distributable under the LaTeX Project Public License,
++%% version 1.3c or higher (your choice). The latest version of
++%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
++%% 
++%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
++%% by Vafa Khalighi.
++%% 
++%% 
++%% 
++%% 
++%%
++%% End of file `flowfram-xepersian.def'.
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-15 11:25:01 UTC (rev 136)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-17 11:06:24 UTC (rev 137)
+@@ -14,7 +14,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 136}
++\def\xepersianrevision{revision 138}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000103.html">[Xepersian-development] r136 - trunk/tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000105.html">[Xepersian-development] r138 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#104">[ date ]</a>
+              <a href="thread.html#104">[ thread ]</a>
+              <a href="subject.html#104">[ subject ]</a>
+              <a href="author.html#104">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

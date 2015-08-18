@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r109 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-September/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r109%20-%20trunk&In-Reply-To=%3C200909190947.n8J9l0On006105%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000075.html">
+   <LINK REL="Next"  HREF="000077.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r109 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r109%20-%20trunk&In-Reply-To=%3C200909190947.n8J9l0On006105%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r109 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sat Sep 19 11:47:00 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000075.html">[Xepersian-development] r108 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000077.html">[Xepersian-development] r110 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#76">[ date ]</a>
+              <a href="thread.html#76">[ thread ]</a>
+              <a href="subject.html#76">[ subject ]</a>
+              <a href="author.html#76">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-09-19 11:46:56 +0200 (Sat, 19 Sep 2009)
+New Revision: 109
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added bilingual captions for hyperref package
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-19 09:02:36 UTC (rev 108)
++++ trunk/xepersian.dtx	2009-09-19 09:46:56 UTC (rev 109)
+@@ -77,6 +77,7 @@
+ \generate{\file{book-xepersian.def}{\from{xepersian.dtx}{book-xepersian.def}}}
+ \generate{\file{breqn-xepersian.def}{\from{xepersian.dtx}{breqn-xepersian.def}}}
+ \generate{\file{footnote-bidi-xepersian.def}{\from{xepersian.dtx}{footnote-bidi-xepersian.def}}}
++\generate{\file{hyperref-xepersian.def}{\from{xepersian.dtx}{hyperref-xepersian.def}}}
+ \generate{\file{localise-xepersian.def}{\from{xepersian.dtx}{localise-xepersian.def}}}
+ \generate{\file{commands-ltx.def}{\from{xepersian.dtx}{commands-ltx.def}}}
+ \generate{\file{commands-xepersian.def}{\from{xepersian.dtx}{commands-xepersian.def}}}
+@@ -163,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 108}
++\def\xepersianrevision{revision 109}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -298,15 +299,8 @@
+     \small
+     \@starttoc{toc}%
+   \end{multicols}}
+-\def\XePersian{\lr{\leavevmode$\smash{\hbox{X\lower.5ex
+-  \hbox{\kern-.125em\reflect{E}}Persian}}$}}
+-\def\TeX{\lr{\@@TeX}}
+-\def\LaTeX{\lr{\@@LaTeX}}
+-\def\LaTeXe{\lr{\@@LaTeXe}}
+-\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">origin at XeTeX</A>\XeTeX
+-\def\XeTeX{\lr{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">origin at XeTeX</A>}}
+-\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">origin at XeLaTeX</A>\XeLaTeX
+-\def\XeLaTeX{\lr{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">origin at XeLaTeX</A>}}
++\def\XePersian{\leavevmode$\smash{\hbox{X\lower.5ex
++  \hbox{\kern-.125em\reflect{E}}Persian}}$}
+ \def\figurename{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1588;&#1705;&#1604;\else Figure\fi}
+ \def\tablename{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1580;&#1583;&#1608;&#1604;\else Table\fi}
+ \def\contentsname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1607;&#1585;&#1587;&#1578; &#1605;&#1591;&#1575;&#1604;&#1576;\else Contents\fi}
+@@ -392,6 +386,7 @@
+ \@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
+ \@ifpackageloaded{breqn}{\input{breqn-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
++\@ifpackageloaded{hyperref}{\input{hyperref-xepersian.def}}{}
+ \@ifpackageloaded{minitoc}{\input{minitoc-xepersian.def}}{}
+ \@ifpackageloaded{tocloft}{\@ifclassloaded{memoir}{}{\input{tocloft-xepersian.def}}}{}
+ \@ifclassloaded{article}{\input{article-xepersian.def}}{}
+@@ -1649,6 +1644,29 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/extbook-xepersian.def&gt;
++%&lt;*hyperref-xepersian.def&gt;
++% \fi
++% \part{hyperref-xepersian.def}
++%    \begin{macrocode}
++  \def\equationautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1605;&#1593;&#1575;&#1583;&#1604;&#1607;\else Equation\fi}%
++  \def\footnoteautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1606;&#1608;&#1740;&#1587;\else footnote\fi}%
++  \def\itemautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1602;&#1585;&#1607;\else item\fi}%
++  \def\figureautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1588;&#1705;&#1604;\else Figure\fi}%
++  \def\tableautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1580;&#1583;&#1608;&#1604;\else Table\fi}%
++  \def\partautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1576;&#1582;&#1588;\else Part\fi}%
++  \def\appendixautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1590;&#1605;&#1740;&#1605;&#1607;\else Appendix\fi}%
++  \def\chapterautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1589;&#1604;\else chapter\fi}%
++  \def\sectionautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1602;&#1587;&#1605;&#1578;\else section\fi}%
++  \def\subsectionautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1602;&#1587;&#1605;&#1578;\else subsection\fi}%
++  \def\subsubsectionautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1586;&#1740;&#1585;&#1602;&#1587;&#1605;&#1578;\else subsubsection\fi}%
++  \def\paragraphautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1662;&#1575;&#1585;&#1575;&#1711;&#1585;&#1575;&#1601;\else paragraph\fi}%
++  \def\subparagraphautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1662;&#1575;&#1585;&#1575;&#1711;&#1585;&#1575;&#1601;\else subparagraph\fi}%
++  \def\FancyVerbLineautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1587;&#1591;&#1585;\else line\fi}%
++  \def\theoremautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1602;&#1590;&#1740;&#1607;\else Theorem\fi}%
++  \def\pageautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1589;&#1601;&#1581;&#1607;\else page\fi}%
++%    \end{macrocode}
++% \iffalse
++%&lt;/hyperref-xepersian.def&gt;
+ %&lt;*kashida-xepersian.def&gt;
+ % \fi
+ % \part{kashida-xepersian.def}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000075.html">[Xepersian-development] r108 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000077.html">[Xepersian-development] r110 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#76">[ date ]</a>
+              <a href="thread.html#76">[ thread ]</a>
+              <a href="subject.html#76">[ subject ]</a>
+              <a href="author.html#76">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

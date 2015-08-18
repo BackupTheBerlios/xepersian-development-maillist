@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r56 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r56%20-%20trunk&In-Reply-To=%3C200906071053.n57Ar3sH020873%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000022.html">
+   <LINK REL="Next"  HREF="000024.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r56 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r56%20-%20trunk&In-Reply-To=%3C200906071053.n57Ar3sH020873%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r56 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sun Jun  7 12:53:03 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000022.html">[Xepersian-development] r55 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000024.html">[Xepersian-development] r57 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-06-07 12:52:57 +0200 (Sun, 07 Jun 2009)
+New Revision: 56
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added support for memoir class
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-06-05 15:01:28 UTC (rev 55)
++++ trunk/xepersian.dtx	2009-06-07 10:52:57 UTC (rev 56)
+@@ -84,6 +84,7 @@
+ \generate{\file{extbook-xepersian.def}{\from{xepersian.dtx}{extbook-xepersian.def}}}
+ \generate{\file{kashida-xepersian.def}{\from{xepersian.dtx}{kashida-xepersian.def}}}
+ \generate{\file{listings-xepersian.def}{\from{xepersian.dtx}{listings-xepersian.def}}}
++\generate{\file{memoir-xepersian.def}{\from{xepersian.dtx}{memoir-xepersian.def}}}
+ \generate{\file{misccommandsenvironments-ltx.def}{\from{xepersian.dtx}{misccommandsenvironments-ltx.def}}}
+ \generate{\file{refrep-xepersian.def}{\from{xepersian.dtx}{refrep-xepersian.def}}}
+ \generate{\file{report-xepersian.def}{\from{xepersian.dtx}{report-xepersian.def}}}
+@@ -155,7 +156,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.1}
+-\def\xepersianrevision{revision 55}
++\def\xepersianrevision{revision 56}
+ \def\xepersiandate{2009/06/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -1656,6 +1657,22 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/listings-xepersian.def&gt;
++%&lt;*memoir-xepersian.def&gt;
++% \fi
++% \part{memoir-xepersian.def}
++%    \begin{macrocode}
++\renewcommand{\@memfront}{%
++  \@smemfront\pagenumbering{harfi}}
++\renewcommand*{\thepart}{\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
++\renewcommand{\appendix}{\par
++  \setcounter{chapter}{0}%
++  \setcounter{section}{0}%
++  \gdef\@chapapp{\appendixname}%
++  \gdef\thechapter{\@harfi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at chapter</A>}%
++  \anappendixtrue}
++%    \end{macrocode}
++% \iffalse
++%&lt;/memoir-xepersian.def&gt;
+ %&lt;*misccommandsenvironments-ltx.def&gt;
+ % \fi
+ % \part{misccommandsenvironments-ltx.def}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000022.html">[Xepersian-development] r55 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000024.html">[Xepersian-development] r57 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

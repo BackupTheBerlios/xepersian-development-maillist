@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r159 - trunk/tex/xelatex/xepersian website
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r159%20-%20trunk/tex/xelatex/xepersian%20website&In-Reply-To=%3C201001130923.o0D9NlWL005662%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000125.html">
+   <LINK REL="Next"  HREF="000127.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r159 - trunk/tex/xelatex/xepersian website</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r159%20-%20trunk/tex/xelatex/xepersian%20website&In-Reply-To=%3C201001130923.o0D9NlWL005662%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r159 - trunk/tex/xelatex/xepersian website">vafa at mail.berlios.de
+       </A><BR>
+    <I>Wed Jan 13 10:23:47 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000125.html">[Xepersian-development] r158 - trunk/tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000127.html">[Xepersian-development] r160 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-01-13 10:23:32 +0100 (Wed, 13 Jan 2010)
+New Revision: 159
+
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+   website/index.php
+Log:
+updated website
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-12 02:08:36 UTC (rev 158)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-13 09:23:32 UTC (rev 159)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 158}
++\def\xepersianrevision{revision 159}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+
+Modified: website/index.php
+===================================================================
+--- website/index.php	2010-01-12 02:08:36 UTC (rev 158)
++++ website/index.php	2010-01-13 09:23:32 UTC (rev 159)
+@@ -29,8 +29,50 @@
+ &lt;center&gt;&lt;p&gt;&lt;font size=&quot;+2&quot;&gt;&lt;i&gt;&ldquo;Support for Persian/English typesetting with XeLaTeX.&rdquo;&lt;/i&gt;&lt;/font&gt;&lt;/p&gt;&lt;/center&gt;
+ &lt;h3&gt;News&lt;/h3&gt;
+ &lt;p&gt; Version 1.0.4 of XePersian package is now available on CTAN and it should be a part of your TeX distribution very soon.&lt;/p&gt;
+-&lt;p&gt;  Experimental version 1.0.5 of XePersian package is in preparation. Please help by downloading the latest release, testing and reporting bugs back.
++&lt;p&gt;  Experimental version 1.0.5 of XePersian package is in preparation. Please help by downloading the latest release, testing and reporting bugs back. The changes in the experimental version 1.0.5 of xepersian package are:
++&lt;ul&gt;
++&lt;li&gt; There is a bug fix to xepersian-mathsdigitspec.sty. Consider the following minimal example:
++&lt;p&gt;
++&lt;code&gt;
++&lt;br /&gt;\documentclass{article}
++&lt;br /&gt;\usepackage{amsthm,amssymb,amsmath}
++&lt;br /&gt;\usepackage{xepersian}
++&lt;br /&gt;\settextfont[Scale=1]{XB Zar}
++&lt;br /&gt;\setdigitfont[Scale=1]{XB Zar}
++&lt;br /&gt;\begin{document}
++&lt;br /&gt;\begin{equation}
++&lt;br /&gt;\begin{split}
++&lt;br /&gt;a&amp;=b\\
++&lt;br /&gt;c&amp;=d
++&lt;br /&gt;\end{split}
++&lt;br /&gt;\end{equation}
++&lt;br /&gt;\begin{equation*}
++&lt;br /&gt;\begin{split}
++&lt;br /&gt;a&amp;=b\\
++&lt;br /&gt;c&amp;=d
++&lt;br /&gt;\end{split}
++&lt;br /&gt;\end{equation*}
++&lt;br /&gt;\end{document}
++&lt;/code&gt;
++&lt;/p&gt;
++If you run &lt;code&gt;xelatex&lt;/code&gt; on this document, you get an error which looks like this:
++&lt;p&gt;
++&lt;code&gt;
++&lt;br /&gt;! Package amsmath Error: \begin{split} won't work here.
++&lt;br /&gt;
++&lt;br /&gt;See the amsmath package documentation for explanation.
++&lt;br /&gt;Type  H &lt;return&gt;  for immediate help.
++&lt;br /&gt; ...                                              
++&lt;br /&gt;                                                  
++&lt;br /&gt;l.11 \end{split}
++&lt;br /&gt;              
++&lt;/code&gt;
++&lt;/p&gt;
++This bug has been fixed in revision 158.
++&lt;/li&gt;
+ 
++&lt;/ul&gt;
++
+ &lt;h2&gt;Overview&lt;/h2&gt;
+ &lt;p&gt;xepersian is a package for typesetting Persian/English documents with XeLaTeX.  The package includes adaptations for use with many other commonly&ndash;used packages.&lt;/p&gt;
+ 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000125.html">[Xepersian-development] r158 - trunk/tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000127.html">[Xepersian-development] r160 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

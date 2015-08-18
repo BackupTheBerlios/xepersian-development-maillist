@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r43 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r43%20-%20trunk&In-Reply-To=%3C200905311529.n4VFTiVU017018%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000009.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r43 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r43%20-%20trunk&In-Reply-To=%3C200905311529.n4VFTiVU017018%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r43 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sun May 31 17:29:44 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000009.html">[Xepersian-development] r42 - trunk
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-05-31 17:29:39 +0200 (Sun, 31 May 2009)
+New Revision: 43
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+improved footnote mechanism and fixed the issue of  footnote counter inside minipage environment
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-05-31 06:06:56 UTC (rev 42)
++++ trunk/xepersian.dtx	2009-05-31 15:29:39 UTC (rev 43)
+@@ -156,7 +156,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.1}
+-\def\xepersianrevision{revision 40}
++\def\xepersianrevision{revision 43}
+ \def\xepersiandate{2009/06/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -458,14 +458,68 @@
+ % \fi
+ % \part{footnote-bidi-xepersian.def}
+ %    \begin{macrocode}
+-\DeclareRobustCommand{\LTRfootnote}[1]{%
+-\bgroup
+-\footnotemark%
+-\renewcommand{\thefootnote}{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RomanFootNum</A>\latinfont{\@arabic\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at footnote</A>}\else\@arabic\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at footnote</A>\fi}%
+-\@RTLfalse\footnotetext{\latinfont#1}%
+-\egroup
+-}
++\def\thefootnote{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RomanFootNum</A>\latinfont{\@arabic\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at footnote</A>}\else\@arabic\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at footnote</A>\fi}
+ \let\PersianFootNum=\NativeFootNum
++\long\def\@RTLfootnotetext#1{\insert\footins{%
++    \@RTLtrue
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\footnotesize
++    \interlinepenalty\interfootnotelinepenalty
++    \splittopskip\footnotesep
++    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
++    \hsize\columnwidth \@parboxrestore
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{%
++       \csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark
++    }%
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at begingroup</A>
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
++      \@makefntext{%
++        \rule\z@\footnotesep\ignorespaces\persianfont#1\@finalstrut\strutbox}%
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}%
++\long\def\@LTRfootnotetext#1{\insert\footins{%
++    \@RTLfalse
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\footnotesize
++    \interlinepenalty\interfootnotelinepenalty
++    \splittopskip\footnotesep
++    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
++    \hsize\columnwidth \@parboxrestore
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{%
++       \csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark
++    }%
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at begingroup</A>
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
++      \@makefntext{%
++        \rule\z@\footnotesep\ignorespaces\latinfont#1\@finalstrut\strutbox}%
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}%
++\long\def\@mpRTLfootnotetext#1{
++  \global\setbox\@mpfootins\vbox{\@RTLtrue
++    \unvbox\@mpfootins
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\footnotesize
++    \hsize\columnwidth
++    \@parboxrestore
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel
++         {\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at mpfootnote</A>\endcsname\@thefnmark}
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at begingroup</A>
++     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi
++      \@makefntext{
++        \rule\z@\footnotesep\ignorespaces\persianfont#1\@finalstrut\strutbox}
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
++\long\def\@mpLTRfootnotetext#1{
++  \global\setbox\@mpfootins\vbox{\@RTLfalse
++    \unvbox\@mpfootins
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\footnotesize
++    \hsize\columnwidth
++    \@parboxrestore
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel
++         {\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at mpfootnote</A>\endcsname\@thefnmark}
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at begingroup</A>
++     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi
++      \@makefntext{
++        \rule\z@\footnotesep\ignorespaces\latinfont#1\@finalstrut\strutbox}
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/footnote-bidi-xepersian.def&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000009.html">[Xepersian-development] r42 - trunk
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

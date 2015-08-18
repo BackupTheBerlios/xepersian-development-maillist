@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r66 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r66%20-%20trunk&In-Reply-To=%3C200906130804.n5D84nmj004993%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000032.html">
+   <LINK REL="Next"  HREF="000034.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r66 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r66%20-%20trunk&In-Reply-To=%3C200906130804.n5D84nmj004993%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r66 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sat Jun 13 10:04:49 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000032.html">[Xepersian-development] r65 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000034.html">[Xepersian-development] r67 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-06-13 10:04:44 +0200 (Sat, 13 Jun 2009)
+New Revision: 66
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added caption name for backref package
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-06-10 14:44:37 UTC (rev 65)
++++ trunk/xepersian.dtx	2009-06-13 08:04:44 UTC (rev 66)
+@@ -70,6 +70,7 @@
+ \generate{\file{amsart-xepersian.def}{\from{xepersian.dtx}{amsart-xepersian.def}}}
+ \generate{\file{amsbook-xepersian.def}{\from{xepersian.dtx}{amsbook-xepersian.def}}}
+ \generate{\file{article-xepersian.def}{\from{xepersian.dtx}{article-xepersian.def}}}
++\generate{\file{backref-xepersian.def}{\from{xepersian.dtx}{backref-xepersian.def}}}
+ \generate{\file{beamer-xepersian.def}{\from{xepersian.dtx}{beamer-xepersian.def}}}
+ \generate{\file{bidimoderncv-xepersian.def}{\from{xepersian.dtx}{bidimoderncv-xepersian.def}}}
+ \generate{\file{bookest-xepersian.def}{\from{xepersian.dtx}{bookest-xepersian.def}}}
+@@ -162,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.1}
+-\def\xepersianrevision{revision 65}
++\def\xepersianrevision{revision 66}
+ \def\xepersiandate{2009/06/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -386,6 +387,7 @@
+ \@ifpackageloaded{listings}{\input{listings-xepersian.def}}{}
+ \@ifpackageloaded{algorithmic}{\input{algorithmic-xepersian.def}}{}
+ \@ifpackageloaded{algorithm}{\input{algorithm-xepersian.def}}{}
++\@ifpackageloaded{backref}{\input{backref-xepersian.def}}{}
+ \@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
+ \@ifpackageloaded{minitoc}{\input{minitoc-xepersian.def}}{}
+@@ -472,6 +474,14 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/article-xepersian.def&gt;
++%&lt;*backref-xepersian.def&gt;
++% \fi
++% \part{backref-xepersian.def}
++%    \begin{macrocode}
++\def\backrefpagesname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1589;&#1601;&#1581;&#1575;&#1578;\else pages\fi}
++%    \end{macrocode}
++% \iffalse
++%&lt;/backref-xepersian.def&gt;
+ %&lt;*beamer-xepersian.def&gt;
+ % \fi
+ % \part{beamer-xepersian.def}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000032.html">[Xepersian-development] r65 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000034.html">[Xepersian-development] r67 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

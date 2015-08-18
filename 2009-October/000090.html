@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r123 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r123%20-%20trunk&In-Reply-To=%3C200910061955.n96Jt9o1031260%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000089.html">
+   <LINK REL="Next"  HREF="000091.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r123 - trunk</H1>
+    <B>vafa at BerliOS</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r123%20-%20trunk&In-Reply-To=%3C200910061955.n96Jt9o1031260%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r123 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Tue Oct  6 21:55:09 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000089.html">[Xepersian-development] r122 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000091.html">[Xepersian-development] r124 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90">[ date ]</a>
+              <a href="thread.html#90">[ thread ]</a>
+              <a href="subject.html#90">[ subject ]</a>
+              <a href="author.html#90">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-10-06 21:55:08 +0200 (Tue, 06 Oct 2009)
+New Revision: 123
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+few small fixes
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-10-01 05:31:58 UTC (rev 122)
++++ trunk/xepersian.dtx	2009-10-06 19:55:08 UTC (rev 123)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 122}
++\def\xepersianrevision{revision 123}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -196,26 +196,23 @@
+ \let\latinrmfamily=\rmfamily%
+ \let\latinsffamily=\sffamily%
+ \let\latinttfamily=\ttfamily%
+-\def\resetlatinfont{%
++\def\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at latin</A>@script{%
+    \let\normalfont=\latinnormalfont%
+    \let\rmfamily=\latinrmfamily%
+    \let\sffamily=\latinsffamily%
+    \let\ttfamily=\latinttfamily%
+    \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\normalfont%
+    \normalfont}
++\def\resetlatinfont{\latinnormalfont}
+ \newcommand*\settextfont[2][]{%
+ \newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \def\setpersianfont{%
+    \fontencoding{EU1}%
+    \let\normalfont=\persianfont%
+    \let\rmfamily=\persianfont%
+-   \let\sffamily=\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at sf</A>%
+-   \let\ttfamily=\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at tt</A>%
+    \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\normalfont%
+    \normalfont}
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">g at addto</A>@macro\document{%
+-\ifx\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at sf</A>\undefined\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at sf</A>\persianfont\fi%
+-\ifx\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at tt</A>\undefined\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at tt</A>\persianfont\fi%
+ \setpersianfont}
+ \newcommand*\settxtmathfont[2][]{%
+ \newfontfamily\TXTmath[Mapping=txt2maths,#1]{#2}
+@@ -265,10 +262,6 @@
+ \DeclareTextFontCommand{\textnavar}{\navarfamily}
+ \DeclareTextFontCommand{\textpook}{\pookfamily}
+ \DeclareTextFontCommand{\textsayeh}{\sayehfamily}
+-\newcommand*\setpersiansansfont[2][]{%
+-\newfontfamily\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at sf</A>[Script=Persian,Mapping=parsidigits,#1]{#2}}
+-\newcommand*\setpersianmonofont[2][]{%
+-\newfontfamily\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">persianfont at tt</A>[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \newcommand*\setnavarfont[2][]{%
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Script=Persian,Mapping=parsidigits,#1}{#2}%
+   \let\navardefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000089.html">[Xepersian-development] r122 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000091.html">[Xepersian-development] r124 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90">[ date ]</a>
+              <a href="thread.html#90">[ thread ]</a>
+              <a href="subject.html#90">[ subject ]</a>
+              <a href="author.html#90">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

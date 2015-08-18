@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r87 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-July/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r87%20-%20trunk&In-Reply-To=%3C200907140111.n6E1B8ZP031000%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000053.html">
+   <LINK REL="Next"  HREF="000055.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r87 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r87%20-%20trunk&In-Reply-To=%3C200907140111.n6E1B8ZP031000%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r87 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Tue Jul 14 03:11:08 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000053.html">[Xepersian-development] r86 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000055.html">[Xepersian-development] r88 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-07-14 03:11:03 +0200 (Tue, 14 Jul 2009)
+New Revision: 87
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+fixing the abstract environment bug in xepersian-thesis.cls
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-07-14 00:41:28 UTC (rev 86)
++++ trunk/xepersian.dtx	2009-07-14 01:11:03 UTC (rev 87)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.1}
+-\def\xepersianrevision{revision 86}
++\def\xepersianrevision{revision 87}
+ \def\xepersiandate{2009/07/15}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -3304,9 +3304,10 @@
+ \def\signature#1#2{\par\noindent#1\dotfill\null\\*
+   {\raggedright #2\par}}
+ 
++\def\abstract{\subsection*{\abstractname}\small
++\@normalsize}
++\def\endabstract{\par}
+ 
+-
+-
+ \pagenumbering{harfi}
+ \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ol at chapter</A>\@chapter
+ \def\@chapter{%
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000053.html">[Xepersian-development] r86 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000055.html">[Xepersian-development] r88 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#54">[ date ]</a>
+              <a href="thread.html#54">[ thread ]</a>
+              <a href="subject.html#54">[ subject ]</a>
+              <a href="author.html#54">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

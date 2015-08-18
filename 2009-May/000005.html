@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r38 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r38%20-%20trunk&In-Reply-To=%3C200905301518.n4UFIEgk026594%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000004.html">
+   <LINK REL="Next"  HREF="000006.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r38 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r38%20-%20trunk&In-Reply-To=%3C200905301518.n4UFIEgk026594%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r38 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sat May 30 17:18:14 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000004.html">[Xepersian-development] r37 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000006.html">[Xepersian-development] r39 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-05-30 17:17:59 +0200 (Sat, 30 May 2009)
+New Revision: 38
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+graphicx and xunicode packages are needed for magazine-sample.tex because (1) we need to include images and (2) we need the textdegree symbol. Also note that xunicode unfortunately has got to be loaded after xepersian package since we already loaded amsmath packages in the bidi package and doing otherwise would make trouble.
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-05-30 08:39:47 UTC (rev 37)
++++ trunk/xepersian.dtx	2009-05-30 15:17:59 UTC (rev 38)
+@@ -8633,7 +8633,9 @@
+ %&lt;/thesis-sample.tex&gt;
+ %&lt;*magazine-sample.tex&gt;
+ \documentclass[12pt,twoside]{xepersian-magazine}
++\usepackage{graphicx}
+ \usepackage{xepersian}
++\usepackage{xunicode}
+ \settextfont[Scale=1]{XB Zar}
+ \setlatintextfont[Scale=1]{Junicode}
+ \setdigitfont{XB Zar}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000004.html">[Xepersian-development] r37 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000006.html">[Xepersian-development] r39 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

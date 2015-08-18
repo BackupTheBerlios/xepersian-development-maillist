@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r149 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r149%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001051745.o05HjZbE028506%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000115.html">
+   <LINK REL="Next"  HREF="000117.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r149 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r149%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001051745.o05HjZbE028506%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r149 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Tue Jan  5 18:45:35 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000115.html">[Xepersian-development] r148 - in trunk: doc/xelatex/xepersian	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000117.html">[Xepersian-development] r150 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#116">[ date ]</a>
+              <a href="thread.html#116">[ thread ]</a>
+              <a href="subject.html#116">[ subject ]</a>
+              <a href="author.html#116">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-01-05 18:45:30 +0100 (Tue, 05 Jan 2010)
+New Revision: 149
+
+Modified:
+   trunk/tex/xelatex/xepersian/hyperref-xepersian.def
+Log:
+fixed the issue of \appendix and using hyperref
+
+Modified: trunk/tex/xelatex/xepersian/hyperref-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/hyperref-xepersian.def	2010-01-05 15:40:32 UTC (rev 148)
++++ trunk/tex/xelatex/xepersian/hyperref-xepersian.def	2010-01-05 17:45:30 UTC (rev 149)
+@@ -25,6 +25,14 @@
+   \def\FancyVerbLineautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1587;&#1591;&#1585;\else line\fi}%
+   \def\theoremautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1602;&#1590;&#1740;&#1607;\else Theorem\fi}%
+   \def\pageautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1589;&#1601;&#1581;&#1607;\else page\fi}%
++\AtBeginDocument{%
++\def\appendix{%
++  \@ifundefined{chapter}%
++    {\gdef\theHsection{\arabic{section}}}%
++    {\gdef\theHchapter{\arabic{chapter}}}%
++  \xdef\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">Hy at chapapp</A>{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">Hy at appendixstring</A>}%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">HyOrg at appendix</A>
++}}
+ %% 
+ %% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+ %% 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000115.html">[Xepersian-development] r148 - in trunk: doc/xelatex/xepersian	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000117.html">[Xepersian-development] r150 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#116">[ date ]</a>
+              <a href="thread.html#116">[ thread ]</a>
+              <a href="subject.html#116">[ subject ]</a>
+              <a href="author.html#116">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

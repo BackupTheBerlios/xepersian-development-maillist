@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r40 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r40%20-%20trunk&In-Reply-To=%3C200905310432.n4V4WPjY003722%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000006.html">
+   <LINK REL="Next"  HREF="000008.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r40 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r40%20-%20trunk&In-Reply-To=%3C200905310432.n4V4WPjY003722%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r40 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sun May 31 06:32:25 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000006.html">[Xepersian-development] r39 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000008.html">[Xepersian-development] r41 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-05-31 06:32:19 +0200 (Sun, 31 May 2009)
+New Revision: 40
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+Options of the bidi package are accessible in xepersian package, i.e. \usepackage[RomanFootnum] is the same as \usepackage[RomanFootNum]{bidi}\usepackage{xepersian}
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-05-31 02:47:02 UTC (rev 39)
++++ trunk/xepersian.dtx	2009-05-31 04:32:19 UTC (rev 40)
+@@ -186,13 +186,17 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.1}
+-\def\xepersianrevision{revision 33}
++\def\xepersianrevision{revision 40}
+ \def\xepersiandate{2009/06/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+ \AtBeginDocument{\special{pdf: docinfo &lt;&lt;
+ 	/Creator (X&#8707;Persian \xepersianversion\space &lt;\xepersianrevision&gt; Copyright &#169; 2008-2009 Vafa Khalighi)
+          &gt;&gt;}}
++\DeclareOption{Kashida}{\input{kashida-xepersian.def}}
++\DeclareOption{localise}{\input{localise-xepersian.def}}
++\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{bidi}}
++\ProcessOptions\relax
+ \RequirePackage[RTLdocument]{bidi}
+ \RequirePackage{fontspec}
+ \RequirePackage{xepersian-persiancal}
+@@ -209,7 +213,6 @@
+ }
+ \gdef\@latexbug{%
+   \@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">latex at error</A>{This may be a XePersian bug}{Please inform the Author of XePersian}}
+-\DeclareOption{Kashida}{\input{kashida-xepersian.def}}
+ \newfontscript{Persian}{arab}
+ \newfontlanguage{Persian}{ARA}
+ \newcommand*\settextfont[2][]{%
+@@ -346,8 +349,6 @@
+ \@ifclassloaded{book}{\input{book-xepersian.def}}{}
+ \@ifclassloaded{refrep}{\input{refrep-xepersian.def}}{}
+ \@ifclassloaded{beamer}{\input{beamer-xepersian.def}}{}
+-\DeclareOption{localise}{\input{localise-xepersian.def}}
+-\ProcessOptions
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/xepersian.sty&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000006.html">[Xepersian-development] r39 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000008.html">[Xepersian-development] r41 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,223 @@
+From vafa at mail.berlios.de  Thu Feb 18 08:15:25 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Thu, 18 Feb 2010 08:15:25 +0100
+Subject: [Xepersian-development] r166 - website
+Message-ID: <201002180715.o1I7FPVU005555@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-02-18 08:15:20 +0100 (Thu, 18 Feb 2010)
+New Revision: 166
+
+Modified:
+   website/index.php
+Log:
+updated website
+
+Modified: website/index.php
+===================================================================
+--- website/index.php	2010-01-16 23:36:25 UTC (rev 165)
++++ website/index.php	2010-02-18 07:15:20 UTC (rev 166)
+@@ -27,51 +27,7 @@
+ <center><p><font size="+9">The XePersian Project</font></p></center>
+ 
+ <center><p><font size="+2"><i>&ldquo;Support for Persian/English typesetting with XeLaTeX.&rdquo;</i></font></p></center>
+-<h3>News</h3>
+-<p> Version 1.0.4 of XePersian package is now available on CTAN and it should be a part of your TeX distribution very soon.</p>
+-<p>  Experimental version 1.0.5 of XePersian package is in preparation. Please help by downloading the latest release, testing and reporting bugs back. The changes in the experimental version 1.0.5 of xepersian package are:
+-<ul>
+-<li> There is a bug fix to xepersian-mathsdigitspec.sty. Consider the following minimal example:
+-<p>
+-<code>
+-<br />\documentclass{article}
+-<br />\usepackage{amsthm,amssymb,amsmath}
+-<br />\usepackage{xepersian}
+-<br />\settextfont[Scale=1]{XB Zar}
+-<br />\setdigitfont[Scale=1]{XB Zar}
+-<br />\begin{document}
+-<br />\begin{equation}
+-<br />\begin{split}
+-<br />a&=b\\
+-<br />c&=d
+-<br />\end{split}
+-<br />\end{equation}
+-<br />\begin{equation*}
+-<br />\begin{split}
+-<br />a&=b\\
+-<br />c&=d
+-<br />\end{split}
+-<br />\end{equation*}
+-<br />\end{document}
+-</code>
+-</p>
+-If you run <code>xelatex</code> on this document, you get an error which looks like this:
+-<p>
+-<code>
+-<br />! Package amsmath Error: \begin{split} won't work here.
+-<br />
+-<br />See the amsmath package documentation for explanation.
+-<br />Type  H <return>  for immediate help.
+-<br /> ...                                              
+-<br />                                                  
+-<br />l.11 \end{split}
+-<br />              
+-</code>
+-</p>
+-This bug has been fixed in revision 158.
+-</li>
+ 
+-</ul>
+ 
+ <h2>Overview</h2>
+ <p>xepersian is a package for typesetting Persian/English documents with XeLaTeX.  The package includes adaptations for use with many other commonly&ndash;used packages.</p>
+
+
+
+From vafa at mail.berlios.de  Thu Feb 18 10:10:09 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Thu, 18 Feb 2010 10:10:09 +0100
+Subject: [Xepersian-development] r167 - trunk/tex
+Message-ID: <201002180910.o1I9A9Ns006576@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-02-18 10:10:03 +0100 (Thu, 18 Feb 2010)
+New Revision: 167
+
+Modified:
+   trunk/tex/loadingorder-bidi-xepersian.def
+   trunk/tex/xepersian.sty
+Log:
+fixed subfigure problem
+
+Modified: trunk/tex/loadingorder-bidi-xepersian.def
+===================================================================
+--- trunk/tex/loadingorder-bidi-xepersian.def	2010-02-18 07:15:20 UTC (rev 166)
++++ trunk/tex/loadingorder-bidi-xepersian.def	2010-02-18 09:10:03 UTC (rev 167)
+@@ -8,12 +8,11 @@
+ %%   License information appended.
+ %% 
+ %% 
+-\ProvidesFile{loadingorder-bidi-xepersian.def}[2010/07/25 v0.1 making sure that xepersian is the last package loaded]
++\ProvidesFile{loadingorder-bidi-xepersian.def}[2010/07/25 v0.2 making sure that xepersian is the last package loaded]
+ \bidi at isloaded{algorithmic}
+ \bidi at isloaded{algorithm}
+ \bidi at isloaded{backref}
+ \bidi at isloaded{enumerate}
+-\bidi at isloaded{subfigure}
+ \bidi at isloaded{tocloft}
+ \AtBeginDocument{
+   \if at bidi@algorithmicloaded@\else
+@@ -28,9 +27,6 @@
+   \if at bidi@enumerateloaded@\else
+     \bidi at isloaded[\PackageError{xepersian}{Oops! you have loaded package enumerate after xepersian package. Please load package enumerate before xepersian package, and then try to run xelatex on your document again}{}]{enumerate}
+   \fi%
+-  \if at bidi@subfigureloaded@%
+-      \bidi at isloaded[\PackageError{xepersian}{Oops! you have loaded package subfigure before xepersian package. Please load package subfigure after xepersian package, and then try to run xelatex on your document again}{}]{subfigure}
+-\else\fi%
+   \if at bidi@tocloftloaded@\else
+     \bidi at isloaded[\PackageError{xepersian}{Oops! you have loaded package tocloft after xepersian package. Please load package tocloft before xepersian package, and then try to run xelatex on your document again}{}]{tocloft}
+   \fi%
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-02-18 07:15:20 UTC (rev 166)
++++ trunk/tex/xepersian.sty	2010-02-18 09:10:03 UTC (rev 167)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 160}
++\def\xepersianrevision{revision 162}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ Persian typesetting in XeLaTeX]
+
+
+
+From vafa at mail.berlios.de  Thu Feb 18 22:35:35 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Thu, 18 Feb 2010 22:35:35 +0100
+Subject: [Xepersian-development] r168 - in trunk: doc tex
+Message-ID: <201002182135.o1ILZZt1001633@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-02-18 22:35:17 +0100 (Thu, 18 Feb 2010)
+New Revision: 168
+
+Modified:
+   trunk/doc/xepersian-doc.pdf
+   trunk/doc/xepersian-doc.synctex.gz
+   trunk/doc/xepersian-doc.tex
+   trunk/tex/xepersian.sty
+Log:
+updated the documentation
+
+Modified: trunk/doc/xepersian-doc.pdf
+===================================================================
+(Binary files differ)
+
+Modified: trunk/doc/xepersian-doc.synctex.gz
+===================================================================
+(Binary files differ)
+
+Modified: trunk/doc/xepersian-doc.tex
+===================================================================
+--- trunk/doc/xepersian-doc.tex	2010-02-18 09:10:03 UTC (rev 167)
++++ trunk/doc/xepersian-doc.tex	2010-02-18 21:35:17 UTC (rev 168)
+@@ -19,7 +19,7 @@
+ \def\Lenv#1{\texttt{#1}}
+ \def\Penv#1{\RLE{\ParsiFont#1}}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 154}
++\def\xepersianrevision{revision 168}
+ \def\xepersiandate{2010/07/25}
+ \def\XePersian{\leavevmode$\smash{\hbox{X\lower.5ex
+   \hbox{\kern-.125em\reflect{E}}Persian}}$}
+@@ -113,31 +113,6 @@
+ ? 
+ 
+ \end{minted}
+-\item However, there is an exception to the two previous points. You should load \textsf{subfigure} package always after \textsf{\XePersian} package. Indeed, if like the following minimal example, you load \textsf{subfigure} package before \textsf{\XePersian} package:
+-\begin{minted}{latex}
+-\documentclass{article}
+-\usepackage{subfigure}
+-\usepackage{xepersian}
+-\settextfont[Scale=1.5]{Scheherazade}
+-\begin{document}
+-This is just a test.
+-\end{document}
+-\end{minted}
+-You will get an error saying that \textsf{subfigure} package should be loaded after \textsf{\XePersian} package. The error message looks like this:
+-\begin{minted}{latex}
+-! Package xepersian Error: Oops! you have loaded package subfigure before xeper
+-sian package. Please load package subfigure after xepersian package, and then t
+-ry to run xelatex on your document again.
+-
+-See the xepersian package documentation for explanation.
+-Type  H <return>  for immediate help.
+- ...                                              
+-                                                  
+-l.5 \begin{document}
+-                    
+-? 
+-
+-\end{minted}
+ \end{enumerate}
+ \section{Commands for Version, Subversion Revision and Date of The Package}
+ \begin{BDef}
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-02-18 09:10:03 UTC (rev 167)
++++ trunk/tex/xepersian.sty	2010-02-18 21:35:17 UTC (rev 168)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 162}
++\def\xepersianrevision{revision 168}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ Persian typesetting in XeLaTeX]
+
+
+

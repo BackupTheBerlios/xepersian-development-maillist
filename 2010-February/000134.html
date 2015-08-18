@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r167 - trunk/tex
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-February/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r167%20-%20trunk/tex&In-Reply-To=%3C201002180910.o1I9A9Ns006576%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000133.html">
+   <LINK REL="Next"  HREF="000135.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r167 - trunk/tex</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r167%20-%20trunk/tex&In-Reply-To=%3C201002180910.o1I9A9Ns006576%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r167 - trunk/tex">vafa at mail.berlios.de
+       </A><BR>
+    <I>Thu Feb 18 10:10:09 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000133.html">[Xepersian-development] r166 - website
+</A></li>
+        <LI>Next message: <A HREF="000135.html">[Xepersian-development] r168 - in trunk: doc tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-02-18 10:10:03 +0100 (Thu, 18 Feb 2010)
+New Revision: 167
+
+Modified:
+   trunk/tex/loadingorder-bidi-xepersian.def
+   trunk/tex/xepersian.sty
+Log:
+fixed subfigure problem
+
+Modified: trunk/tex/loadingorder-bidi-xepersian.def
+===================================================================
+--- trunk/tex/loadingorder-bidi-xepersian.def	2010-02-18 07:15:20 UTC (rev 166)
++++ trunk/tex/loadingorder-bidi-xepersian.def	2010-02-18 09:10:03 UTC (rev 167)
+@@ -8,12 +8,11 @@
+ %%   License information appended.
+ %% 
+ %% 
+-\ProvidesFile{loadingorder-bidi-xepersian.def}[2010/07/25 v0.1 making sure that xepersian is the last package loaded]
++\ProvidesFile{loadingorder-bidi-xepersian.def}[2010/07/25 v0.2 making sure that xepersian is the last package loaded]
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{algorithmic}
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{algorithm}
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{backref}
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{enumerate}
+-\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{subfigure}
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{tocloft}
+ \AtBeginDocument{
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@algorithmicloaded@\else
+@@ -28,9 +27,6 @@
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@enumerateloaded@\else
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package enumerate after xepersian package. Please load package enumerate before xepersian package, and then try to run xelatex on your document again}{}]{enumerate}
+   \fi%
+-  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@subfigureloaded@%
+-      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package subfigure before xepersian package. Please load package subfigure after xepersian package, and then try to run xelatex on your document again}{}]{subfigure}
+-\else\fi%
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@tocloftloaded@\else
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package tocloft after xepersian package. Please load package tocloft before xepersian package, and then try to run xelatex on your document again}{}]{tocloft}
+   \fi%
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-02-18 07:15:20 UTC (rev 166)
++++ trunk/tex/xepersian.sty	2010-02-18 09:10:03 UTC (rev 167)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 160}
++\def\xepersianrevision{revision 162}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000133.html">[Xepersian-development] r166 - website
+</A></li>
+	<LI>Next message: <A HREF="000135.html">[Xepersian-development] r168 - in trunk: doc tex
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

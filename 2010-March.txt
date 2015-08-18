@@ -1,0 +1,167 @@
+From vafa at mail.berlios.de  Wed Mar  3 14:53:33 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Wed, 3 Mar 2010 14:53:33 +0100
+Subject: [Xepersian-development] r169 - trunk/tex
+Message-ID: <201003031353.o23DrXch023179@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-03-03 14:53:19 +0100 (Wed, 03 Mar 2010)
+New Revision: 169
+
+Modified:
+   trunk/tex/hyperref-xepersian.def
+   trunk/tex/xepersian.sty
+Log:
+removed the buggy code
+
+Modified: trunk/tex/hyperref-xepersian.def
+===================================================================
+--- trunk/tex/hyperref-xepersian.def	2010-02-18 21:35:17 UTC (rev 168)
++++ trunk/tex/hyperref-xepersian.def	2010-03-03 13:53:19 UTC (rev 169)
+@@ -8,7 +8,7 @@
+ %%   License information appended.
+ %% 
+ %% 
+-\ProvidesFile{hyperref-xepersian.def}[2010/07/25 v0.2 bilingual captions for hyperref package]
++\ProvidesFile{hyperref-xepersian.def}[2010/07/25 v0.3 bilingual captions for hyperref package]
+   \def\equationautorefname{\if at RTL ??????\else Equation\fi}%
+   \def\footnoteautorefname{\if at RTL ???????\else footnote\fi}%
+   \def\itemautorefname{\if at RTL ????\else item\fi}%
+@@ -25,15 +25,6 @@
+   \def\FancyVerbLineautorefname{\if at RTL ???\else line\fi}%
+   \def\theoremautorefname{\if at RTL ????\else Theorem\fi}%
+   \def\pageautorefname{\if at RTL ????\else page\fi}%
+-\AtBeginDocument{%
+-\let\HyOrg at appendix\appendix
+-\def\appendix{%
+-  \@ifundefined{chapter}%
+-    {\gdef\theHsection{\arabic{section}}}%
+-    {\gdef\theHchapter{\arabic{chapter}}}%
+-  \xdef\Hy at chapapp{\Hy at appendixstring}%
+-  \HyOrg at appendix
+-}}
+ %% 
+ %% Copyright ? 2008-2010      by Vafa Khalighi     <vafa at users.berlios.de>
+ %% 
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-02-18 21:35:17 UTC (rev 168)
++++ trunk/tex/xepersian.sty	2010-03-03 13:53:19 UTC (rev 169)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 168}
++\def\xepersianrevision{revision 169}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ Persian typesetting in XeLaTeX]
+
+
+
+From vafa at mail.berlios.de  Tue Mar 23 02:30:48 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Tue, 23 Mar 2010 02:30:48 +0100
+Subject: [Xepersian-development] r170 - trunk/tex
+Message-ID: <201003230130.o2N1UmVs025393@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-03-23 02:30:44 +0100 (Tue, 23 Mar 2010)
+New Revision: 170
+
+Modified:
+   trunk/tex/xepersian.sty
+Log:
+fixed xepersian pdf creator bug
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-03-03 13:53:19 UTC (rev 169)
++++ trunk/tex/xepersian.sty	2010-03-23 01:30:44 UTC (rev 170)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 169}
++\def\xepersianrevision{revision 170}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ Persian typesetting in XeLaTeX]
+@@ -19,10 +19,6 @@
+ \RequirePackage{xepersian-mathsdigitspec}
+ \RequirePackage{etoolbox}
+ \RequirePackage[RTLdocument]{bidi}
+-\g at addto@macro\document{%
+-\special{pdf: docinfo <<
+-/Creator (X?Persian \xepersianversion\space <\xepersianrevision> Copyright ? 2008-2010 Vafa Khalighi)
+-         >>}}
+ \edef\xepersianinfo{%
+ xepersian package (Persian for LaTeX over XeTeX)^^J
+ Description: The package supports Persian^^J
+
+
+
+From vafa at mail.berlios.de  Tue Mar 23 11:41:58 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Tue, 23 Mar 2010 11:41:58 +0100
+Subject: [Xepersian-development] r171 - in trunk: doc tex
+Message-ID: <201003231041.o2NAfwtc002047@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-03-23 11:41:40 +0100 (Tue, 23 Mar 2010)
+New Revision: 171
+
+Modified:
+   trunk/doc/xepersian-doc.pdf
+   trunk/doc/xepersian-doc.synctex.gz
+   trunk/doc/xepersian-doc.tex
+   trunk/tex/xepersian.sty
+Log:
+updated the documentation
+
+Modified: trunk/doc/xepersian-doc.pdf
+===================================================================
+(Binary files differ)
+
+Modified: trunk/doc/xepersian-doc.synctex.gz
+===================================================================
+(Binary files differ)
+
+Modified: trunk/doc/xepersian-doc.tex
+===================================================================
+--- trunk/doc/xepersian-doc.tex	2010-03-23 01:30:44 UTC (rev 170)
++++ trunk/doc/xepersian-doc.tex	2010-03-23 10:41:40 UTC (rev 171)
+@@ -64,15 +64,6 @@
+ Location on CTAN: /macros/xetex/latex/xepersian
+ \end{minipage}}
+ \end{center}
+-\section{PDF Creator of \textsf{\XePersian} Documents}
+-If you use \textsf{\XePersian} package to produce a PDF file, the \textsf{\XePersian} package writes itself to the Application field of the PDF file and hyperref would have no effect since this is done at the beggining of the document. Thus if you produce a PDF file using the \textsf{\XePersian} package and then you look at the application field in the properties of the PDF file, you will see this:
+-
+-\begin{center}
+-\colorbox{yellow}{\begin{minipage}{0.8\textwidth}%
+-XePersian \xepersianversion\space <\xepersianrevision> Copyright ? 2008-2010 Vafa Khalighi
+-\end{minipage}}
+-\end{center}
+-
+ \chapter{Basics\label{basics}}
+ \section{Loading The Package}
+ You can load the package in the ordinary way;
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-03-23 01:30:44 UTC (rev 170)
++++ trunk/tex/xepersian.sty	2010-03-23 10:41:40 UTC (rev 171)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 170}
++\def\xepersianrevision{revision 171}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ Persian typesetting in XeLaTeX]
+
+
+

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r63 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r63%20-%20trunk&In-Reply-To=%3C200906100601.n5A61Ykk004697%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000029.html">
+   <LINK REL="Next"  HREF="000031.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r63 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r63%20-%20trunk&In-Reply-To=%3C200906100601.n5A61Ykk004697%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r63 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Wed Jun 10 08:01:34 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000029.html">[Xepersian-development] r62 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000031.html">[Xepersian-development] r64 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#30">[ date ]</a>
+              <a href="thread.html#30">[ thread ]</a>
+              <a href="subject.html#30">[ subject ]</a>
+              <a href="author.html#30">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-06-10 08:01:29 +0200 (Wed, 10 Jun 2009)
+New Revision: 63
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added support for scrreprt
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-06-09 14:08:55 UTC (rev 62)
++++ trunk/xepersian.dtx	2009-06-10 06:01:29 UTC (rev 63)
+@@ -90,6 +90,7 @@
+ \generate{\file{report-xepersian.def}{\from{xepersian.dtx}{report-xepersian.def}}}
+ \generate{\file{scrartcl-xepersian.def}{\from{xepersian.dtx}{scrartcl-xepersian.def}}}
+ \generate{\file{scrbook-xepersian.def}{\from{xepersian.dtx}{scrbook-xepersian.def}}}
++\generate{\file{scrreprt-xepersian.def}{\from{xepersian.dtx}{scrreprt-xepersian.def}}}
+ \generate{\file{tocloft-xepersian.def}{\from{xepersian.dtx}{tocloft-xepersian.def}}}
+ \generate{\file{xepersian-magazine.cls}{\from{xepersian.dtx}{xepersian-magazine.cls}}}
+ \generate{\file{xepersian-mathsdigitspec.sty}{\from{xepersian.dtx}{xepersian-mathsdigitspec.sty}}}
+@@ -159,7 +160,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.1}
+-\def\xepersianrevision{revision 62}
++\def\xepersianrevision{revision 63}
+ \def\xepersiandate{2009/06/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -392,6 +393,7 @@
+ \@ifclassloaded{report}{\input{report-xepersian.def}}{}
+ \@ifclassloaded{scrartcl}{\input{scrartcl-xepersian.def}}{}
+ \@ifclassloaded{scrbook}{\input{scrbook-xepersian.def}}{}
++\@ifclassloaded{scrreprt}{\input{scrreprt-xepersian.def}}{}
+ \@ifclassloaded{xepersian-thesis}{\input{xepersian-thesis-xepersian.def}}{}
+ \@ifclassloaded{amsbook}{\input{amsbook-xepersian.def}}{}
+ \@ifclassloaded{bookest}{\input{bookest-xepersian.def}}{}
+@@ -1810,6 +1812,49 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/scrbook-xepersian.def&gt;
++%&lt;*scrreprt-xepersian.def&gt;
++% \fi
++% \part{scrreprt-xepersian.def}
++%    \begin{macrocode}
++\renewcommand*\descfont{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\persiansffamily\else\sffamily\fi\bfseries}
++\DeclareOldFontCommand{\sf}{\normalfont\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\persiansffamily\else\sffamily\fi}{\mathsf}
++\DeclareOldFontCommand{\tt}{\normalfont\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\persianttfamily\else\ttfamily\fi}{\mathtt}
++\DeclareOldFontCommand{\sfb}{\normalfont\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\persiansffamily\else\sffamily\fi\bfseries}{%
++  \@nomath\sfb}
++\renewcommand*\sectfont{\normalcolor\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\persiansffamily\else\sffamily\fi\bfseries}
++\newkomafont{dictum-xepersian}{\normalfont\normalcolor\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\persiansffamily\else\sffamily\fi\small}
++\renewcommand*{\thepart}{\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
++\renewcommand*\appendix{\par%
++  \setcounter{chapter}{0}%
++  \setcounter{section}{0}%
++  \gdef\@chapapp{\appendixname}%
++  \gdef\thechapter{\@harfi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at chapter</A>}%
++  \csname appendixmore\endcsname
++}
++\renewcommand*{\@@maybeautodot}[1]{%
++  \ifx #1\@stop\let\@@maybeautodot\relax
++  \else
++    \ifx #1\harfi \@autodottrue\fi
++    \ifx #1\adadi \@autodottrue\fi
++    \ifx #1\tartibi \@autodottrue\fi
++    \ifx #1\Alph \@autodottrue\fi
++    \ifx #1\alph \@autodottrue\fi
++    \ifx #1\Roman \@autodottrue\fi
++    \ifx #1\roman \@autodottrue\fi
++    \ifx #1\@harfi \@autodottrue\fi
++    \ifx #1\@adadi \@autodottrue\fi
++    \ifx #1\@tartibi \@autodottrue\fi
++    \ifx #1\@Alph \@autodottrue\fi
++    \ifx #1\@alph \@autodottrue\fi
++    \ifx #1\@Roman \@autodottrue\fi
++    \ifx #1\@roman \@autodottrue\fi
++    \ifx #1\romannumeral \@autodottrue\fi
++  \fi
++  \@@maybeautodot
++}
++%    \end{macrocode}
++% \iffalse
++%&lt;/scrreprt-xepersian.def&gt;
+ %&lt;*tocloft-xepersian.def&gt;
+ % \fi
+ % \part{tocloft-xepersian.def}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000029.html">[Xepersian-development] r62 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000031.html">[Xepersian-development] r64 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#30">[ date ]</a>
+              <a href="thread.html#30">[ thread ]</a>
+              <a href="subject.html#30">[ subject ]</a>
+              <a href="author.html#30">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

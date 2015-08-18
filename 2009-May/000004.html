@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r37 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r37%20-%20trunk&In-Reply-To=%3C200905300839.n4U8dpK9013497%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r37 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r37%20-%20trunk&In-Reply-To=%3C200905300839.n4U8dpK9013497%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r37 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sat May 30 10:39:51 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000003.html">[Xepersian-development] r36 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[Xepersian-development] r38 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-05-30 10:39:47 +0200 (Sat, 30 May 2009)
+New Revision: 37
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+the required change of \bf to \bfseries in latin environment in xepersian-thesis.cls. Also since we are only loading amsmath packlage only, we need to say \usepackage{graphicx} at the beginning of thesis-sample.tex
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-05-30 06:03:08 UTC (rev 36)
++++ trunk/xepersian.dtx	2009-05-30 08:39:47 UTC (rev 37)
+@@ -2910,8 +2910,8 @@
+ \def\latinabstract{\newpage
+ \thispagestyle{empty}
+ \vskip 15mm
+-\begin{center}{\Large\bf \@latintitle \\[5mm]}
+-{\bf Abstract}
++\begin{center}{\Large\bfseries \@latintitle \\[5mm]}
++{\bfseries Abstract}
+ \end{center}
+ \vspace{5mm}}
+ 
+@@ -2961,8 +2961,8 @@
+ {\titlefont \@latintitle} \par
+ \addtolength{\baselineskip}{-5mm}
+ \vskip 1cm
+-{\bf\latinby}\par
+-{\Large\bf \@latinauthor}\par
++{\bfseries\latinby}\par
++{\Large\bfseries \@latinauthor}\par
+ \vskip 5mm
+ {\latinwrittenfor\par
+ \large\@latindegree}
+@@ -2975,7 +2975,7 @@
+ {\@latinthesisdate}
+ \par
+ \vskip 1cm
+-\large\bf
++\large\bfseries
+ \@latindepartment\space Department
+ \par
+ \@latinuniversity \par\@latincity
+@@ -8565,6 +8565,7 @@
+ f.close()	
+%&lt;/ftxe-0.1.py&gt;
+ %&lt;*thesis-sample.tex&gt;
+ \documentclass[a4paper,11pt]{xepersian-thesis}
++\usepackage{graphicx}
+ \usepackage{xepersian}
+ \settextfont[Scale=1]{XB Zar}
+ \setlatintextfont[Scale=1]{Linux Libertine}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000003.html">[Xepersian-development] r36 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[Xepersian-development] r38 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r145 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r145%20-%20in%20trunk%3A%0A%09doc/xelatex/xepersian/samples%20tex/xelatex/xepersian&In-Reply-To=%3C201001030848.o038mklg006982%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000111.html">
+   <LINK REL="Next"  HREF="000113.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r145 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r145%20-%20in%20trunk%3A%0A%09doc/xelatex/xepersian/samples%20tex/xelatex/xepersian&In-Reply-To=%3C201001030848.o038mklg006982%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r145 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sun Jan  3 09:48:46 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000111.html">[Xepersian-development] r144 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000113.html">[Xepersian-development] r146 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112">[ date ]</a>
+              <a href="thread.html#112">[ thread ]</a>
+              <a href="subject.html#112">[ subject ]</a>
+              <a href="author.html#112">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-01-03 09:48:40 +0100 (Sun, 03 Jan 2010)
+New Revision: 145
+
+Removed:
+   trunk/doc/xelatex/xepersian/samples/logo.pdf
+   trunk/doc/xelatex/xepersian/samples/thesis-sample.tex
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+making necessary changes for version 1.0.4
+
+Deleted: trunk/doc/xelatex/xepersian/samples/logo.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/doc/xelatex/xepersian/samples/thesis-sample.tex
+===================================================================
+--- trunk/doc/xelatex/xepersian/samples/thesis-sample.tex	2010-01-01 11:41:50 UTC (rev 144)
++++ trunk/doc/xelatex/xepersian/samples/thesis-sample.tex	2010-01-03 08:48:40 UTC (rev 145)
+@@ -1,62 +0,0 @@
+-\documentclass[a4paper,11pt]{xepersian-thesis}
+-\usepackage{graphicx}
+-\usepackage{xepersian}
+-\settextfont[Scale=1]{XB Zar}
+-\setlatintextfont[Scale=1]{Linux Libertine}
+-\setdigitfont[Scale=1]{XB Zar}
+-
+-\begin{document}
+-\title{&#1575;&#1593;&#1583;&#1575;&#1583; &#1605;&#1585;&#1705;&#1576;}
+-\author{&#1608;&#1601;&#1575; &#1582;&#1604;&#1740;&#1602;&#1740;}
+-\degree{&#1705;&#1575;&#1585;&#1588;&#1606;&#1575;&#1587;&#1740; &#1585;&#1740;&#1575;&#1590;&#1740;&#1575;&#1578; &#1605;&#1581;&#1590;}
+-\supervisor{&#1605;&#1581;&#1605;&#1583; &#1602;&#1583;&#1587;&#1740;}
+-\department{&#1585;&#1740;&#1575;&#1590;&#1740;}
+-\university{&#1578;&#1607;&#1585;&#1575;&#1606;}
+-\city{&#1578;&#1607;&#1585;&#1575;&#1606;}
+-\thesisdate{\today}
+-\maketitle
+-\begin{acknowledgementpage}
+-&#1583;&#1585; &#1575;&#1740;&#1606;&#1580;&#1575; &#1583;&#1608;&#1587;&#1578; &#1583;&#1575;&#1585;&#1605; &#1575;&#1586; &#1607;&#1605;&#1607; &#1578;&#1588;&#1705;&#1585; &#1705;&#1606;&#1605;
+-\end{acknowledgementpage}
+-\begin{abstractpage}
+-&#1575;&#1740;&#1606;&#1580;&#1575; &#1607;&#1605; &#1576;&#1575;&#1740;&#1583; &#1605;&#1591;&#1604;&#1576;&#1740; &#1606;&#1608;&#1588;&#1578;...
+-\keywords{&#1585;&#1740;&#1575;&#1590;&#1740; &#1605;&#1581;&#1590;&#1548; &#1607;&#1606;&#1583;&#1587;&#1607; &#1608; &#1578;&#1608;&#1662;&#1608;&#1604;&#1608;&#1688;&#1740;}
+-\end{abstractpage}
+-\tableofcontents
+-\listoftables
+-\chapter{&#1605;&#1580;&#1605;&#1608;&#1593;&#1607; &#1575;&#1593;&#1583;&#1575;&#1583;}
+-&#1583;&#1585; &#1575;&#1740;&#1606;&#1580;&#1575; &#1604;&#1575;&#1586;&#1605; &#1605;&#1740;&#8204;&#1583;&#1575;&#1606;&#1605; &#1578;&#1575; &#1606;&#1711;&#1575;&#1607;&#1740; &#1585;&#1608;&#1740; &#1605;&#1580;&#1605;&#1608;&#1593;&#1607;&#1620; &#1575;&#1593;&#1583;&#1575;&#1583; &#1575;&#1606;&#1583;&#1575;&#1586;&#1740;&#1605; &#1578;&#1575; &#1605;&#1578;&#1608;&#1580;&#1607; &#1582;&#1589;&#1604;&#1578;&#8204;&#1607;&#1575;&#1740; &#1570;&#1606; &#1588;&#1608;&#1740;&#1605;
+-\begin{equation}
+-(a+b)^2=a^2+2ab+b^3
+-\end{equation}
+-\newpage
+-&#1575;&#1740;&#1606; &#1589;&#1601;&#1581;&#1607;&#1620; &#1580;&#1583;&#1740;&#1583; &#1575;&#1587;&#1578; &#1705;&#1607; &#1605;&#1575; &#1583;&#1585; &#1575;&#1740;&#1606; &#1589;&#1601;&#1581;&#1607; &#1576;&#1607; &#1606;&#1608;&#1588;&#1578;&#1606; &#1605;&#1602;&#1575;&#1604;&#1575;&#1578; &#1583;&#1740;&#1711;&#1585;&#1740; &#1605;&#1588;&#1594;&#1608;&#1604; &#1607;&#1587;&#1578;&#1740;&#1605;.
+-\section{&#1605;&#1602;&#1583;&#1605;&#1607;}
+-
+-\newpage
+-&#1575;&#1740;&#1606; &#1607;&#1605; &#1740;&#1705; &#1589;&#1601;&#1581;&#1607;&#1620; &#1580;&#1583;&#1740;&#1583; &#1583;&#1740;&#1711;&#1585;
+-\chapter{&#1583;&#1608;&#1605;}
+-\chapter{&#1587;&#1608;&#1605;}
+-\appendix
+-\chapter{&#1575;&#1608;&#1604;}
+-\chapter{&#1583;&#1608;&#1605;}
+-\chapter{&#1587;&#1608;&#1605;}
+-\bibliographystyle{unsrt}
+-\begin{thebibliography}{99}
+-\end{thebibliography}
+-\begin{latin}
+-\latintitle{Pure Mathematics}
+-\latinauthor{Vafa Khalighi}
+-\latindegree{Bachelor of Pure Mathematics}
+-\latinthesisdate{\latintoday}
+-\latinsupervisor{Mohammad Ghodsi}
+-\latindepartment{Computer Science}
+-\latinuniversity{Iran University of Science \&amp; Technology}
+-\latincity{Tehran}
+-\begin{latinabstract}
+-\noindent This is our abstract written in English and This thesis is written very very very carefully so that we can keep  an eye on the beauty of typesetting.
+-\latinkeywords{Mathematics, topology, geometry and category theory.}
+-\end{latinabstract}
+-\makelatintitle
+-\end{latin}
+-\end{document}
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-01 11:41:50 UTC (rev 144)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-03 08:48:40 UTC (rev 145)
+@@ -14,7 +14,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 142}
++\def\xepersianrevision{revision 144}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+@@ -34,7 +34,7 @@
+ Copyright &#169; 2008-2010 Vafa Khalighi^^J
+ \xepersianversion, &lt;\xepersianrevision&gt;, \xepersiandate^^J
+ License: LaTeX Project Public License, version 1.3c or higher (your choice)^^J
+-Home: <A HREF="http://developer.berlios.de/projects/xepersian/^^J">http://developer.berlios.de/projects/xepersian/^^J</A>
++Home: <A HREF="http://xepersian.berlios.de^^J">http://xepersian.berlios.de^^J</A>
+ Location on CTAN: /macros/xetex/latex/xepersian}
+ \typeout{\xepersianinfo}
+ \edef\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">xepersian at everyjob</A>{\the\everyjob}
+@@ -45,7 +45,7 @@
+    }{%
+       XePersian Error: #1%
+    }{%
+-      Oops! either you have done something wrong or it is a xepersian bug. Please first produce a similar file without using XePersian package and then compile it with xelatex, if you got the same error, then please study the Persian translation of &#8220;The not so Short Introduction to LaTeX&#8221; by MEHDI OMIDALI, otherwise please report the error with a minimal tex file which shows the error to  the Author of XePersian.%
++      Oops! either you have done something wrong or it is a xepersian bug. Please first produce a similar file without using XePersian package and then compile it with xelatex, if you got the same error, then either you have been certainly doing something wrong or it is a LaTeX bug, otherwise please report the error with a minimal tex file which shows the error to  the Author of XePersian.%
+    }{#2}%
+ }
+ \gdef\@latexbug{%
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000111.html">[Xepersian-development] r144 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000113.html">[Xepersian-development] r146 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112">[ date ]</a>
+              <a href="thread.html#112">[ thread ]</a>
+              <a href="subject.html#112">[ subject ]</a>
+              <a href="author.html#112">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

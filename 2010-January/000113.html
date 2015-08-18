@@ -1,0 +1,585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r146 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r146%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001040910.o049AWBj020067%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000112.html">
+   <LINK REL="Next"  HREF="000114.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r146 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r146%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001040910.o049AWBj020067%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r146 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Mon Jan  4 10:10:32 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000112.html">[Xepersian-development] r145 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000114.html">[Xepersian-development] r147 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-01-04 10:10:20 +0100 (Mon, 04 Jan 2010)
+New Revision: 146
+
+Added:
+   trunk/tex/xelatex/xepersian/loadingorder-bidi-xepersian.def
+Removed:
+   trunk/tex/xelatex/xepersian/xepersian-doc.cls
+Modified:
+   trunk/tex/xelatex/xepersian/footnote-bidi-xepersian.def
+   trunk/tex/xelatex/xepersian/multicol-xepersian.def
+   trunk/tex/xelatex/xepersian/xepersian-multiplechoice.sty
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+fixed font isuue
+
+Modified: trunk/tex/xelatex/xepersian/footnote-bidi-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/footnote-bidi-xepersian.def	2010-01-03 08:48:40 UTC (rev 145)
++++ trunk/tex/xelatex/xepersian/footnote-bidi-xepersian.def	2010-01-04 09:10:20 UTC (rev 146)
+@@ -23,7 +23,7 @@
+     \hsize\columnwidth \@parboxrestore
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\resetlatinfont#1\fi\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\latinfont#1\fi\strut}}%
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -37,7 +37,7 @@
+     \hsize\columnwidth \@parboxrestore
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\setpersianfont #1\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\persianfont #1\strut}}%
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -51,7 +51,7 @@
+     \hsize\columnwidth \@parboxrestore
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\resetlatinfont #1\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\latinfont #1\strut}}%
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -67,7 +67,7 @@
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
+     \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at mpfootnote</A>=1\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi\fi
+       \@makefntext{%
+-        \rule\z@\footnotesep\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\resetlatinfont#1\fi\@finalstrut\strutbox}%
++        \rule\z@\footnotesep\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\latinfont#1\fi\@finalstrut\strutbox}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ \long\def\@mpRTLfootnotetext#1{%
+   \global\setbox\@mpfootins\vbox{\@RTLtrue%
+@@ -81,7 +81,7 @@
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
+     \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at mpfootnote</A>=1\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi\fi
+       \@makefntext{%
+-        \rule\z@\footnotesep\ignorespaces\setpersianfont#1\@finalstrut\strutbox}%
++        \rule\z@\footnotesep\ignorespaces\persianfont#1\@finalstrut\strutbox}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ \long\def\@mpLTRfootnotetext#1{%
+   \global\setbox\@mpfootins\vbox{\@RTLfalse%
+@@ -95,7 +95,7 @@
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
+     \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at mpfootnote</A>=1\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi\fi
+       \@makefntext{%
+-        \rule\z@\footnotesep\ignorespaces\resetlatinfont#1\@finalstrut\strutbox}%
++        \rule\z@\footnotesep\ignorespaces\latinfont#1\@finalstrut\strutbox}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ %% 
+ %% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+
+Added: trunk/tex/xelatex/xepersian/loadingorder-bidi-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/loadingorder-bidi-xepersian.def	2010-01-03 08:48:40 UTC (rev 145)
++++ trunk/tex/xelatex/xepersian/loadingorder-bidi-xepersian.def	2010-01-04 09:10:20 UTC (rev 146)
+@@ -0,0 +1,56 @@
++%%
++%% This is file `loadingorder-bidi-xepersian.def',
++%% generated with the docstrip utility.
++%%
++%% The original source files were:
++%%
++%% xepersian.dtx  (with options: `loadingorder-bidi-xepersian.def')
++%% 
++%%   __________________________________
++%%   Copyright &#169; 2009-2010 Vafa Khalighi
++%% 
++%%   License information appended.
++%% 
++%% 
++\ProvidesFile{loadingorder-bidi-xepersian.def}[2010/03/01 v0.1 making sure that xepersian is the last package loaded]
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{algorithmic}
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{algorithm}
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{backref}
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{enumerate}
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{subfigure}
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>{tocloft}
++\AtBeginDocument{
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@algorithmicloaded@\else
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package algorithmic after xepersian package. Please load package algorithmic before xepersian package, and then try to run xelatex on your document again}{}]{algorithmic}
++  \fi%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@algorithmloaded@\else
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package algorithm after xepersian package. Please load package algorithm before xepersian package, and then try to run xelatex on your document again}{}]{algorithm}
++  \fi%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@backrefloaded@\else
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package backref after xepersian package. Please load package backref before xepersian package, and then try to run xelatex on your document again}{}]{backref}
++  \fi%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@enumerateloaded@\else
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package enumerate after xepersian package. Please load package enumerate before xepersian package, and then try to run xelatex on your document again}{}]{enumerate}
++  \fi%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@subfigureloaded@%
++      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package subfigure before xepersian package. Please load package subfigure after xepersian package, and then try to run xelatex on your document again}{}]{subfigure}
++\else\fi%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at bidi</A>@tocloftloaded@\else
++    \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at isloaded</A>[\PackageError{xepersian}{Oops! you have loaded package tocloft after xepersian package. Please load package tocloft before xepersian package, and then try to run xelatex on your document again}{}]{tocloft}
++  \fi%
++}
++%% 
++%% Copyright &#169; 2009-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
++%% 
++%% Distributable under the LaTeX Project Public License,
++%% version 1.3c or higher (your choice). The latest version of
++%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
++%% 
++%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
++%% by Vafa Khalighi.
++%% 
++%% 
++%% 
++%% 
++%%
++%% End of file `loadingorder-bidi-xepersian.def'.
+
+Modified: trunk/tex/xelatex/xepersian/multicol-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/multicol-xepersian.def	2010-01-03 08:48:40 UTC (rev 145)
++++ trunk/tex/xelatex/xepersian/multicol-xepersian.def	2010-01-04 09:10:20 UTC (rev 146)
+@@ -23,7 +23,7 @@
+     \hsize\textwidth \@parboxrestore
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\resetlatinfont#1\fi\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\latinfont#1\fi\strut}}%
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -37,7 +37,7 @@
+     \hsize\textwidth \@parboxrestore
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\setpersianfont #1\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\persianfont #1\strut}}%
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -51,7 +51,7 @@
+     \hsize\textwidth \@parboxrestore
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">protected at edef</A>\@currentlabel{\csname <A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">p at footnote</A>\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\resetlatinfont #1\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\latinfont #1\strut}}%
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -67,7 +67,7 @@
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
+     \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at mpfootnote</A>=1\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi\fi
+       \@makefntext{%
+-        \rule\z@\footnotesep\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\resetlatinfont#1\fi\@finalstrut\strutbox}%
++        \rule\z@\footnotesep\ignorespaces\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>@footnote#1\else\latinfont#1\fi\@finalstrut\strutbox}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ \long\def\@mpRTLfootnotetext#1{%
+   \global\setbox\@mpfootins\vbox{\@RTLtrue%
+@@ -81,7 +81,7 @@
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
+     \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at mpfootnote</A>=1\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi\fi
+       \@makefntext{%
+-        \rule\z@\footnotesep\ignorespaces\setpersianfont#1\@finalstrut\strutbox}%
++        \rule\z@\footnotesep\ignorespaces\persianfont#1\@finalstrut\strutbox}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ \long\def\@mpLTRfootnotetext#1{%
+   \global\setbox\@mpfootins\vbox{\@RTLfalse%
+@@ -95,7 +95,7 @@
+      \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnotetext</A>@dir{#1}
+     \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at mpfootnote</A>=1\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">right at footnote</A>\else\global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">bidi at footnoterule</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">left at footnote</A>\fi\fi
+       \@makefntext{%
+-        \rule\z@\footnotesep\ignorespaces\resetlatinfont#1\@finalstrut\strutbox}%
++        \rule\z@\footnotesep\ignorespaces\latinfont#1\@finalstrut\strutbox}%
+     \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endgroup</A>}}
+ %% 
+ %% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+
+Deleted: trunk/tex/xelatex/xepersian/xepersian-doc.cls
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian-doc.cls	2010-01-03 08:48:40 UTC (rev 145)
++++ trunk/tex/xelatex/xepersian/xepersian-doc.cls	2010-01-04 09:10:20 UTC (rev 146)
+@@ -1,155 +0,0 @@
+-%%
+-%% This is file `xepersian-doc.cls',
+-%% generated with the docstrip utility.
+-%%
+-%% The original source files were:
+-%%
+-%% xepersian.dtx  (with options: `xepersian-doc.cls')
+-%% 
+-%%   __________________________________
+-%%   Copyright &#169; 2008-2010 Vafa Khalighi
+-%% 
+-%%   License information appended.
+-%% 
+-%% 
+-\NeedsTeXFormat{LaTeX2e}
+-\ProvidesClass{xepersian-doc}[2010/03/01 Class for typesetting xepersian documentation]
+-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
+-\ProcessOptions
+-\LoadClass[a4paper,12pt,twoside]{book}
+-\RequirePackage[onehalfspacing]{setspace}
+-\RequirePackage[landscape,margin=1in,top=1in,bottom=1in]{geometry}
+-\RequirePackage{xcolor}
+-\RequirePackage[colorlinks,
+-            plainpages=false,
+-            linkcolor=xepersianbrown,
+-            bookmarksopen]{hyperref}
+-\RequirePackage{pifont}
+-\RequirePackage{bbding}
+-\RequirePackage[norotate,ttbnotitle,ttbnum]{flowfram}
+-\definecolor{xepersianred}{rgb}{0.65,0.04,0.07}
+-\definecolor{xepersiangreen}{rgb}{0,.43,0}
+-\definecolor{xepersianbrown}{rgb}{.6,0,0}
+-\newlength{\leftwidth}
+-\newlength{\rightwidth}
+-\computeleftedgeodd{\leftwidth}
+-\setlength{\leftwidth}{-\leftwidth}
+-\addtolength{\leftwidth}{0.4\textwidth}
+-\setlength{\rightwidth}{\paperwidth}
+-\addtolength{\rightwidth}{-\leftwidth}
+-\vtwotone[1]{\leftwidth}{xepersianred}{backleft}{\rightwidth}{xepersiangreen}{backright}
+-\vtwotone[none]{\rightwidth}{xepersiangreen}{lastbackright}{\leftwidth}{xepersianred}{lastbackleft}
+-\vtwotonetop[odd]{1cm}{\leftwidth}{xepersianred}{oddtopleft}{\rightwidth}{xepersiangreen}{oddtopright}
+-\vtwotonetop[even]{1cm}{\rightwidth}{xepersiangreen}{eventopleft}{\leftwidth}{xepersianred}{eventopright}
+-\setlength{\marginparwidth}{2cm}
+-\newflowframe{0.6\textwidth}{\textheight}{0pt}{0pt}[main]
+-\newdynamicframe{0.38\textwidth}{\textheight}{0.62\textwidth}{0pt}[chaphead]
+-\setflowframe*{main}{evenx=0.4\textwidth}
+-\setdynamicframe*{chaphead}{evenx=0pt,clear}
+-\newstaticframe[none]{0.38\textwidth}{0.55\textheight}{0.62\textwidth}{0.45\textheight}[shapedt]
+-\setstaticframe*{shapedt}{evenx=0pt}
+-\newstaticframe[none]{0.38\textwidth}{0.45\textheight}{0.62\textwidth}{0pt}[shapedb]
+-\setstaticframe*{shapedb}{evenx=0pt}
+-\setflowframe*{main}{margin=inner}
+-\dfchaphead*{chaphead}
+-\appenddfminitoc*{chaphead}
+-\renewcommand{\DFchapterstyle}[1]{%
+-{\raggedleft\bfseries\Huge\color{blue}\thechapter. #1\par
+-}}
+-\renewcommand{\DFschapterstyle}[1]{{\raggedleft\bfseries\Huge\color{blue} #1\par
+-}}
+-\makethumbtabs{0.75in}
+-\enableminitoc
+-\setthumbtab{1}{backcolor=[rgb]{0.15,0.15,1}}
+-\setthumbtab{2}{backcolor=[rgb]{0.2,0.2,1}}
+-\setthumbtab{3}{backcolor=[rgb]{0.25,0.25,1}}
+-\setthumbtab{4}{backcolor=[rgb]{0.3,0.3,1}}
+-\setthumbtab{5}{backcolor=[rgb]{0.35,0.35,1}}
+-\setthumbtab{6}{backcolor=[rgb]{0.4,0.4,1}}
+-\setthumbtab{7}{backcolor=[rgb]{0.45,0.45,1}}
+-\setthumbtab{8}{backcolor=[rgb]{0.5,0.5,1}}
+-\newcommand{\thumbtabstyle}[1]{{\hypersetup{linkcolor=white}%
+-\textbf{\large #1}}}
+-\setthumbtab{all}{style=thumbtabstyle,textcolor=white}
+-\pagestyle{plain}
+-\makedfheaderfooter
+-\newlength{\xoffset}
+-\computerightedgeodd{\xoffset}
+-\addtolength{\xoffset}{-2cm}
+-\newlength{\yoffset}
+-\computebottomedge{\yoffset}
+-\newcommand{\footstyle}[1]{\bfseries\LARGE #1}
+-\setdynamicframe*{footer}{oddx=\xoffset,y=\yoffset,width=2cm,height=2cm,
+-backcolor=blue,textcolor=white,style=footstyle,pages=none}
+-\computeleftedgeeven{\xoffset}
+-\setdynamicframe*{footer}{evenx=\xoffset}
+-\twocolumninarea[none]{0.6\textwidth}{\textheight}{0pt}{0pt}
+-\newcounter{N}
+-\newcounter{I}
+-\setcounter{N}{\value{maxflow}}
+-\addtocounter{N}{-2}
+-\whiledo{\value{N}&lt;\value{maxflow}}{%
+-\stepcounter{N}\stepcounter{I}
+-\setflowframe{\value{N}}{label=oddcol\theI}}
+-\twocolumninarea[none]{0.6\textwidth}{\textheight}{0.4\textwidth}{0pt}
+-\setcounter{I}{0}
+-\setcounter{N}{\value{maxflow}}
+-\addtocounter{N}{-2}
+-\whiledo{\value{N}&lt;\value{maxflow}}{%
+-\stepcounter{N}\stepcounter{I}
+-\setflowframe{\value{N}}{label=evencol\theI}}
+-\renewenvironment{theindex}{%
+-\setflowframe*{oddcol1,oddcol2}{pages=odd}%
+-\setflowframe*{evencol1,evencol2}{pages=even}%
+-\setdynamicframe*{chaphead}{clear=false}%
+-\clearpage
+-\mbox{}\framebreak\phantomsection
+-\setflowframe*{main}{pages=none}%
+-\setdynamiccontents*{chaphead}{\DFschapterstyle{\indexname}%
+-\idxnav}%
+-\addcontentsline{toc}{chapter}{\indexname}%
+-\setlength{\parindent}{0pt}%
+-\setlength{\parskip}{0pt plus .3pt}%
+-\let\item\@idxitem
+-}{%
+-\setdynamicframe*{chaphead}{clear}%
+-}
+-\newcommand{\chapdesc}[1]{%
+-\appenddynamiccontents*{chaphead}{\par
+-\emph{#1}}}
+-\renewenvironment{theindex}{%
+-\setflowframe*{oddcol1,oddcol2}{pages=odd}%
+-\setflowframe*{evencol1,evencol2}{pages=even}%
+-\setdynamicframe*{chaphead}{clear=false}%
+-\clearpage
+-\mbox{}\framebreak\phantomsection
+-\setflowframe*{main}{pages=none}%
+-\setdynamiccontents*{chaphead}{\DFschapterstyle{\indexname}%
+-\idxnav}%
+-\addcontentsline{toc}{chapter}{\indexname}%
+-\setlength{\parindent}{0pt}%
+-\setlength{\parskip}{0pt plus .3pt}%
+-\let\item\@idxitem
+-}{%
+-\setdynamicframe*{chaphead}{clear}%
+-}
+-\renewcommand\labelitemi{\HandLeft}
+-\renewcommand\labelitemii{\HandLeftUp}
+-\renewcommand\labelitemiii{\HandCuffLeft}
+-\renewcommand\labelitemiv{\HandPencilLeft}
+-\endinput
+-%% 
+-%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+-%% 
+-%% Distributable under the LaTeX Project Public License,
+-%% version 1.3c or higher (your choice). The latest version of
+-%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
+-%% 
+-%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
+-%% by Vafa Khalighi.
+-%% 
+-%% 
+-%% 
+-%% 
+-%%
+-%% End of file `xepersian-doc.cls'.
+
+Modified: trunk/tex/xelatex/xepersian/xepersian-multiplechoice.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian-multiplechoice.sty	2010-01-03 08:48:40 UTC (rev 145)
++++ trunk/tex/xelatex/xepersian/xepersian-multiplechoice.sty	2010-01-04 09:10:20 UTC (rev 146)
+@@ -20,7 +20,7 @@
+ \RequirePackage{ifthen}
+ \RequirePackage{calc}
+ \RequirePackage{verbatim}
+-\RequirePackage{fmultico}
++\RequirePackage{multicol}
+ \def\@headerfont{\bfseries}
+ \newcommand\headerfont[1]{\gdef\@headerfont{#1}}
+ \def\@X{X}
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-03 08:48:40 UTC (rev 145)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-04 09:10:20 UTC (rev 146)
+@@ -14,7 +14,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 144}
++\def\xepersianrevision{revision 146}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+@@ -50,43 +50,32 @@
+ }
+ \gdef\@latexbug{%
+   \@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">latex at error</A>{This may be a XePersian bug}{Please inform the Author of XePersian}}
++\AtBeginDocument{\ifdefined\persianfont\relax\else%
++\PackageError{xepersian}{Oops! you have not specified any font for the main text of the document. Please specify a font for the main text of the document by using \settextfont\space CS, and then try to run xelatex on your document again}%
++\fi}
++\AtBeginDocument{\ifdefined\latinfont\relax\else%
++\PackageInfo{xepersian}{&#8220;You have not specified any font for the Latin texts of the document and so the default TeX fonts will be used for the Latin texts of the document. If you would like to have any other font as the font of the Latin texts, then please specify a font for the Latin texts of the document by using \setlatintextfont\space CS, and then try to run xelatex on your document again&#8221;}%
++\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic}]{lmroman10-regular}
++\fi}
++\AtBeginDocument{\ifdefined\decimalseparator\relax\else%
++\PackageInfo{xepersian}{&#8220;You have not specified any font for the digits in maths mode and so the digits in maths mode will appear Latin. If you would like to have Persian digits in maths mode, then please specify a font for the digits in maths mode by using \setdigitfont\space CS, and then try to run xelatex on your document again&#8221;}%
++\fi}
+ \def\prq{&#171;}
+ \def\plq{&#187;}
+ \newfontscript{Persian}{arab}
+ \newfontlanguage{Persian}{ARA}
+-\let\latinnormalfont=\normalfont%
+-\let\latinrmfamily=\rmfamily%
+-\let\latinsffamily=\sffamily%
+-\let\latinttfamily=\ttfamily%
+-\def\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at latin</A>@script{%
+-   \let\normalfont=\latinnormalfont%
+-   \let\rmfamily=\latinrmfamily%
+-   \let\sffamily=\latinsffamily%
+-   \let\ttfamily=\latinttfamily%
+-   \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\normalfont%
+-   \normalfont}
+-\def\resetlatinfont{\latinnormalfont}
+ \newcommand*\settextfont[2][]{%
+-\newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}}
+-\def\setpersianfont{%
+-   \fontencoding{EU1}%
+-   \let\normalfont=\persianfont%
+-   \let\rmfamily=\persianfont%
+-   \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">reset at font</A>\normalfont%
+-   \normalfont}
+-\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">g at addto</A>@macro\document{%
+-\setpersianfont}
++\newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}
++\let\rmdefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
++  \normalfont
++}
+ \newcommand*\settxtmathfont[2][]{%
+ \newfontfamily\TXTmath[Mapping=txt2maths,#1]{#2}
+ }
+ \newcommand*\setlatintextfont[2][]{%
+-  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Mapping=tex-text,#1}{#2}%
+-  \let\rmdefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
+-  \normalfont}
+-\newcommand*\setlatinsansfont[2][]{%
+-  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Mapping=tex-text,#1}{#2}%
+-  \let\sfdefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
+-  \normalfont}
++\newfontfamily\latinfont[Mapping=tex-text,#1]{#2}
++}
++\let\setlatinsansfont\setsansfont
+ \let\setlatinmonofont\setmonofont
+ \newcommand*\defpersianfont[1]{%
+   \@ifnextchar[{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">defpersianfont at i</A>#1}{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">defpersianfont at i</A>#1[]}}
+@@ -104,10 +93,18 @@
+     \noexpand\DeclareRobustCommand\noexpand#1
+       {\noexpand\fontfamily{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>}\noexpand\selectfont}}%
+   \@tempa}
++\newcommand\persiansfdefault{}
++\newcommand\persianttdefault{}
+ \newcommand\iranicdefault{}
+ \newcommand\navardefault{}
+ \newcommand\pookdefault{}
+ \newcommand\sayehdefault{}
++\DeclareRobustCommand\persiansffamily
++        {\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">not at math</A>@alphabet\persiansffamily\mathpersiansf
++         \fontfamily\persiansfdefault\selectfont}
++\DeclareRobustCommand\persianttfamily
++        {\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">not at math</A>@alphabet\persianttfamily\mathpersiantt
++         \fontfamily\persianttdefault\selectfont}
+ \DeclareRobustCommand\iranicfamily
+         {\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">not at math</A>@alphabet\iranicfamily\mathiranic
+          \fontfamily\iranicdefault\selectfont}
+@@ -120,10 +117,20 @@
+ \DeclareRobustCommand\sayehfamily
+         {\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">not at math</A>@alphabet\sayehfamily\mathsayeh
+          \fontfamily\sayehdefault\selectfont}
++\DeclareTextFontCommand{\textpersiansf}{\persiansffamily}
++\DeclareTextFontCommand{\textpersiantt}{\persianttfamily}
+ \DeclareTextFontCommand{\textiranic}{\iranicfamily}
+ \DeclareTextFontCommand{\textnavar}{\navarfamily}
+ \DeclareTextFontCommand{\textpook}{\pookfamily}
+ \DeclareTextFontCommand{\textsayeh}{\sayehfamily}
++\newcommand*\setpersiansansfont[2][]{%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Script=Persian,Mapping=parsidigits,#1}{#2}%
++  \let\persiansfdefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
++  \normalfont}
++\newcommand*\setpersianmonofont[2][]{%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Script=Persian,Mapping=parsidigits,#1}{#2}%
++  \let\persianttdefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
++  \normalfont}
+ \newcommand*\setnavarfont[2][]{%
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Script=Persian,Mapping=parsidigits,#1}{#2}%
+   \let\navardefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
+@@ -140,8 +147,14 @@
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at fontspec</A>{Script=Persian,Mapping=parsidigits,#1}{#2}%
+   \let\iranicdefault\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">zf at family</A>
+   \normalfont}
+-\def\lr#1{\begingroup\beginL\resetlatinfont#1\endL\endgroup}
+-\def\rl#1{\begingroup\beginR\setpersianfont#1\endR\endgroup}
++\def\resetlatinfont{%
++\let\normalfont\latinfont%
++\latinfont}
++\def\setpersianfont{%
++\let\normalfont\persianfont%
++\persianfont}
++\def\lr#1{\begingroup\beginL\latinfont#1\endL\endgroup}
++\def\rl#1{\begingroup\beginR\persianfont#1\endR\endgroup}
+ \def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@Latintrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\resetlatinfont}
+ \def\endlatin{\par\egroup}
+ \def\persian{\bgroup\PersianAlphs\par\@RTLtrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotetrue</A>\setpersianfont}
+@@ -210,10 +223,12 @@
+   \let\firstmark\botmark
+ }
+ \newcommand\twocolumnstableofcontents{%
++\@ifpackageloaded{multicol}{%
+   \begin{multicols}{2}[\section*{\contentsname}]%
+     \small
+     \@starttoc{toc}%
+   \end{multicols}}
++{\PackageError{xepersian}{Oops! you should load multicol package before xepersian package for being able to use this command.}}}
+ \def\XePersian{\leavevmode$\smash{\hbox{X\lower.5ex
+   \hbox{\kern-.125em\reflect{E}}Persian}}$}
+ \def\figurename{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1588;&#1705;&#1604;\else Figure\fi}
+@@ -294,6 +309,7 @@
+    \let\@Alph\@latinAlph%
+ }
+ \PersianAlphs
++\@ifdefinitionfileloaded{loadingorder-bidi}{\input{loadingorder-bidi-xepersian.def}}{}
+ \@ifpackageloaded{listings}{\input{listings-xepersian.def}}{}
+ \@ifpackageloaded{algorithmic}{\input{algorithmic-xepersian.def}}{}
+ \@ifpackageloaded{algorithm}{\input{algorithm-xepersian.def}}{}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000112.html">[Xepersian-development] r145 - in trunk:	doc/xelatex/xepersian/samples tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000114.html">[Xepersian-development] r147 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r139 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-November/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r139%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911171143.nAHBhjNw009910%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000105.html">
+   <LINK REL="Next"  HREF="000107.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r139 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r139%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911171143.nAHBhjNw009910%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r139 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Tue Nov 17 12:43:45 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000105.html">[Xepersian-development] r138 - trunk/tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000107.html">[Xepersian-development] r140 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-11-17 12:43:38 +0100 (Tue, 17 Nov 2009)
+New Revision: 139
+
+Added:
+   trunk/tex/xelatex/xepersian/xepersian-doc.cls
+Log:
+added xepersian-doc.cls
+
+Added: trunk/tex/xelatex/xepersian/xepersian-doc.cls
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian-doc.cls	2009-11-17 11:11:54 UTC (rev 138)
++++ trunk/tex/xelatex/xepersian/xepersian-doc.cls	2009-11-17 11:43:38 UTC (rev 139)
+@@ -0,0 +1,153 @@
++%%
++%% This is file `xepersian-doc.cls',
++%% generated with the docstrip utility.
++%%
++%% The original source files were:
++%%
++%% xepersian.dtx  (with options: `xepersian-doc.cls')
++%% 
++%%   __________________________________
++%%   Copyright &#169; 2008-2010 Vafa Khalighi
++%% 
++%%   License information appended.
++%% 
++%% 
++\NeedsTeXFormat{LaTeX2e}
++\ProvidesClass{xepersian-doc}[2010/03/01 Class for typesetting xepersian documentation]
++\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
++\ProcessOptions
++\LoadClass[a4paper,12pt,twoside]{book}
++\RequirePackage[landscape,margin=1in,top=1in,bottom=1in]{geometry}
++\RequirePackage{xcolor}
++\RequirePackage[colorlinks,
++            plainpages=false,
++            linkcolor=black,
++            bookmarksopen]{hyperref}
++\RequirePackage{pifont}
++\RequirePackage{bbding}
++\RequirePackage[norotate,ttbnotitle,ttbnum]{flowfram}
++\definecolor{xepersianred}{rgb}{0.65,0.04,0.07}
++\definecolor{xepersiangreen}{rgb}{0,.43,0}
++\newlength{\leftwidth}
++\newlength{\rightwidth}
++\computeleftedgeodd{\leftwidth}
++\setlength{\leftwidth}{-\leftwidth}
++\addtolength{\leftwidth}{0.4\textwidth}
++\setlength{\rightwidth}{\paperwidth}
++\addtolength{\rightwidth}{-\leftwidth}
++\vtwotone[1]{\leftwidth}{xepersianred}{backleft}{\rightwidth}{xepersiangreen}{backright}
++\vtwotone[none]{\rightwidth}{xepersiangreen}{lastbackright}{\leftwidth}{xepersianred}{lastbackleft}
++\vtwotonetop[odd]{1cm}{\leftwidth}{xepersianred}{oddtopleft}{\rightwidth}{xepersiangreen}{oddtopright}
++\vtwotonetop[even]{1cm}{\rightwidth}{xepersiangreen}{eventopleft}{\leftwidth}{xepersianred}{eventopright}
++\setlength{\marginparwidth}{2cm}
++\newflowframe{0.6\textwidth}{\textheight}{0pt}{0pt}[main]
++\newdynamicframe{0.38\textwidth}{\textheight}{0.62\textwidth}{0pt}[chaphead]
++\setflowframe*{main}{evenx=0.4\textwidth}
++\setdynamicframe*{chaphead}{evenx=0pt,clear}
++\newstaticframe[none]{0.38\textwidth}{0.55\textheight}{0.62\textwidth}{0.45\textheight}[shapedt]
++\setstaticframe*{shapedt}{evenx=0pt}
++\newstaticframe[none]{0.38\textwidth}{0.45\textheight}{0.62\textwidth}{0pt}[shapedb]
++\setstaticframe*{shapedb}{evenx=0pt}
++\setflowframe*{main}{margin=inner}
++\dfchaphead*{chaphead}
++\appenddfminitoc*{chaphead}
++\renewcommand{\DFchapterstyle}[1]{%
++{\raggedleft\bfseries\Huge\color{blue}\thechapter. #1\par
++}}
++\renewcommand{\DFschapterstyle}[1]{{\raggedleft\bfseries\Huge\color{blue} #1\par
++}}
++\makethumbtabs{0.75in}
++\enableminitoc
++\setthumbtab{1}{backcolor=[rgb]{0.15,0.15,1}}
++\setthumbtab{2}{backcolor=[rgb]{0.2,0.2,1}}
++\setthumbtab{3}{backcolor=[rgb]{0.25,0.25,1}}
++\setthumbtab{4}{backcolor=[rgb]{0.3,0.3,1}}
++\setthumbtab{5}{backcolor=[rgb]{0.35,0.35,1}}
++\setthumbtab{6}{backcolor=[rgb]{0.4,0.4,1}}
++\setthumbtab{7}{backcolor=[rgb]{0.45,0.45,1}}
++\setthumbtab{8}{backcolor=[rgb]{0.5,0.5,1}}
++\newcommand{\thumbtabstyle}[1]{{\hypersetup{linkcolor=white}%
++\textbf{\large #1}}}
++\setthumbtab{all}{style=thumbtabstyle,textcolor=white}
++\pagestyle{plain}
++\makedfheaderfooter
++\newlength{\xoffset}
++\computerightedgeodd{\xoffset}
++\addtolength{\xoffset}{-2cm}
++\newlength{\yoffset}
++\computebottomedge{\yoffset}
++\newcommand{\footstyle}[1]{\bfseries\LARGE #1}
++\setdynamicframe*{footer}{oddx=\xoffset,y=\yoffset,width=2cm,height=2cm,
++backcolor=blue,textcolor=white,style=footstyle,pages=none}
++\computeleftedgeeven{\xoffset}
++\setdynamicframe*{footer}{evenx=\xoffset}
++\twocolumninarea[none]{0.6\textwidth}{\textheight}{0pt}{0pt}
++\newcounter{N}
++\newcounter{I}
++\setcounter{N}{\value{maxflow}}
++\addtocounter{N}{-2}
++\whiledo{\value{N}&lt;\value{maxflow}}{%
++\stepcounter{N}\stepcounter{I}
++\setflowframe{\value{N}}{label=oddcol\theI}}
++\twocolumninarea[none]{0.6\textwidth}{\textheight}{0.4\textwidth}{0pt}
++\setcounter{I}{0}
++\setcounter{N}{\value{maxflow}}
++\addtocounter{N}{-2}
++\whiledo{\value{N}&lt;\value{maxflow}}{%
++\stepcounter{N}\stepcounter{I}
++\setflowframe{\value{N}}{label=evencol\theI}}
++\renewenvironment{theindex}{%
++\setflowframe*{oddcol1,oddcol2}{pages=odd}%
++\setflowframe*{evencol1,evencol2}{pages=even}%
++\setdynamicframe*{chaphead}{clear=false}%
++\clearpage
++\mbox{}\framebreak\phantomsection
++\setflowframe*{main}{pages=none}%
++\setdynamiccontents*{chaphead}{\DFschapterstyle{\indexname}%
++\idxnav}%
++\addcontentsline{toc}{chapter}{\indexname}%
++\setlength{\parindent}{0pt}%
++\setlength{\parskip}{0pt plus .3pt}%
++\let\item\@idxitem
++}{%
++\setdynamicframe*{chaphead}{clear}%
++}
++\newcommand{\chapdesc}[1]{%
++\appenddynamiccontents*{chaphead}{\par
++\emph{#1}}}
++\renewenvironment{theindex}{%
++\setflowframe*{oddcol1,oddcol2}{pages=odd}%
++\setflowframe*{evencol1,evencol2}{pages=even}%
++\setdynamicframe*{chaphead}{clear=false}%
++\clearpage
++\mbox{}\framebreak\phantomsection
++\setflowframe*{main}{pages=none}%
++\setdynamiccontents*{chaphead}{\DFschapterstyle{\indexname}%
++\idxnav}%
++\addcontentsline{toc}{chapter}{\indexname}%
++\setlength{\parindent}{0pt}%
++\setlength{\parskip}{0pt plus .3pt}%
++\let\item\@idxitem
++}{%
++\setdynamicframe*{chaphead}{clear}%
++}
++\renewcommand\labelitemi{\HandRight}
++\renewcommand\labelitemii{\HandRightUp}
++\renewcommand\labelitemiii{\HandCuffRight}
++\renewcommand\labelitemiv{\HandPencilLeft}
++\endinput
++%% 
++%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
++%% 
++%% Distributable under the LaTeX Project Public License,
++%% version 1.3c or higher (your choice). The latest version of
++%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
++%% 
++%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
++%% by Vafa Khalighi.
++%% 
++%% 
++%% 
++%% 
++%%
++%% End of file `xepersian-doc.cls'.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000105.html">[Xepersian-development] r138 - trunk/tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000107.html">[Xepersian-development] r140 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

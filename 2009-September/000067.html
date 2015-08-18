@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r100 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-September/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r100%20-%20trunk&In-Reply-To=%3C200909121915.n8CJFHpk030968%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000066.html">
+   <LINK REL="Next"  HREF="000068.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r100 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r100%20-%20trunk&In-Reply-To=%3C200909121915.n8CJFHpk030968%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r100 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sat Sep 12 21:15:17 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000066.html">[Xepersian-development] r99 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000068.html">[Xepersian-development] r101 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-09-12 21:15:11 +0200 (Sat, 12 Sep 2009)
+New Revision: 100
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added support for breqn
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-12 06:11:09 UTC (rev 99)
++++ trunk/xepersian.dtx	2009-09-12 19:15:11 UTC (rev 100)
+@@ -75,6 +75,7 @@
+ \generate{\file{bidimoderncv-xepersian.def}{\from{xepersian.dtx}{bidimoderncv-xepersian.def}}}
+ \generate{\file{bookest-xepersian.def}{\from{xepersian.dtx}{bookest-xepersian.def}}}
+ \generate{\file{book-xepersian.def}{\from{xepersian.dtx}{book-xepersian.def}}}
++\generate{\file{breqn-xepersian.def}{\from{xepersian.dtx}{breqn-xepersian.def}}}
+ \generate{\file{footnote-bidi-xepersian.def}{\from{xepersian.dtx}{footnote-bidi-xepersian.def}}}
+ \generate{\file{localise-xepersian.def}{\from{xepersian.dtx}{localise-xepersian.def}}}
+ \generate{\file{commands-ltx.def}{\from{xepersian.dtx}{commands-ltx.def}}}
+@@ -162,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 99}
++\def\xepersianrevision{revision 100}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -285,12 +286,12 @@
+   \normalfont}
+ \def\lr#1{\begingroup\beginL\latinfont#1\endL\endgroup}
+ \def\rl#1{\begingroup\beginR\persianfont#1\endR\endgroup}
+-\def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\let\normalfont\latinfont\latinfont}
++\def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@Latintrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\let\normalfont\latinfont\latinfont}
+ \def\endlatin{\par\egroup}
+ \def\persian{\bgroup\PersianAlphs\par\@RTLtrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotetrue</A>\let\normalfont\persianfont\persianfont}
+ \def\endpersian{\par\egroup}
+-\def\Latin{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\par\LatinAlphs\@RTLfalse\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\let\normalfont\latinfont\latinfont\fi}
+-\def\Persian{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\relax\else\par\PersianAlphs\@RTLtrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotetrue</A>\let\normalfont\persianfont\persianfont\fi}
++\def\Latin{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\par\LatinAlphs\@RTLfalse\@Latintrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\let\normalfont\latinfont\latinfont\fi}
++\def\Persian{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\relax\else\par\PersianAlphs\@RTLtrue\@Latintfalse\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotetrue</A>\let\normalfont\persianfont\persianfont\fi}
+ \let\originaltoday=\today
+ \def\today{\lr{\originaltoday}}
+ \let\latintoday\today
+@@ -392,6 +393,7 @@
+ \@ifpackageloaded{algorithm}{\input{algorithm-xepersian.def}}{}
+ \@ifpackageloaded{backref}{\input{backref-xepersian.def}}{}
+ \@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
++\@ifpackageloaded{breqn}{\input{breqn-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
+ \@ifpackageloaded{minitoc}{\input{minitoc-xepersian.def}}{}
+ \@ifpackageloaded{tocloft}{\@ifclassloaded{memoir}{}{\input{tocloft-xepersian.def}}}{}
+@@ -489,7 +491,7 @@
+ % \part{bidibeamer-xepersian.def}
+ %    \begin{macrocode}
+ \def\familydefault{\rmdefault}
+-\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\let\normalfont\latinfont\latinfont}
++\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\let\normalfont\latinfont\latinfont}
+ \def\endlatin{\par\egroup}
+ \def\persian{\bgroup\PersianAlphs\par\raggedleft\@RTLtrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotetrue</A>\let\normalfont\persianfont\persianfont}
+ \def\endpersian{\par\egroup}
+@@ -553,6 +555,52 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/book-xepersian.def&gt;
++%&lt;*breqn-xepersian.def&gt;
++% \fi
++% \part{breqn-xepersian.def}
++%    \begin{macrocode}
++\def\@dmath[#1]{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
++  \everydisplay\expandafter{\the\everydisplay \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">display at setup</A>}%
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at noskipsec</A> \leavevmode \fi
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at inlabel</A> \leavevmode \global\@inlabelfalse \fi
++  \if\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at group</A>\else\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at prelim</A>\fi
++  \setkeys{breqn}{#1}%
++  \the\eqstyle
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at setnumber</A>
++  \begingroup
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at setup</A>@a
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at startup</A>
++}
++\def\@dgroup[#1]{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
++  \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at group</A>\@True \global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at GRP</A>@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">first at dmath</A>\@True
++  \global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">GRP at queue</A>\@emptytoks \global\setbox\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">GRP at box</A>\box\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">voidb at x</A>
++  \global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">GRP at label</A>\@empty
++  \global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at wdL</A>\z@\global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at wdR</A>\z@\global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at wdT</A>\z@
++  \global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at linewidth</A>\z@\global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at wdNum</A>\z@
++  \global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at eqs</A>@numbered\@False
++  \global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at aligned</A>\@True
++  \global\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at shiftnumber</A>\@False
++  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at prelim</A>
++  \setkeys{breqn}{#1}%
++  \if\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at hasNumber</A> \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">grp at setnumber</A> \fi
++}
++\def\@dseries[#1]{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
++  \let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">display at setup</A>\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">dseries at display</A>@setup
++  % Question: should this be the default for dseries???
++  \global\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at wdCond</A>\z@
++  \@dmath[layout={M},#1]%
++  \mathsurround\z@\@@math \penalty\@Mi
++  \let\endmath\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ends at math</A>
++  \def\premath{%
++    \ifdim\lastskip&lt;.3em \unskip
++    \else\ifnum\lastpenalty&lt;\@M \dquad\fi\fi
++}%
++  \def\postmath{\unpenalty\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">eq at addpunct</A> \penalty\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">intermath at penalty</A> \dquad \@ignoretrue}%
++\ignorespaces
++}
++%    \end{macrocode}
++% \iffalse
++%&lt;/breqn-xepersian.def&gt;
+ %&lt;*footnote-bidi-xepersian.def&gt;
+ % \fi
+ % \part{footnote-bidi-xepersian.def}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000066.html">[Xepersian-development] r99 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000068.html">[Xepersian-development] r101 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

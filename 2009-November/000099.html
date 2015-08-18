@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r132 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-November/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r132%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911120109.nAC19w4u010784%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000098.html">
+   <LINK REL="Next"  HREF="000100.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r132 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r132%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911120109.nAC19w4u010784%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r132 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Thu Nov 12 02:09:58 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000098.html">[Xepersian-development] r131 - trunk/tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000100.html">[Xepersian-development] r133 - / website
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#99">[ date ]</a>
+              <a href="thread.html#99">[ thread ]</a>
+              <a href="subject.html#99">[ subject ]</a>
+              <a href="author.html#99">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-11-12 02:09:51 +0100 (Thu, 12 Nov 2009)
+New Revision: 132
+
+Added:
+   trunk/tex/xelatex/xepersian/bidicode-xepersian.def
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+added new definition file bidicode-xepersian.def
+
+Added: trunk/tex/xelatex/xepersian/bidicode-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/bidicode-xepersian.def	2009-11-11 14:59:01 UTC (rev 131)
++++ trunk/tex/xelatex/xepersian/bidicode-xepersian.def	2009-11-12 01:09:51 UTC (rev 132)
+@@ -0,0 +1,32 @@
++%%
++%% This is file `bidicode-xepersian.def',
++%% generated with the docstrip utility.
++%%
++%% The original source files were:
++%%
++%% xepersian.dtx  (with options: `bidicode-xepersian.def')
++%% 
++%%   __________________________________
++%%   Copyright &#169; 2008-2010 Vafa Khalighi
++%% 
++%%   License information appended.
++%% 
++%% 
++\ProvidesFile{bidicode-xepersian.def}[2010/03/01 v0.1 Persian captions for bidicode package]
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">lst at UserCommand</A>\lstlistlistingname{&#1601;&#1607;&#1585;&#1587;&#1578; &#1605;&#1579;&#1575;&#1604;&#8204;&#1607;&#1575;} % \lstlistoflistings
++\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">lst at UserCommand</A>\lstlistingname{&#1605;&#1579;&#1575;&#1604;}
++%% 
++%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
++%% 
++%% Distributable under the LaTeX Project Public License,
++%% version 1.3c or higher (your choice). The latest version of
++%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
++%% 
++%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
++%% by Vafa Khalighi.
++%% 
++%% 
++%% 
++%% 
++%%
++%% End of file `bidicode-xepersian.def'.
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-11 14:59:01 UTC (rev 131)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-12 01:09:51 UTC (rev 132)
+@@ -14,7 +14,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 131}
++\def\xepersianrevision{revision 132}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+@@ -299,6 +299,7 @@
+ \@ifpackageloaded{algorithm}{\input{algorithm-xepersian.def}}{}
+ \@ifpackageloaded{backref}{\input{backref-xepersian.def}}{}
+ \@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
++\@ifpackageloaded{bidicode}{\input{bidicode-xepersian.def}}{}
+ \@ifpackageloaded{breqn}{\input{breqn-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
+ \@ifpackageloaded{hyperref}{\input{hyperref-xepersian.def}}{}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000098.html">[Xepersian-development] r131 - trunk/tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000100.html">[Xepersian-development] r133 - / website
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#99">[ date ]</a>
+              <a href="thread.html#99">[ thread ]</a>
+              <a href="subject.html#99">[ subject ]</a>
+              <a href="author.html#99">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

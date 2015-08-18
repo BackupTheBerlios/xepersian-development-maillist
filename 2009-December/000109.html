@@ -1,0 +1,426 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r142 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-December/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r142%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200912250952.nBP9q0AZ011180%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r142 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r142%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200912250952.nBP9q0AZ011180%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r142 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Fri Dec 25 10:52:00 CET 2009</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109">[ date ]</a>
+              <a href="thread.html#109">[ thread ]</a>
+              <a href="subject.html#109">[ subject ]</a>
+              <a href="author.html#109">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-12-25 10:51:45 +0100 (Fri, 25 Dec 2009)
+New Revision: 142
+
+Removed:
+   trunk/tex/xelatex/xepersian/bidibeamer-xepersian.def
+   trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def
+   trunk/tex/xelatex/xepersian/xepersian-thesis-xepersian.def
+   trunk/tex/xelatex/xepersian/xepersian-thesis.cls
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+some cleanup
+
+Deleted: trunk/tex/xelatex/xepersian/bidibeamer-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/bidibeamer-xepersian.def	2009-11-17 14:10:43 UTC (rev 141)
++++ trunk/tex/xelatex/xepersian/bidibeamer-xepersian.def	2009-12-25 09:51:45 UTC (rev 142)
+@@ -1,46 +0,0 @@
+-%%
+-%% This is file `bidibeamer-xepersian.def',
+-%% generated with the docstrip utility.
+-%%
+-%% The original source files were:
+-%%
+-%% xepersian.dtx  (with options: `bidibeamer-xepersian.def')
+-%% 
+-%%   __________________________________
+-%%   Copyright &#169; 2008-2010 Vafa Khalighi
+-%% 
+-%%   License information appended.
+-%% 
+-%% 
+-\ProvidesFile{bidibeamer-xepersian.def}[2010/03/01 v0.2 adaptations for bidibeamer class]
+-\def\familydefault{\sfdefault}
+-\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\resetlatinfont}
+-\def\endlatin{\par\egroup}
+-\def\persian{\bgroup\PersianAlphs\par\raggedleft\@RTLtrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotetrue</A>\setpersianfont}
+-\def\endpersian{\par\egroup}
+-\def\biditheoremname{&#1602;&#1590;&#1740;&#1607;}
+-\def\bidicorollaryname{&#1606;&#1578;&#1740;&#1580;&#1607;}
+-\def\bidifactname{&#1581;&#1602;&#1740;&#1602;&#1578;}
+-\def\bidilemmaname{&#1604;&#1605;}
+-\def\bidiproblemname{&#1605;&#1587;&#1574;&#1604;&#1607;}
+-\def\bidisolutionname{&#1662;&#1575;&#1587;&#1582;}
+-\def\bididefinitionname{&#1578;&#1593;&#1585;&#1740;&#1601;}
+-\def\bididefinitionsname{&#1578;&#1593;&#1585;&#1740;&#1601;&#8204;&#1607;&#1575;}
+-\def\bidiexamplename{&#1605;&#1579;&#1575;&#1604;}
+-\def\bidiexamplesname{&#1605;&#1579;&#1575;&#1604;&#8204;&#1607;&#1575;}
+-\def\bidiproofname{&#1575;&#1579;&#1576;&#1575;&#1578;}
+-%% 
+-%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+-%% 
+-%% Distributable under the LaTeX Project Public License,
+-%% version 1.3c or higher (your choice). The latest version of
+-%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
+-%% 
+-%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
+-%% by Vafa Khalighi.
+-%% 
+-%% 
+-%% 
+-%% 
+-%%
+-%% End of file `bidibeamer-xepersian.def'.
+
+Deleted: trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def	2009-11-17 14:10:43 UTC (rev 141)
++++ trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def	2009-12-25 09:51:45 UTC (rev 142)
+@@ -1,31 +0,0 @@
+-%%
+-%% This is file `bidimoderncv-xepersian.def',
+-%% generated with the docstrip utility.
+-%%
+-%% The original source files were:
+-%%
+-%% xepersian.dtx  (with options: `bidimoderncv-xepersian.def')
+-%% 
+-%%   __________________________________
+-%%   Copyright &#169; 2008-2010 Vafa Khalighi
+-%% 
+-%%   License information appended.
+-%% 
+-%% 
+-\ProvidesFile{bidimoderncv-xepersian.def}[2010/03/01 v0.1 adaptations for bidimoderncv class]
+-\def\refname{&#1578;&#1571;&#1604;&#1740;&#1601;&#1575;&#1578;}
+-%% 
+-%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+-%% 
+-%% Distributable under the LaTeX Project Public License,
+-%% version 1.3c or higher (your choice). The latest version of
+-%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
+-%% 
+-%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
+-%% by Vafa Khalighi.
+-%% 
+-%% 
+-%% 
+-%% 
+-%%
+-%% End of file `bidimoderncv-xepersian.def'.
+
+Deleted: trunk/tex/xelatex/xepersian/xepersian-thesis-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian-thesis-xepersian.def	2009-11-17 14:10:43 UTC (rev 141)
++++ trunk/tex/xelatex/xepersian/xepersian-thesis-xepersian.def	2009-12-25 09:51:45 UTC (rev 142)
+@@ -1,37 +0,0 @@
+-%%
+-%% This is file `xepersian-thesis-xepersian.def',
+-%% generated with the docstrip utility.
+-%%
+-%% The original source files were:
+-%%
+-%% xepersian.dtx  (with options: `xepersian-thesis-xepersian.def')
+-%% 
+-%%   __________________________________
+-%%   Copyright &#169; 2008-2010 Vafa Khalighi
+-%% 
+-%%   License information appended.
+-%% 
+-%% 
+-\ProvidesFile{xepersian-thesis-xepersian.def}[2010/03/01 v0.1 adaptations for xepersian-thesis class]
+-\renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+-\renewcommand\appendix{\par
+-  \setcounter{chapter}{0}%
+-  \setcounter{section}{0}%
+-  \gdef\@chapapp{\appendixname}%
+-  \gdef\thechapter{\@harfi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at chapter</A>}
+-}%end appendix
+-%% 
+-%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+-%% 
+-%% Distributable under the LaTeX Project Public License,
+-%% version 1.3c or higher (your choice). The latest version of
+-%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
+-%% 
+-%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
+-%% by Vafa Khalighi.
+-%% 
+-%% 
+-%% 
+-%% 
+-%%
+-%% End of file `xepersian-thesis-xepersian.def'.
+
+Deleted: trunk/tex/xelatex/xepersian/xepersian-thesis.cls
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian-thesis.cls	2009-11-17 14:10:43 UTC (rev 141)
++++ trunk/tex/xelatex/xepersian/xepersian-thesis.cls	2009-12-25 09:51:45 UTC (rev 142)
+@@ -1,174 +0,0 @@
+-%%
+-%% This is file `xepersian-thesis.cls',
+-%% generated with the docstrip utility.
+-%%
+-%% The original source files were:
+-%%
+-%% xepersian.dtx  (with options: `xepersian-thesis.cls')
+-%% 
+-%%   __________________________________
+-%%   Copyright &#169; 2008-2010 Vafa Khalighi
+-%% 
+-%%   License information appended.
+-%% 
+-%% 
+-\NeedsTeXFormat{LaTeX2e}
+-\ProvidesClass{xepersian-thesis}
+-              [2009/01/05 v0.1
+- Persian thesis document class in XeLaTeX]
+-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+-\ProcessOptions
+-\LoadClass{report}
+-\def\university#1{\gdef\@university{#1}}
+-\def\department#1{\gdef\@department{#1}}
+-\def\degree#1{\gdef\@degree{#1}}
+-\def\thesisdate#1{\gdef\@thesisdate{#1}}
+-\def\supervisor#1{\gdef\@supervisor{#1}}
+-\def\city#1{\gdef\@city{#1}}
+-
+-\def\latintitle#1{\gdef\@latintitle{#1}}
+-\def\latinauthor#1{\gdef\@latinauthor{#1}}
+-\def\latindegree#1{\gdef\@latindegree{#1}}
+-\def\latindepartment#1{\gdef\@latindepartment{#1}}
+-\def\latinthesisdate#1{\gdef\@latinthesisdate{#1}}
+-\def\latinsupervisor#1{\gdef\@latinsupervisor{#1}}
+-\def\latincity#1{\gdef\@latincity{#1}}
+-\def\latinuniversity#1{\gdef\@latinuniversity{#1}}
+-
+-\def\maketitle{\begin{titlepage}
+-{\includegraphics{logo}}
+-\vskip 1.5cm
+-{\Huge\bfseries \@title}\par
+-\vskip 1cm
+-{\large%
+-  \by}\par
+-{\Large\bfseries \@author}\par
+-\vskip 5mm
+-{\large\bfseries\writtenfor
+-\par
+-\@degree}
+-\par
+-\vskip 1cm
+-{\large
+-  \undersupervision\par
+-\Large\bfseries \@supervisor}
+-\par
+-\vskip 1cm
+-{\large \@thesisdate}
+-\par
+-\vskip 1cm
+-{\large\bfseries\departmentof\space\@department}
+-\par
+-{\large\bfseries\universityof\space\@university \par\@city}
+-\vfill
+-\end{titlepage}%
+-}
+-
+-\def\abstractpage{\newpage
+-\thispagestyle{empty}
+-\vskip 15mm
+-\begin{center}{\large{\bfseries \@title} \\}
+-\end{center}
+-\par
+-\begin{abstract}}
+-\def\endabstractpage{\end{abstract}
+-\newpage
+-}
+-
+-\def\latinabstract{\newpage
+-\thispagestyle{empty}
+-\vskip 15mm
+-\begin{center}{\Large\bfseries \@latintitle \\[5mm]}
+-{\bfseries Abstract}
+-\end{center}
+-\vspace{5mm}}
+-
+-\def\endlatinabstract{\newpage}
+-
+-\def\acknowledgementpage{\newpage
+-\thispagestyle{empty}
+-\centerline{\Large \bfseries\acknowledgementname}
+-\vspace{1cm}
+-\par\noindent}
+-\def\endacknowledgementpage{\newpage}
+-
+-\def\titlepage{\newpage\centering
+-  \thispagestyle{empty}
+-  \parindent 0pt \parskip 10pt plus 1fil minus 1fil
+-  \def\baselinestretch{1}\@normalsize\vbox to \vsize\bgroup\vbox to 9in\bgroup}
+-\def\endtitlepage{\par\kern 0pt\egroup\vss\egroup\newpage}
+-
+-\def\signature#1#2{\par\noindent#1\dotfill\null\\*
+-  {\raggedright #2\par}}
+-
+-\def\abstract{\subsection*{\abstractname}\small
+-\@normalsize}
+-\def\endabstract{\par}
+-
+-\pagenumbering{harfi}
+-\let\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ol at chapter</A>\@chapter
+-\def\@chapter{%
+-  \ifnum\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at chapter</A>=0 \pagenumbering{arabic}\setcounter{page}{1}\fi
+-  \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ol at chapter</A>}
+-
+-\def\keywords#1{\par \vspace{5mm}
+-{\textbf{&#1608;&#1575;&#1688;&#1607;&#8204;&#1607;&#1575;&#1740; &#1705;&#1604;&#1740;&#1583;&#1740;:}} {\textit{ #1}}}
+-
+-\def\latinkeywords#1{\par \vspace{5mm}
+-\noindent {\textbf{Keywords:}} {\textit{ #1}}}
+-
+-\font\titlefont=cmssbx10 scaled 2074
+-\font\supervisorfont=cmbxti10
+-\def\makelatintitle{\begin{titlepage}
+-{\includegraphics{logo}}
+-\vskip 1.5cm
+-\addtolength{\baselineskip}{5mm}
+-{\titlefont \@latintitle} \par
+-\addtolength{\baselineskip}{-5mm}
+-\vskip 1cm
+-{\bfseries\latinby}\par
+-{\Large\bfseries \@latinauthor}\par
+-\vskip 5mm
+-{\latinwrittenfor\par
+-\large\@latindegree}
+-\par
+-\vskip 1cm
+-Under supervision of \\
+-{\supervisorfont\@latinsupervisor}
+-\par
+-\vskip 1cm
+-{\@latinthesisdate}
+-\par
+-\vskip 1cm
+-\large\bfseries
+-\@latindepartment\space Department
+-\par
+-\@latinuniversity \par\@latincity
+-\vfill
+-\end{titlepage}%
+-}
+-
+-\def\acknowledgementname{&#1602;&#1583;&#1585;&#1583;&#1575;&#1606;&#1740;}
+-\def\by{&#1578;&#1608;&#1587;&#1591;}
+-\def\writtenfor{  &#1585;&#1587;&#1575;&#1604;&#1607;&#1620; &#1575;&#1585;&#1575;&#1574;&#1607; &#1588;&#1583;&#1607; &#1576;&#1607; &#1593;&#1606;&#1608;&#1575;&#1606; &#1576;&#1582;&#1588;&#1740; &#1575;&#1586; &#1605;&#1604;&#1586;&#1608;&#1605;&#1575;&#1578; &#1576;&#1585;&#1575;&#1740; &#1583;&#1585;&#1740;&#1575;&#1601;&#1578; &#1583;&#1585;&#1580;&#1607;&#1620;}
+-\def\undersupervision{&#1586;&#1740;&#1585; &#1606;&#1592;&#1585;}
+-\def\departmentof{&#1583;&#1575;&#1606;&#1588;&#1705;&#1583;&#1607;&#1620;}
+-\def\universityof{&#1583;&#1575;&#1606;&#1588;&#1711;&#1575;&#1607;}
+-\def\latinby{by}
+-\def\latinwrittenfor{Submitted in Partial Fulfillment\\ of the Requirements\\ for the Degree of}
+-\def\latinundersupervision{Under supervision of}
+-%% 
+-%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
+-%% 
+-%% Distributable under the LaTeX Project Public License,
+-%% version 1.3c or higher (your choice). The latest version of
+-%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
+-%% 
+-%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
+-%% by Vafa Khalighi.
+-%% 
+-%% 
+-%% 
+-%% 
+-%%
+-%% End of file `xepersian-thesis.cls'.
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-17 14:10:43 UTC (rev 141)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2009-12-25 09:51:45 UTC (rev 142)
+@@ -14,15 +14,15 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 141}
++\def\xepersianrevision{revision 142}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+-\RequirePackage[RTLdocument]{bidi}
+ \RequirePackage{fontspec}
+ \RequirePackage{xepersian-persiancal}
+ \RequirePackage{xepersian-mathsdigitspec}
+ \RequirePackage{etoolbox}
++\RequirePackage[RTLdocument]{bidi}
+ \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">g at addto</A>@macro\document{%
+ \special{pdf: docinfo &lt;&lt;
+ /Creator (X&#8707;Persian \xepersianversion\space &lt;\xepersianrevision&gt; Copyright &#169; 2008-2010 Vafa Khalighi)
+@@ -309,19 +309,16 @@
+ \@ifpackageloaded{tocloft}{\@ifclassloaded{memoir}{}{\input{tocloft-xepersian.def}}}{}
+ \@ifclassloaded{article}{\input{article-xepersian.def}}{}
+ \@ifclassloaded{amsart}{\input{amsart-xepersian.def}}{}
+-\@ifclassloaded{bidimoderncv}{\input{bidimoderncv-xepersian.def}}{}
+ \@ifclassloaded{report}{\input{report-xepersian.def}}{}
+ \@ifclassloaded{rapport3}{\input{rapport3-xepersian.def}}{}
+ \@ifclassloaded{scrartcl}{\input{scrartcl-xepersian.def}}{}
+ \@ifclassloaded{scrbook}{\input{scrbook-xepersian.def}}{}
+ \@ifclassloaded{scrreprt}{\input{scrreprt-xepersian.def}}{}
+-\@ifclassloaded{xepersian-thesis}{\input{xepersian-thesis-xepersian.def}}{}
+ \@ifclassloaded{amsbook}{\input{amsbook-xepersian.def}}{}
+ \@ifclassloaded{bookest}{\input{bookest-xepersian.def}}{}
+ \@ifclassloaded{extbook}{\input{extbook-xepersian.def}}{}
+ \@ifclassloaded{book}{\input{book-xepersian.def}}{}
+ \@ifclassloaded{refrep}{\input{refrep-xepersian.def}}{}
+-\@ifclassloaded{bidibeamer}{\input{bidibeamer-xepersian.def}}{}
+ \@ifclassloaded{memoir}{\input{memoir-xepersian.def}}{}
+ \DeclareOption{Kashida}{\input{kashida-xepersian.def}}
+ \DeclareOption{localise}{\input{localise-xepersian.def}}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109">[ date ]</a>
+              <a href="thread.html#109">[ thread ]</a>
+              <a href="subject.html#109">[ subject ]</a>
+              <a href="author.html#109">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

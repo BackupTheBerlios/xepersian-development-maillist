@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r153 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r153%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001061130.o06BUent005290%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000119.html">
+   <LINK REL="Next"  HREF="000121.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r153 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r153%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001061130.o06BUent005290%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r153 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Wed Jan  6 12:30:40 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000119.html">[Xepersian-development] r152 - trunk/tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000121.html">[Xepersian-development] r154 - in trunk: doc/xelatex/xepersian	tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-01-06 12:30:35 +0100 (Wed, 06 Jan 2010)
+New Revision: 153
+
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+add small caps font too for default latin  font
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-06 11:08:49 UTC (rev 152)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-06 11:30:35 UTC (rev 153)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 152}
++\def\xepersianrevision{revision 153}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+@@ -51,7 +51,7 @@
+ \fi}
+ \AtBeginDocument{\ifdefined\latinfont\relax\else%
+ \PackageInfo{xepersian}{&#8220;You have not specified any font for the Latin texts of the document and so the default TeX fonts will be used for the Latin texts of the document. If you would like to have any other font as the font of the Latin texts, then please specify a font for the Latin texts of the document by using \setlatintextfont\space CS, and then try to run xelatex on your document again&#8221;}%
+-\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic}]{lmroman10-regular}
++\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic},SmallCapsFont={lmromancaps10-regular}]{lmroman10-regular}
+ \fi}
+ \AtBeginDocument{\ifdefined\decimalseparator\relax\else%
+ \PackageInfo{xepersian}{&#8220;You have not specified any font for the digits in maths mode and so the digits in maths mode will appear Latin. If you would like to have Persian digits in maths mode, then please specify a font for the digits in maths mode by using \setdigitfont\space CS, and then try to run xelatex on your document again&#8221;}%
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000119.html">[Xepersian-development] r152 - trunk/tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000121.html">[Xepersian-development] r154 - in trunk: doc/xelatex/xepersian	tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

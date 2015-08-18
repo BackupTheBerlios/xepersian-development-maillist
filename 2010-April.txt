@@ -1,0 +1,18 @@
+From vafa at mail.berlios.de  Sun Apr  4 13:24:48 2010
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 4 Apr 2010 13:24:48 +0200
+Subject: [Xepersian-development] r172 - /
+Message-ID: <201004041124.o34BOlSe020152@sheep.berlios.de>
+
+Author: vafa
+Date: 2010-04-04 13:24:42 +0200 (Sun, 04 Apr 2010)
+New Revision: 172
+
+Removed:
+   trunk/
+   website/
+Log:
+
+
+
+

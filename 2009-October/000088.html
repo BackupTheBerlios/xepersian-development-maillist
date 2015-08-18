@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r121 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r121%20-%20trunk&In-Reply-To=%3C200910010522.n915MuJg002746%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000089.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r121 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r121%20-%20trunk&In-Reply-To=%3C200910010522.n915MuJg002746%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r121 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Thu Oct  1 07:22:56 CEST 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000089.html">[Xepersian-development] r122 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-10-01 07:22:48 +0200 (Thu, 01 Oct 2009)
+New Revision: 121
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+liitle extra additions
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-29 18:16:55 UTC (rev 120)
++++ trunk/xepersian.dtx	2009-10-01 05:22:48 UTC (rev 121)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 120}
++\def\xepersianrevision{revision 121}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -475,6 +475,7 @@
+ % \fi
+ % \part{algorithmic-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{algorithmic-xepersian.def}[2010/03/01 v0.2 adaptations for algorithmic package]
+ \def\algorithmicrequire{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\textbf{&#1608;&#1585;&#1608;&#1583;&#1740;:}\else\textbf{Require:}\fi}
+ \def\algorithmicensure{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\textbf{&#1582;&#1585;&#1608;&#1580;&#1740;:}\else\textbf{Ensure:}\fi}
+ %    \end{macrocode}
+@@ -484,6 +485,7 @@
+ % \fi
+ % \part{algorithm-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{algorithm-xepersian.def}[2010/03/01 v0.2 adaptations for algorithm package]
+ \def\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ALG at name</A>{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1575;&#1604;&#1711;&#1608;&#1585;&#1740;&#1578;&#1605;\else Algorithm\fi}
+ \def\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ALGS at name</A>{&#1575;&#1604;&#1711;&#1608;&#1585;&#1740;&#1578;&#1605;&#8204;&#1607;&#1575;}
+ \def\listalgorithmname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1604;&#1740;&#1587;&#1578; \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ALGS at name</A>\else List of \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">ALG at name</A> s\fi}
+@@ -494,6 +496,7 @@
+ % \fi
+ % \part{amsart-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{amsart-xepersian.def}[2010/03/01 v0.1 adaptations for amsart class]
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ \renewcommand\appendix{\par
+   \setcounter{section}{0}%
+@@ -506,6 +509,7 @@
+ % \fi
+ % \part{amsbook-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{amsbook-xepersian.def}[2010/03/01 v0.2 adaptations for amsbook class]
+ \def\frontmatter{\cleardoublepage\pagenumbering{harfi}}
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ %to make appendix numbering persian
+@@ -522,6 +526,7 @@
+ % \fi
+ % \part{article-xepersian-def}
+ %    \begin{macrocode}
++\ProvidesFile{article-xepersian.def}[2010/03/01 v0.1 adaptations for standard article class]
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ \renewcommand\appendix{\par
+   \setcounter{section}{0}%
+@@ -534,6 +539,7 @@
+ % \fi
+ % \part{backref-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{backref-xepersian.def}[2010/03/01 v0.1 adaptations for backref package]
+ \def\backrefpagesname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1589;&#1601;&#1581;&#1575;&#1578;\else pages\fi}
+ %    \end{macrocode}
+ % \iffalse
+@@ -542,6 +548,7 @@
+ % \fi
+ % \part{bidibeamer-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{bidibeamer-xepersian.def}[2010/03/01 v0.2 adaptations for bidibeamer class]
+ \def\familydefault{\sfdefault}
+ \def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">RTL at footnotefalse</A>\resetlatinfont}
+ \def\endlatin{\par\egroup}
+@@ -565,6 +572,7 @@
+ % \fi
+ % \part{bidimoderncv-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{bidimoderncv-xepersian.def}[2010/03/01 v0.1 adaptations for bidimoderncv class]
+ \def\refname{&#1578;&#1571;&#1604;&#1740;&#1601;&#1575;&#1578;}
+ %    \end{macrocode}
+ % \iffalse
+@@ -573,6 +581,7 @@
+ % \fi
+ % \part{bookest-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{bookest-xepersian.def}[2010/03/01 v0.1 adaptations for bookest class]
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ %to make appendix numbering persian
+ \renewcommand\appendix{\par
+@@ -588,6 +597,7 @@
+ % \fi
+ % \part{book-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{book-xepersian.def}[2010/03/01 v0.1 adaptations for standard book class]
+ \renewcommand\frontmatter{%
+     \cleardoublepage
+   \@mainmatterfalse
+@@ -611,6 +621,7 @@
+ % \fi
+ % \part{breqn-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{breqn-xepersian.def}[2010/03/01 v0.1 adaptations for breqn package]
+ \def\@dmath[#1]{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A>\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
+   \everydisplay\expandafter{\the\everydisplay \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">display at setup</A>}%
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at noskipsec</A> \leavevmode \fi
+@@ -657,6 +668,7 @@
+ % \fi
+ % \part{footnote-bidi-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{footnote-xepersian.def}[2010/03/01 v0.2 footnote macros for xepersian package]
+ \long\def\@footnotetext#1{%
+     \begingroup
+     \setbox\footins
+@@ -748,6 +760,7 @@
+ % \fi
+ % \part{localise-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{localise-xepersian.def}[2010/03/01 v0.2 Persian localisation of LaTeX2e]
+ \catcode`&#8204;=11
+ \newcommand\eqcommand[2][]{\let#1=#2}
+ \newcommand\eqenvironment[2][]{\newenvironment{#1}{\begin{#2}}{\end{#2}}}
+@@ -763,6 +776,7 @@
+ % \fi
+ % \part{commands-ltx.def}
+ %    \begin{macrocode}
++\ProvidesFile{commands-ltx.def}[2010/03/01 v0.2 Persian localisation of LaTeX2e commands]
+ \eqcommand[\&#1662;&#1585;&#1588;&#8204;&#1705;&#1608;&#1578;&#1575;&#1607;&#8204;&#1576;&#1575;&#1604;&#1575;&#1740;&#8204;&#1606;&#1605;&#1575;&#1740;&#1588;]{\abovedisplayshortskip}
+ \eqcommand[\&#1662;&#1585;&#1588;&#8204;&#1576;&#1575;&#1604;&#1575;&#1740;&#8204;&#1606;&#1605;&#1575;&#1740;&#1588;]{\abovedisplayskip}
+ \eqcommand[\&#1606;&#1575;&#1605;&#8204;&#1670;&#1705;&#1740;&#1583;&#1607;]{\abstractname}
+@@ -1561,7 +1575,7 @@
+ % \fi
+ % \part{commands-xepersian.def}
+ %    \begin{macrocode}
+-
++\ProvidesFile{commands-xepersian.def}[2010/03/01 v0.0 Persian localisation of XePersian commands]
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/commands-xepersian.def&gt;
+@@ -1569,6 +1583,7 @@
+ % \fi
+ % \part{enumerate-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{enumerate-xepersian.def}[2010/03/01 v0.1 adaptations for enumerate package]
+ \def\@enloop@{%
+   \ifx &#1575;\@entemp         \def\@tempa{\@enLabel\harfi  }\else
+   \ifx &#1740;\@entemp         \def\@tempa{\@enLabel\adadi  }\else
+@@ -1592,6 +1607,7 @@
+ % \fi
+ % \part{minitoc-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{minitoc-xepersian.def}[2010/03/01 v0.1 bilingual captions for minitoc package]
+ \def\ptctitle{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1607;&#1585;&#1587;&#1578; &#1605;&#1591;&#1575;&#1604;&#1576;\else Table of Contents\fi}%
+ \def\plftitle{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1604;&#1740;&#1587;&#1578; &#1578;&#1589;&#1575;&#1608;&#1740;&#1585;\else List of Figures\fi}%
+ \def\plttitle{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1604;&#1740;&#1587;&#1578; &#1580;&#1583;&#1575;&#1608;&#1604;\else List of Tables\fi}%
+@@ -1608,6 +1624,7 @@
+ % \fi
+ % \part{environments-ltx.def}
+ %    \begin{macrocode}
++\ProvidesFile{environments-ltx.def}[2010/03/01 v0.1 Persian localisation of LaTeX2e environments]
+ \eqenvironment[&#1670;&#1705;&#1740;&#1583;&#1607;]{abstract}
+ %\eqenvironment[]{align}
+ %\eqenvironment[]{alignat}
+@@ -1677,7 +1694,7 @@
+ % \fi
+ % \part{environments-xepersian.def}
+ %    \begin{macrocode}
+-
++\ProvidesFile{environments-xepersian.def}[2010/03/01 v0.1 Persian localisation of XePersian and bidi environments]
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/environments-xepersian.def&gt;
+@@ -1685,6 +1702,7 @@
+ % \fi
+ % \part{extbook-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{extbook-xepersian.def}[2010/03/01 v0.1 adaptations for extbook class]
+ \renewcommand\frontmatter{%
+     \cleardoublepage
+   \@mainmatterfalse
+@@ -1708,6 +1726,7 @@
+ % \fi
+ % \part{hyperref-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{hyperref-xepersian.def}[2010/03/01 v0.1 bilingual captions for hyperref package]
+   \def\equationautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1605;&#1593;&#1575;&#1583;&#1604;&#1607;\else Equation\fi}%
+   \def\footnoteautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1606;&#1608;&#1740;&#1587;\else footnote\fi}%
+   \def\itemautorefname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1602;&#1585;&#1607;\else item\fi}%
+@@ -1731,6 +1750,7 @@
+ % \fi
+ % \part{kashida-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{kashida-xepersian.def}[2010/03/01 v0.1 implementation of Kashida for xepersian package]
+ \chardef\zwj=&quot;200D % zero-width joiner
+ \chardef\ksh=&quot;0640 % kashida
+ 
+@@ -1779,6 +1799,7 @@
+ % \fi
+ % \part{listings-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{listings-xepersian.def}[2010/03/01 v0.1 bilingual captions for listings package]
+ \def\lstlistingname{&#1576;&#1585;&#1606;&#1575;&#1605;&#1607;&#1620;}
+ \def\lstlistlistingname{&#1601;&#1607;&#1585;&#1587;&#1578; &#1576;&#1585;&#1606;&#1575;&#1605;&#1607;&#8204;&#1607;&#1575;}
+ %    \end{macrocode}
+@@ -1788,6 +1809,7 @@
+ % \fi
+ % \part{memoir-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{memoir-xepersian.def}[2010/03/01 v0.1 adaptations for memoir class]
+ \renewcommand{\@memfront}{%
+   \@smemfront\pagenumbering{harfi}}
+ \renewcommand{\setthesection}{\thechapter\@SepMark\harfi{section}}
+@@ -1806,6 +1828,7 @@
+ % \fi
+ % \part{misccommandsenvironments-ltx.def}
+ %    \begin{macrocode}
++\ProvidesFile{misccommandsenvironments-ltx.def}[2010/03/01 v0.1 Persian localisation of LaTeX2e miscellaneous commands and environments]
+ \eqcommand[\&#1606;&#1608;&#1588;&#1578;&#1575;&#1585;]{\document}
+ \eqcommand[\end&#1606;&#1608;&#1588;&#1578;&#1575;&#1585;]{\enddocument}
+ %    \end{macrocode}
+@@ -1815,6 +1838,7 @@
+ % \fi
+ % \part{refrep-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{refrep-xepersian.def}[2010/03/01 v0.1 adaptations for refrep class]
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ %to make appendix numbering Persian
+ \renewcommand\appendix{\par
+@@ -1830,6 +1854,7 @@
+ % \fi
+ % \part{report-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{report-xepersian.def}[2010/03/01 v0.1 adaptations for standard report class]
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ %to make appendix numbering Persian
+ \renewcommand\appendix{\par
+@@ -1845,6 +1870,7 @@
+ % \fi
+ % \part{rapport3-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{rapport3-xepersian.def}[2010/03/01 v0.1 adaptations for rapport3 class]
+ \renewcommand*\thepart{\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ \renewcommand*\appendix{\par
+   \setcounter{chapter}{0}%
+@@ -1858,6 +1884,7 @@
+ % \fi
+ % \part{scrartcl-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{scrartcl-xepersian.def}[2010/03/01 v0.1 adaptations for scrartcl class]
+ \renewcommand*{\thepart}{\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ \renewcommand*\appendix{\par%
+   \setcounter{section}{0}%
+@@ -1893,6 +1920,7 @@
+ % \fi
+ % \part{scrbook-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{scrbook-xepersian.def}[2010/03/01 v0.1 adaptations for scrbook class]
+ \renewcommand*\frontmatter{%
+   \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at twoside</A>\cleardoubleoddpage\else\clearpage\fi
+   \@mainmatterfalse\pagenumbering{harfi}%
+@@ -1933,6 +1961,7 @@
+ % \fi
+ % \part{scrreprt-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{scrreprt-xepersian.def}[2010/03/01 v0.1 adaptations for scrreprt class]
+ \renewcommand*{\thepart}{\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ \renewcommand*\appendix{\par%
+   \setcounter{chapter}{0}%
+@@ -1969,6 +1998,7 @@
+ % \fi
+ % \part{tocloft-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{tocloft-xepersian.def}[2010/03/01 v0.1 bilingual captions for tocloft package]
+ \renewcommand*{\cftchapname}{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1601;&#1589;&#1604;\else chapter\fi}
+ \renewcommand*{\cftsecname}{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1602;&#1587;&#1605;&#1578;\else section\fi}
+ \renewcommand*{\cftsubsecname}{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1586;&#1740;&#1585;&#1602;&#1587;&#1605;&#1578;\else subsection\fi}
+@@ -3440,6 +3470,7 @@
+ % \fi
+ % \part{xepersian-thesis-xepersian.def}
+ %    \begin{macrocode}
++\ProvidesFile{xepersian-thesis-xepersian.def}[2010/03/01 v0.1 adaptations for xepersian-thesis class]
+ \renewcommand \thepart {\@tartibi\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at part</A>}
+ %to make appendix numbering persian
+ \renewcommand\appendix{\par
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000089.html">[Xepersian-development] r122 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r140 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-November/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r140%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911171207.nAHC7J3K031247%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000106.html">
+   <LINK REL="Next"  HREF="000108.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r140 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r140%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C200911171207.nAHC7J3K031247%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r140 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Tue Nov 17 13:07:19 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000106.html">[Xepersian-development] r139 - trunk/tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000108.html">[Xepersian-development] r141 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-11-17 13:07:02 +0100 (Tue, 17 Nov 2009)
+New Revision: 140
+
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian-doc.cls
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+adding setspace package to xepersian-doc.cls
+
+Modified: trunk/tex/xelatex/xepersian/xepersian-doc.cls
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian-doc.cls	2009-11-17 11:43:38 UTC (rev 139)
++++ trunk/tex/xelatex/xepersian/xepersian-doc.cls	2009-11-17 12:07:02 UTC (rev 140)
+@@ -17,6 +17,7 @@
+ \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
+ \ProcessOptions
+ \LoadClass[a4paper,12pt,twoside]{book}
++\RequirePackage[onehalfspacing]{setspace}
+ \RequirePackage[landscape,margin=1in,top=1in,bottom=1in]{geometry}
+ \RequirePackage{xcolor}
+ \RequirePackage[colorlinks,
+@@ -131,9 +132,9 @@
+ }{%
+ \setdynamicframe*{chaphead}{clear}%
+ }
+-\renewcommand\labelitemi{\HandRight}
+-\renewcommand\labelitemii{\HandRightUp}
+-\renewcommand\labelitemiii{\HandCuffRight}
++\renewcommand\labelitemi{\HandLeft}
++\renewcommand\labelitemii{\HandLeftUp}
++\renewcommand\labelitemiii{\HandCuffLeft}
+ \renewcommand\labelitemiv{\HandPencilLeft}
+ \endinput
+ %% 
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-17 11:43:38 UTC (rev 139)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2009-11-17 12:07:02 UTC (rev 140)
+@@ -14,7 +14,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 139}
++\def\xepersianrevision{revision 140}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000106.html">[Xepersian-development] r139 - trunk/tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000108.html">[Xepersian-development] r141 - trunk/tex/xelatex/xepersian
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

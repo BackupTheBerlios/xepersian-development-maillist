@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r39 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-May/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r39%20-%20trunk&In-Reply-To=%3C200905310247.n4V2l75j016851%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000005.html">
+   <LINK REL="Next"  HREF="000007.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r39 - trunk</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r39%20-%20trunk&In-Reply-To=%3C200905310247.n4V2l75j016851%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r39 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sun May 31 04:47:07 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000005.html">[Xepersian-development] r38 - trunk
+</A></li>
+        <LI>Next message: <A HREF="000007.html">[Xepersian-development] r40 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-05-31 04:47:02 +0200 (Sun, 31 May 2009)
+New Revision: 39
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+with the bidimoderncv class, we needed to define the Persian caption for \refname. And we had to do a bit of change to bidi footnote mechanism: we had to use \latinfont instead \rmfamily and \PersianFootNum instead \NativeFootNum
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-05-30 15:17:59 UTC (rev 38)
++++ trunk/xepersian.dtx	2009-05-31 02:47:02 UTC (rev 39)
+@@ -71,8 +71,10 @@
+ \generate{\file{amsbook-xepersian.def}{\from{xepersian.dtx}{amsbook-xepersian.def}}}
+ \generate{\file{article-xepersian.def}{\from{xepersian.dtx}{article-xepersian.def}}}
+ \generate{\file{beamer-xepersian.def}{\from{xepersian.dtx}{beamer-xepersian.def}}}
++\generate{\file{bidimoderncv-xepersian.def}{\from{xepersian.dtx}{bidimoderncv-xepersian.def}}}
+ \generate{\file{bookest-xepersian.def}{\from{xepersian.dtx}{bookest-xepersian.def}}}
+ \generate{\file{book-xepersian.def}{\from{xepersian.dtx}{book-xepersian.def}}}
++\generate{\file{footnote-bidi-xepersian.def}{\from{xepersian.dtx}{footnote-bidi-xepersian.def}}}
+ \generate{\file{localise-xepersian.def}{\from{xepersian.dtx}{localise-xepersian.def}}}
+ \generate{\file{commands-ltx.def}{\from{xepersian.dtx}{commands-ltx.def}}}
+ \generate{\file{commands-xepersian.def}{\from{xepersian.dtx}{commands-xepersian.def}}}
+@@ -331,9 +333,11 @@
+ \@ifpackageloaded{listings}{\input{listings-xepersian.def}}{}
+ \@ifpackageloaded{algorithmic}{\input{algorithmic-xepersian.def}}{}
+ \@ifpackageloaded{algorithm}{\input{algorithm-xepersian.def}}{}
++\@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
+ \@ifclassloaded{article}{\input{article-xepersian.def}}{}
+ \@ifclassloaded{amsart}{\input{amsart-xepersian.def}}{}
++\@ifclassloaded{bidimoderncv}{\input{bidimoderncv-xepersian.def}}{}
+ \@ifclassloaded{report}{\input{report-xepersian.def}}{}
+ \@ifclassloaded{xepersian-thesis}{\input{xepersian-thesis-xepersian.def}}{}
+ \@ifclassloaded{amsbook}{\input{amsbook-xepersian.def}}{}
+@@ -433,6 +437,14 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/beamer-xepersian.def&gt;
++%&lt;*bidimoderncv-xepersian.def&gt;
++% \fi
++% \part{bidimoderncv-xepersian.def}
++%    \begin{macrocode}
++\def\refname{&#1578;&#1571;&#1604;&#1740;&#1601;&#1575;&#1578;}
++%    \end{macrocode}
++% \iffalse
++%&lt;/bidimoderncv-xepersian.def&gt;
+ %&lt;*bookest-xepersian.def&gt;
+ % \fi
+ % \part{bookest-xepersian.def}
+@@ -471,6 +483,21 @@
+ %    \end{macrocode}
+ % \iffalse
+ %&lt;/book-xepersian.def&gt;
++%&lt;*footnote-bidi-xepersian.def&gt;
++% \fi
++% \part{footnote-bidi-xepersian.def}
++%    \begin{macrocode}
++\DeclareRobustCommand{\LTRfootnote}[1]{%
++\bgroup
++\footnotemark%
++\renewcommand{\thefootnote}{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RomanFootNum</A>\latinfont{\@arabic\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at footnote</A>}\else\@arabic\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">c at footnote</A>\fi}%
++\@RTLfalse\footnotetext{\latinfont#1}%
++\egroup
++}
++\let\PersianFootNum=\NativeFootNum
++%    \end{macrocode}
++% \iffalse
++%&lt;/footnote-bidi-xepersian.def&gt;
+ %&lt;*localise-xepersian.def&gt;
+ % \fi
+ % \part{localise-xepersian.def}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000005.html">[Xepersian-development] r38 - trunk
+</A></li>
+	<LI>Next message: <A HREF="000007.html">[Xepersian-development] r40 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

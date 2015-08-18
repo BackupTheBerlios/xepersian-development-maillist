@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r127 - trunk
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r127%20-%20trunk&In-Reply-To=%3C200910180617.n9I6HDo9003066%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000093.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r127 - trunk</H1>
+    <B>vafa at BerliOS</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r127%20-%20trunk&In-Reply-To=%3C200910180617.n9I6HDo9003066%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r127 - trunk">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sun Oct 18 08:17:13 CEST 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000093.html">[Xepersian-development] r126 - trunk
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#94">[ date ]</a>
+              <a href="thread.html#94">[ thread ]</a>
+              <a href="subject.html#94">[ subject ]</a>
+              <a href="author.html#94">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2009-10-18 08:17:12 +0200 (Sun, 18 Oct 2009)
+New Revision: 127
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+fixed the bidirectional output routine
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-10-11 16:04:32 UTC (rev 126)
++++ trunk/xepersian.dtx	2009-10-18 06:17:12 UTC (rev 127)
+@@ -165,7 +165,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 126}
++\def\xepersianrevision{revision 127}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ 	Persian typesetting in XeLaTeX]
+@@ -341,7 +341,7 @@
+         \vfil
+         \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at hbox</A>
+           \normalcolor
+-          \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">hb at xt</A>@\textwidth{\@thehead}%
++          \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">hb at xt</A>@\textwidth{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTLmain</A>\beginR\fi\@thehead\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTLmain</A>\endR\fi}%
+         \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endbox</A>
+         }%                        %% 22 Feb 87
+       \dp\@tempboxa \z@
+@@ -351,7 +351,7 @@
+       \baselineskip \footskip
+       \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at hbox</A>
+         \normalcolor
+-        \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">hb at xt</A>@\textwidth{\@thefoot}%
++        \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">hb at xt</A>@\textwidth{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTLmain</A>\beginR\fi\@thefoot\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTLmain</A>\endR\fi}%
+       \<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">color at endbox</A>
+       }%
+     }%
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000093.html">[Xepersian-development] r126 - trunk
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#94">[ date ]</a>
+              <a href="thread.html#94">[ thread ]</a>
+              <a href="subject.html#94">[ subject ]</a>
+              <a href="author.html#94">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

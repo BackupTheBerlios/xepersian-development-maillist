@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r168 - in trunk: doc tex
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-February/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r168%20-%20in%20trunk%3A%20doc%20tex&In-Reply-To=%3C201002182135.o1ILZZt1001633%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000134.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r168 - in trunk: doc tex</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r168%20-%20in%20trunk%3A%20doc%20tex&In-Reply-To=%3C201002182135.o1ILZZt1001633%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r168 - in trunk: doc tex">vafa at mail.berlios.de
+       </A><BR>
+    <I>Thu Feb 18 22:35:35 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000134.html">[Xepersian-development] r167 - trunk/tex
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#135">[ date ]</a>
+              <a href="thread.html#135">[ thread ]</a>
+              <a href="subject.html#135">[ subject ]</a>
+              <a href="author.html#135">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-02-18 22:35:17 +0100 (Thu, 18 Feb 2010)
+New Revision: 168
+
+Modified:
+   trunk/doc/xepersian-doc.pdf
+   trunk/doc/xepersian-doc.synctex.gz
+   trunk/doc/xepersian-doc.tex
+   trunk/tex/xepersian.sty
+Log:
+updated the documentation
+
+Modified: trunk/doc/xepersian-doc.pdf
+===================================================================
+(Binary files differ)
+
+Modified: trunk/doc/xepersian-doc.synctex.gz
+===================================================================
+(Binary files differ)
+
+Modified: trunk/doc/xepersian-doc.tex
+===================================================================
+--- trunk/doc/xepersian-doc.tex	2010-02-18 09:10:03 UTC (rev 167)
++++ trunk/doc/xepersian-doc.tex	2010-02-18 21:35:17 UTC (rev 168)
+@@ -19,7 +19,7 @@
+ \def\Lenv#1{\texttt{#1}}
+ \def\Penv#1{\RLE{\ParsiFont#1}}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 154}
++\def\xepersianrevision{revision 168}
+ \def\xepersiandate{2010/07/25}
+ \def\XePersian{\leavevmode$\smash{\hbox{X\lower.5ex
+   \hbox{\kern-.125em\reflect{E}}Persian}}$}
+@@ -113,31 +113,6 @@
+ ? 
+ 
+ \end{minted}
+-\item However, there is an exception to the two previous points. You should load \textsf{subfigure} package always after \textsf{\XePersian} package. Indeed, if like the following minimal example, you load \textsf{subfigure} package before \textsf{\XePersian} package:
+-\begin{minted}{latex}
+-\documentclass{article}
+-\usepackage{subfigure}
+-\usepackage{xepersian}
+-\settextfont[Scale=1.5]{Scheherazade}
+-\begin{document}
+-This is just a test.
+-\end{document}
+-\end{minted}
+-You will get an error saying that \textsf{subfigure} package should be loaded after \textsf{\XePersian} package. The error message looks like this:
+-\begin{minted}{latex}
+-! Package xepersian Error: Oops! you have loaded package subfigure before xeper
+-sian package. Please load package subfigure after xepersian package, and then t
+-ry to run xelatex on your document again.
+-
+-See the xepersian package documentation for explanation.
+-Type  H &lt;return&gt;  for immediate help.
+- ...                                              
+-                                                  
+-l.5 \begin{document}
+-                    
+-? 
+-
+-\end{minted}
+ \end{enumerate}
+ \section{Commands for Version, Subversion Revision and Date of The Package}
+ \begin{BDef}
+
+Modified: trunk/tex/xepersian.sty
+===================================================================
+--- trunk/tex/xepersian.sty	2010-02-18 09:10:03 UTC (rev 167)
++++ trunk/tex/xepersian.sty	2010-02-18 21:35:17 UTC (rev 168)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 162}
++\def\xepersianrevision{revision 168}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000134.html">[Xepersian-development] r167 - trunk/tex
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#135">[ date ]</a>
+              <a href="thread.html#135">[ thread ]</a>
+              <a href="subject.html#135">[ subject ]</a>
+              <a href="author.html#135">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

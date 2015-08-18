@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xepersian-development] r156 - trunk/tex/xelatex/xepersian
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xepersian-development/2010-January/index.html" >
+   <LINK REL="made" HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r156%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001091346.o09DkHUe012181%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000122.html">
+   <LINK REL="Next"  HREF="000124.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xepersian-development] r156 - trunk/tex/xelatex/xepersian</H1>
+    <B>vafa at mail.berlios.de</B> 
+    <A HREF="mailto:xepersian-development%40lists.berlios.de?Subject=Re%3A%20%5BXepersian-development%5D%20r156%20-%20trunk/tex/xelatex/xepersian&In-Reply-To=%3C201001091346.o09DkHUe012181%40sheep.berlios.de%3E"
+       TITLE="[Xepersian-development] r156 - trunk/tex/xelatex/xepersian">vafa at mail.berlios.de
+       </A><BR>
+    <I>Sat Jan  9 14:46:17 CET 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000122.html">[Xepersian-development] r155 - in trunk: doc/xelatex/xepersian	tex/xelatex/xepersian
+</A></li>
+        <LI>Next message: <A HREF="000124.html">[Xepersian-development] r157 - trunk/tex/xelatex/xepersian website
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: vafa
+Date: 2010-01-09 14:46:09 +0100 (Sat, 09 Jan 2010)
+New Revision: 156
+
+Added:
+   trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def
+Modified:
+   trunk/tex/xelatex/xepersian/xepersian.sty
+Log:
+support for bidimodercv is back
+
+Added: trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def
+===================================================================
+--- trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def	2010-01-09 11:19:27 UTC (rev 155)
++++ trunk/tex/xelatex/xepersian/bidimoderncv-xepersian.def	2010-01-09 13:46:09 UTC (rev 156)
+@@ -0,0 +1,27 @@
++%%
++%% This is file `bidimoderncv-xepersian.def',
++
++%% 
++%%   __________________________________
++%%   Copyright &#169; 2008-2010 Vafa Khalighi
++%% 
++%%   License information appended.
++%% 
++%% 
++\ProvidesFile{bidimoderncv-xepersian.def}[2010/07/25 v0.1 adaptations for bidimoderncv class]
++\def\refname{\<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">if at RTL</A> &#1578;&#1571;&#1604;&#1740;&#1601;&#1575;&#1578;\else Publications\fi}
++%% 
++%% Copyright &#169; 2008-2010      by Vafa Khalighi     &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xepersian-development">vafa at users.berlios.de</A>&gt;
++%% 
++%% Distributable under the LaTeX Project Public License,
++%% version 1.3c or higher (your choice). The latest version of
++%% this license is at: <A HREF="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</A>
++%% 
++%% This work is &quot;maintained&quot; (as per LPPL maintenance status)
++%% by Vafa Khalighi.
++%% 
++%% 
++%% 
++%% 
++%%
++%% End of file `bidimoderncv-xepersian.def'.
+
+Modified: trunk/tex/xelatex/xepersian/xepersian.sty
+===================================================================
+--- trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-09 11:19:27 UTC (rev 155)
++++ trunk/tex/xelatex/xepersian/xepersian.sty	2010-01-09 13:46:09 UTC (rev 156)
+@@ -10,7 +10,7 @@
+ %% 
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.5}
+-\def\xepersianrevision{revision 155}
++\def\xepersianrevision{revision 156}
+ \def\xepersiandate{2010/07/25}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space &lt;\xepersianrevision&gt;
+ Persian typesetting in XeLaTeX]
+@@ -326,6 +326,7 @@
+ \@ifpackageloaded{tocloft}{\@ifclassloaded{memoir}{}{\input{tocloft-xepersian.def}}}{}
+ \@ifclassloaded{article}{\input{article-xepersian.def}}{}
+ \@ifclassloaded{amsart}{\input{amsart-xepersian.def}}{}
++\@ifclassloaded{bidimoderncv}{\input{bidimoderncv-xepersian.def}}{}
+ \@ifclassloaded{report}{\input{report-xepersian.def}}{}
+ \@ifclassloaded{rapport3}{\input{rapport3-xepersian.def}}{}
+ \@ifclassloaded{scrartcl}{\input{scrartcl-xepersian.def}}{}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000122.html">[Xepersian-development] r155 - in trunk: doc/xelatex/xepersian	tex/xelatex/xepersian
+</A></li>
+	<LI>Next message: <A HREF="000124.html">[Xepersian-development] r157 - trunk/tex/xelatex/xepersian website
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xepersian-development">More information about the Xepersian-development
+mailing list</a><br>
+</body></html>

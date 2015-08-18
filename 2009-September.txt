@@ -1,0 +1,3286 @@
+From vafa at mail.berlios.de  Fri Sep 11 16:13:41 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Fri, 11 Sep 2009 16:13:41 +0200
+Subject: [Xepersian-development] r96 - trunk
+Message-ID: <200909111413.n8BEDfhi011849@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-11 16:13:27 +0200 (Fri, 11 Sep 2009)
+New Revision: 96
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added Persian LaTeX commands translations, thanks to Mehdi Omidali for providing translations
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-08-15 04:07:19 UTC (rev 95)
++++ trunk/xepersian.dtx	2009-09-11 14:13:27 UTC (rev 96)
+@@ -162,7 +162,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 95}
++\def\xepersianrevision{revision 96}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -198,7 +198,7 @@
+ \RequirePackage{xepersian-mathsdigitspec}
+ \RequirePackage{etoolbox}
+ \AtBeginDocument{\special{pdf: docinfo <<
+-	/Creator (X?Persian \xepersianversion\space <\xepersianrevision> Copyright ? 2008-2009 Vafa Khalighi)
++	/Creator (X?Persian \xepersianversion\space <\xepersianrevision> Copyright ? 2008-2010 Vafa Khalighi)
+          >>}}
+ \gdef\@latex at error#1#2{%
+    \GenericError{%
+@@ -680,818 +680,797 @@
+ % \fi
+ % \part{commands-ltx.def}
+ %    \begin{macrocode}
+-\eqcommand[]{\abovedisplayshortskip}
+-\eqcommand[]{\abovedisplayskip}
+-\eqcommand[]{\abstractname}
+-\eqcommand[]{\acute}
+-\eqcommand[]{\addcontentsline}
+-\eqcommand[]{\address}
+-\eqcommand[]{\addtocontents}
+-\eqcommand[]{\addtocounter}
+-\eqcommand[]{\addtolength}
+-\eqcommand[]{\addvspace}
+-\eqcommand[]{\aleph}
+-\eqcommand[]{\allowdisplaybreaks}
+-\eqcommand[]{\Alph}
+-\eqcommand[]{\alph}
+-\eqcommand[]{\alpha}
+-\eqcommand[]{\alsoname}
+-\eqcommand[]{\amalg}
+-\eqcommand[]{\and}
+-\eqcommand[]{\angle}
+-\eqcommand[]{\appendixname}
+-\eqcommand[]{\approx}
+-\eqcommand[]{\arabic}
+-\eqcommand[]{\arccos}
+-\eqcommand[]{\arcsin}
+-\eqcommand[]{\arctan}
+-\eqcommand[]{\arg}
+-\eqcommand[]{\arraycolsep}
+-\eqcommand[]{\arrayrulewidth}
+-\eqcommand[]{\arraystretch}
+-\eqcommand[]{\ast}
+-\eqcommand[]{\asymp}
+-\eqcommand[]{\AtBeginDocument}
+-\eqcommand[]{\AtEndDocument}
+-\eqcommand[]{\AtEndOfClass}
+-\eqcommand[]{\AtEndOfPackage}
+-\eqcommand[]{\author}
+-\eqcommand[]{\backmatter}
+-\eqcommand[]{\backslash}
+-\eqcommand[]{\bar}
+-\eqcommand[]{\baselineskip}
+-\eqcommand[]{\baselinestretch}
+-\eqcommand[]{\begin}
+-\eqcommand[]{\belowdisplayshortskip}
+-\eqcommand[]{\belowdisplayskip}
+-\eqcommand[]{\beta}
+-\eqcommand[]{\bfdefault}
+-\eqcommand[]{\bfseries}
+-\eqcommand[]{\bibitem}
+-\eqcommand[]{\bibliography}
+-\eqcommand[]{\bibliographystyle}
+-\eqcommand[]{\bibname}
+-\eqcommand[]{\big}
+-\eqcommand[]{\Big}
+-\eqcommand[]{\bigcap}
+-\eqcommand[]{\bigcirc}
+-\eqcommand[]{\bigcup}
+-\eqcommand[]{\bigg}
+-\eqcommand[]{\Bigg}
+-\eqcommand[]{\bigodot}
+-\eqcommand[]{\bigoplus}
+-\eqcommand[]{\bigotimes}
+-\eqcommand[]{\bigskip}
+-\eqcommand[]{\bigskipamount}
+-\eqcommand[]{\bigsqcup}
+-\eqcommand[]{\bigtriangledown}
+-\eqcommand[]{\bigtriangleup}
+-\eqcommand[]{\biguplus}
+-\eqcommand[]{\bigvee}
+-\eqcommand[]{\bigwedge}
+-\eqcommand[]{\binom}
+-\eqcommand[]{\bmod}
+-\eqcommand[]{\boldmath}
+-\eqcommand[]{\boldsymbol}
+-\eqcommand[]{\bot}
+-\eqcommand[]{\botfigrule}
+-\eqcommand[]{\bottomfraction}
+-\eqcommand[]{\bowtie}
+-\eqcommand[]{\Box}
+-\eqcommand[]{\boxed}
+-\eqcommand[]{\breve}
+-\eqcommand[]{\bullet}
+-\eqcommand[]{\cap}
+-\eqcommand[]{\caption}
+-\eqcommand[]{\cc}
+-\eqcommand[]{\ccname}
+-\eqcommand[]{\cdot}
+-\eqcommand[]{\cdots}
+-\eqcommand[]{\centering}
+-\eqcommand[]{\centerline}
+-\eqcommand[]{\cfrac}
+-\eqcommand[]{\chapter}
+-\eqcommand[]{\chapter*}
+-\eqcommand[]{\chaptername}
+-\eqcommand[]{\check}
+-\eqcommand[]{\CheckCommand}
+-\eqcommand[]{\chi}
+-\eqcommand[]{\circ}
+-\eqcommand[]{\circle}
+-\eqcommand[]{\circle*}
+-\eqcommand[]{\cite}
+-\eqcommand[]{\citep}
+-\eqcommand[]{\citet}
+-\eqcommand[]{\ClassError}
+-\eqcommand[]{\ClassInfo}
+-\eqcommand[]{\ClassWarning}
+-\eqcommand[]{\ClassWarningNoLine}
+-\eqcommand[]{\cleardoublepage}
+-\eqcommand[]{\clearpage}
+-\eqcommand[]{\cline}
+-\eqcommand[]{\closing}
+-\eqcommand[]{\clubsuit}
+-\eqcommand[]{\color}
+-\eqcommand[]{\colorbox}
+-\eqcommand[]{\columnsep}
+-\eqcommand[]{\columnseprule}
+-\eqcommand[]{\cong}
+-\eqcommand[]{\contentsline}
+-\eqcommand[]{\contentsname}
+-\eqcommand[]{\coprod}
+-\eqcommand[]{\copyright}
+-\eqcommand[]{\cos}
+-\eqcommand[]{\cosh}
+-\eqcommand[]{\cot}
+-\eqcommand[]{\coth}
+-\eqcommand[]{\csc}
+-\eqcommand[]{\cup}
+-\eqcommand[]{\CurrentOption}
+-\eqcommand[]{\dag}
+-\eqcommand[]{\dagger}
+-\eqcommand[]{\dashbox}
+-\eqcommand[]{\dashv}
+-\eqcommand[]{\date}
+-\eqcommand[]{\dbinom}
+-\eqcommand[]{\dblfigrule}
+-\eqcommand[]{\dblfloatpagefraction}
+-\eqcommand[]{\dblfloatsep}
+-\eqcommand[]{\dbltextfloatsep}
+-\eqcommand[]{\dbltopfraction}
+-\eqcommand[]{\ddag}
+-\eqcommand[]{\ddagger}
+-\eqcommand[]{\dddot}
+-\eqcommand[]{\ddddot}
+-\eqcommand[]{\ddot}
+-\eqcommand[]{\ddots}
+-\eqcommand[]{\DeclareGraphicsExtensions}
+-\eqcommand[]{\DeclareGraphicsRule}
+-\eqcommand[]{\DeclareOption}
+-\eqcommand[]{\DeclareOption*}
+-\eqcommand[]{\DeclareRobustCommand}
+-\eqcommand[]{\DeclareRobustCommand*}
+-\eqcommand[]{\definecolor}
+-\eqcommand[]{\deg}
+-\eqcommand[]{\DeleteShortVerb}
+-\eqcommand[]{\Delta}
+-\eqcommand[]{\delta}
+-\eqcommand[]{\depth}
+-\eqcommand[]{\det}
+-\eqcommand[]{\dfrac}
+-\eqcommand[]{\Diamond}
+-\eqcommand[]{\diamond}
+-\eqcommand[]{\diamondsuit}
+-\eqcommand[]{\dim}
+-\eqcommand[]{\discretionary}
+-\eqcommand[]{\displaybreak}
+-\eqcommand[]{\displaystyle}
+-\eqcommand[]{\div}
+-\eqcommand[]{\documentclass}
+-\eqcommand[]{\dot}
+-\eqcommand[]{\doteq}
+-\eqcommand[]{\dotfill}
+-\eqcommand[]{\dots}
+-\eqcommand[]{\dotsb}
+-\eqcommand[]{\dotsc}
+-\eqcommand[]{\dotsi}
+-\eqcommand[]{\dotsm}
+-\eqcommand[]{\doublebox}
+-\eqcommand[]{\doublerulesep}
+-\eqcommand[]{\Downarrow}
+-\eqcommand[]{\downarrow}
+-\eqcommand[]{\ell}
+-\eqcommand[]{\em}
+-\eqcommand[]{\emph}
+-\eqcommand[]{\emptyset}
+-\eqcommand[]{\encl}
+-\eqcommand[]{\enclname}
+-\eqcommand[]{\end}
+-\eqcommand[]{\endfirsthead}
+-\eqcommand[]{\endfoot}
+-\eqcommand[]{\endhead}
+-\eqcommand[]{\endlastfoot}
+-\eqcommand[]{\enlargethispage}
+-\eqcommand[]{\enlargethispage*}
+-\eqcommand[]{\ensuremath}
+-\eqcommand[]{\epsilon}
+-\eqcommand[]{\eqref}
+-\eqcommand[]{\equiv}
+-\eqcommand[]{\eta}
+-\eqcommand[]{\euro}
+-\eqcommand[]{\EUR}
+-\eqcommand[]{\evensidemargin}
+-\eqcommand[]{\ExecuteOptions}
+-\eqcommand[]{\exists}
+-\eqcommand[]{\exp}
+-\eqcommand[]{\extracolsep}
+-\eqcommand[]{\fancypage}
+-\eqcommand[]{\fbox}
+-\eqcommand[]{\fboxrule}
+-\eqcommand[]{\fboxsep}
+-\eqcommand[]{\fcolorbox}
+-\eqcommand[]{\figurename}
+-\eqcommand[]{\fill}
+-\eqcommand[]{\flat}
+-\eqcommand[]{\floatpagefraction}
+-\eqcommand[]{\floatsep}
+-\eqcommand[]{\flushbottom}
+-\eqcommand[]{\fnsymbol}
+-\eqcommand[]{\fontfamily}
+-\eqcommand[]{\fontseries}
+-\eqcommand[]{\fontshape}
+-\eqcommand[]{\fontsize}
+-\eqcommand[]{\LTRfootnote}
+-\eqcommand[]{\footnote}
+-\eqcommand[]{\footnotemark}
+-\eqcommand[]{\footnoterule}
+-\eqcommand[]{\footnotesep}
+-\eqcommand[]{\footnotesize}
+-\eqcommand[]{\footnotetext}
+-\eqcommand[]{\footskip}
+-\eqcommand[]{\forall}
+-\eqcommand[]{\frac}
+-\eqcommand[]{\frame}
+-\eqcommand[]{\framebox}
+-\eqcommand[]{\frenchspacing}
+-\eqcommand[]{\frontmatter}
+-\eqcommand[]{\frown}
+-\eqcommand[]{\fussy}
+-\eqcommand[]{\Gamma}
+-\eqcommand[]{\gamma}
+-\eqcommand[]{\gcd}
+-\eqcommand[]{\ge}
+-\eqcommand[]{\genfrac}
+-\eqcommand[]{\geq}
+-\eqcommand[]{\gets}
+-\eqcommand[]{\gg}
+-\eqcommand[]{\glossary}
+-\eqcommand[]{\glossaryentry}
+-\eqcommand[]{\graphpaper}
+-\eqcommand[]{\grave}
+-\eqcommand[]{\guillemotleft}
+-\eqcommand[]{\guillemotright}
+-\eqcommand[]{\guilsinglleft}
+-\eqcommand[]{\guilsinglright}
+-\eqcommand[]{\hat}
+-\eqcommand[]{\hbar}
+-\eqcommand[]{\headheight}
+-\eqcommand[]{\headsep}
+-\eqcommand[]{\headtoname}
+-\eqcommand[]{\heartsuit}
+-\eqcommand[]{\height}
+-\eqcommand[]{\hfill}
+-\eqcommand[]{\hline}
+-\eqcommand[]{\hoffset}
+-\eqcommand[]{\hom}
+-\eqcommand[]{\hookleftarrow}
+-\eqcommand[]{\hookrightarrow}
+-\eqcommand[]{\hrulefill}
+-\eqcommand[]{\hspace}
+-\eqcommand[]{\hspace*}
+-\eqcommand[]{\huge}
+-\eqcommand[]{\Huge}
+-\eqcommand[]{\hyperlink}
+-\eqcommand[]{\hypersetup}
+-\eqcommand[]{\hypertarget}
+-\eqcommand[]{\hyphenation}
+-\eqcommand[]{\idotsint}
+-\eqcommand[]{\iff}
+-\eqcommand[]{\IfFileExists}
+-\eqcommand[]{\ifthenelse}
+-\eqcommand[]{\Im}
+-\eqcommand[]{\imath}
+-\eqcommand[]{\in}
+-\eqcommand[]{\include}
+-\eqcommand[]{\includegraphics}
+-\eqcommand[]{\includegraphics*}
+-\eqcommand[]{\includeonly}
+-\eqcommand[]{\indent}
+-\eqcommand[]{\index}
+-\eqcommand[]{\indexentry}
+-\eqcommand[]{\indexname}
+-\eqcommand[]{\indexspace}
+-\eqcommand[]{\inf}
+-\eqcommand[]{\infty}
+-\eqcommand[]{\input}
+-\eqcommand[]{\InputIfFileExists}
+-\eqcommand[]{\int}
+-\eqcommand[]{\iint}
+-\eqcommand[]{\iiint}
+-\eqcommand[]{\iiiint}
+-\eqcommand[]{\intertext}
+-\eqcommand[]{\intertextsep}
+-\eqcommand[]{\invisible}
+-\eqcommand[]{\iota}
+-\eqcommand[]{\itdefault}
+-\eqcommand[]{\item}
+-\eqcommand[]{\itemindent}
+-\eqcommand[]{\itemsep}
+-\eqcommand[]{\itshape}
+-\eqcommand[]{\jmath}
+-\eqcommand[]{\join}
+-\eqcommand[]{\jot}
+-\eqcommand[]{\kappa}
+-\eqcommand[]{\ker}
+-\eqcommand[]{\kill}
+-\eqcommand[]{\label}
+-\eqcommand[]{\labelenumi}
+-\eqcommand[]{\labelenumii}
+-\eqcommand[]{\labelenumiii}
+-\eqcommand[]{\labelenumiv}
+-\eqcommand[]{\labelitemi}
+-\eqcommand[]{\labelitemii}
+-\eqcommand[]{\labelitemiii}
+-\eqcommand[]{\labelitemiv}
+-\eqcommand[]{\labelsep}
+-\eqcommand[]{\labelwidth}
+-\eqcommand[]{\Lambda}
+-\eqcommand[]{\lambda}
+-\eqcommand[]{\langle}
+-\eqcommand[]{\language}
+-\eqcommand[]{\large}
+-\eqcommand[]{\Large}
+-\eqcommand[]{\LARGE}
+-\eqcommand[]{\LaTeX}
+-\eqcommand[]{\LaTeXe}
+-\eqcommand[]{\lceil}
+-\eqcommand[]{\ldots}
+-\eqcommand[]{\le}
+-\eqcommand[]{\leadsto}
+-\eqcommand[]{\left}
+-\eqcommand[]{\Leftarrow}
+-\eqcommand[]{\leftarrow}
+-\eqcommand[]{\lefteqn}
+-\eqcommand[]{\leftharpoondown}
+-\eqcommand[]{\leftharpoonup}
+-\eqcommand[]{\leftmargin}
+-\eqcommand[]{\Leftrightarrow}
+-\eqcommand[]{\leftrightarrow}
+-\eqcommand[]{\leftroot}
+-\eqcommand[]{\leq}
+-\eqcommand[]{\lfloor}
+-\eqcommand[]{\lg}
+-\eqcommand[]{\lhd}
+-\eqcommand[]{\lim}
+-\eqcommand[]{\liminf}
+-\eqcommand[]{\limits}
+-\eqcommand[]{\limsup}
+-\eqcommand[]{\line}
+-\eqcommand[]{\linebreak}
+-\eqcommand[]{\linethickness}
+-\eqcommand[]{\linewidth}
+-\eqcommand[]{\listfigurename}
+-\eqcommand[]{\listfiles}
+-\eqcommand[]{\listoffigures}
+-\eqcommand[]{\listoftables}
+-\eqcommand[]{\listparindent}
+-\eqcommand[]{\listtablename}
+-\eqcommand[]{\ll}
+-\eqcommand[]{\ln}
+-\eqcommand[]{\LoadClass}
+-\eqcommand[]{\LoadClassWithOptions}
+-\eqcommand[]{\location}
+-\eqcommand[]{\log}
+-\eqcommand[]{\Longleftarrow}
+-\eqcommand[]{\longleftarrow}
+-\eqcommand[]{\Longleftrightarrow}
+-\eqcommand[]{\longleftrightarrow}
+-\eqcommand[]{\longmapsto}
+-\eqcommand[]{\Longrightarrow}
+-\eqcommand[]{\longrightarrow}
+-\eqcommand[]{\lvert}
+-\eqcommand[]{\lVert}
+-\eqcommand[]{\mainmatter}
+-\eqcommand[]{\makebox}
+-\eqcommand[]{\makeglossary}
+-\eqcommand[]{\makeindex}
+-\eqcommand[]{\makelabel}
+-\eqcommand[]{\makelabels}
+-\eqcommand[]{\MakeLowercase}
+-\eqcommand[]{\MakeShortVerb}
+-\eqcommand[]{\maketitle}
+-\eqcommand[]{\MakeUppercase}
+-\eqcommand[]{\mapsto}
+-\eqcommand[]{\marginpar}
+-\eqcommand[]{\marginparpush}
+-\eqcommand[]{\marginparsep}
+-\eqcommand[]{\marginparwidth}
+-\eqcommand[]{\markboth}
+-\eqcommand[]{\markright}
+-\eqcommand[]{\mathbf}
+-\eqcommand[]{\mathcal}
+-\eqcommand[]{\mathindent}
+-\eqcommand[]{\mathit}
+-\eqcommand[]{\mathnormal}
+-\eqcommand[]{\mathring}
+-\eqcommand[]{\mathrm}
+-\eqcommand[]{\mathsf}
+-\eqcommand[]{\mathtt}
+-\eqcommand[]{\max}
+-\eqcommand[]{\mbox}
+-\eqcommand[]{\mddefault}
+-\eqcommand[]{\mdseries}
+-\eqcommand[]{\medskip}
+-\eqcommand[]{\medskipamount}
+-\eqcommand[]{\medspace}
+-\eqcommand[]{\MessageBreak}
+-\eqcommand[]{\mho}
+-\eqcommand[]{\mid}
+-\eqcommand[]{\min}
+-\eqcommand[]{\mod}
+-\eqcommand[]{\models}
+-\eqcommand[]{\mp}
+-\eqcommand[]{\mspace}
+-\eqcommand[]{\mu}
+-\eqcommand[]{\multicolumn}
+-\eqcommand[]{\multiput}
+-\eqcommand[]{\multlinegap}
+-\eqcommand[]{\nabla}
+-\eqcommand[]{\name}
+-\eqcommand[]{\natural}
+-\eqcommand[]{\nearrow}
+-\eqcommand[]{\NeedsTeXFormat}
+-\eqcommand[]{\neg}
+-\eqcommand[]{\negmedspace}
+-\eqcommand[]{\negthickspace}
+-\eqcommand[]{\negthinspace}
+-\eqcommand[]{\neq}
+-\eqcommand[]{\newboolean}
+-\eqcommand[]{\newcommand}
+-\eqcommand[]{\newcommand*}
+-\eqcommand[]{\newcounter}
+-\eqcommand[]{\newenvironment}
+-\eqcommand[]{\newenvironment*}
+-\eqcommand[]{\newfont}
+-\eqcommand[]{\newlength}
+-\eqcommand[]{\newline}
+-\eqcommand[]{\newpage}
+-\eqcommand[]{\newsavebox}
+-\eqcommand[]{\newtheorem}
+-\eqcommand[]{\ni}
+-\eqcommand[]{\nocite}
+-\eqcommand[]{\nofiles}
+-\eqcommand[]{\noindent}
+-\eqcommand[]{\nolimits}
+-\eqcommand[]{\nolinebreak}
+-\eqcommand[]{\nonfrenchspacing}
+-\eqcommand[]{\nonumber}
+-\eqcommand[]{\nopagebreak}
+-\eqcommand[]{\normalcolor}
+-\eqcommand[]{\normalfont}
+-\eqcommand[]{\normalmarginpar}
+-\eqcommand[]{\normalsize}
+-\eqcommand[]{\not}
+-\eqcommand[]{\notag}
+-\eqcommand[]{\notin}
+-\eqcommand[]{\nu}
+-\eqcommand[]{\numberwithin}
+-\eqcommand[]{\nwarrow}
+-\eqcommand[]{\oddsidemargin}
+-\eqcommand[]{\odot}
+-\eqcommand[]{\oint}
+-\eqcommand[]{\Omega}
+-\eqcommand[]{\omega}
+-\eqcommand[]{\ominus}
+-\eqcommand[]{\onecolumn}
+-\eqcommand[]{\onlynotes}
+-\eqcommand[]{\onlyslides}
+-\eqcommand[]{\opening}
+-\eqcommand[]{\oplus}
+-\eqcommand[]{\OptionNotUsed}
+-\eqcommand[]{\oslash}
+-\eqcommand[]{\otimes}
+-\eqcommand[]{\oval}
+-\eqcommand[]{\ovalbox}
+-\eqcommand[]{\Ovalbox}
+-\eqcommand[]{\overbrace}
+-\eqcommand[]{\overleftarrow}
+-\eqcommand[]{\overleftrightarrow}
+-\eqcommand[]{\overline}
+-\eqcommand[]{\overrightarrow}
+-\eqcommand[]{\overset}
+-\eqcommand[]{\PackageError}
+-\eqcommand[]{\PackageInfo}
+-\eqcommand[]{\PackageWarning}
+-\eqcommand[]{\PackageWarningNoLine}
+-\eqcommand[]{\pagebreak}
+-\eqcommand[]{\pagecolor}
+-\eqcommand[]{\pagename}
+-\eqcommand[]{\pagenumbering}
+-\eqcommand[]{\pageref}
+-\eqcommand[]{\pagestyle}
+-\eqcommand[]{\paperheight}
+-\eqcommand[]{\paperwidth}
+-\eqcommand[]{\par}
+-\eqcommand[]{\paragraph}
+-\eqcommand[]{\paragraph*}
+-\eqcommand[]{\parallel}
+-\eqcommand[]{\parbox}
+-\eqcommand[]{\parindent}
+-\eqcommand[]{\parsep}
+-\eqcommand[]{\parskip}
+-\eqcommand[]{\part}
+-\eqcommand[]{\part*}
+-\eqcommand[]{\partial}
+-\eqcommand[]{\partname}
+-\eqcommand[]{\partopsep}
+-\eqcommand[]{\PassOptionToClass}
+-\eqcommand[]{\PassOptionToPackage}
+-\eqcommand[]{\path}
+-\eqcommand[]{\prep}
+-\eqcommand[]{\Phi}
+-\eqcommand[]{\phi}
+-\eqcommand[]{\Pi}
+-\eqcommand[]{\pi}
+-\eqcommand[]{\pm}
+-\eqcommand[]{\pmb}
+-\eqcommand[]{\pmod}
+-\eqcommand[]{\pod}
+-\eqcommand[]{\poptabs}
+-\eqcommand[]{\pounds}
+-\eqcommand[]{\Pr}
+-\eqcommand[]{\prec}
+-\eqcommand[]{\preceq}
+-\eqcommand[]{\prime}
+-\eqcommand[]{\printindex}
+-\eqcommand[]{\ProcessOptions}
+-\eqcommand[]{\ProcessOptions*}
+-\eqcommand[]{\prod}
+-\eqcommand[]{\propto}
+-\eqcommand[]{\protect}
+-\eqcommand[]{\providecommand}
+-\eqcommand[]{\providecommand*}
+-\eqcommand[]{\ProvidesClass}
+-\eqcommand[]{\ProvidesFile}
+-\eqcommand[]{\ProvidesPackage}
+-\eqcommand[]{\ps}
+-\eqcommand[]{\Psi}
+-\eqcommand[]{\psi}
+-\eqcommand[]{\pushtabs}
+-\eqcommand[]{\put}
+-\eqcommand[]{\qbezier}
+-\eqcommand[]{\qquad}
+-\eqcommand[]{\quad}
+-\eqcommand[]{\raggedbottom}
+-\eqcommand[]{\raggedleft}
+-\eqcommand[]{\raggedright}
+-\eqcommand[]{\raisebox}
+-\eqcommand[]{\raisetag}
+-\eqcommand[]{\rangle}
+-\eqcommand[]{\rceil}
+-\eqcommand[]{\Re}
+-\eqcommand[]{\ref}
+-\eqcommand[]{\reflectbox}
+-\eqcommand[]{\refname}
+-\eqcommand[]{\refstepcounter}
+-\eqcommand[]{\renewcommand}
+-\eqcommand[]{\renewcommand*}
+-\eqcommand[]{\renewenvironment}
+-\eqcommand[]{\renewenvironment*}
+-\eqcommand[]{\RequirePackage}
+-\eqcommand[]{\RequirePackageWithOptions}
+-\eqcommand[]{\resizebox}
+-\eqcommand[]{\resizebox*}
+-\eqcommand[]{\reversemarginpar}
+-\eqcommand[]{\rfloor}
+-\eqcommand[]{\rhd}
+-\eqcommand[]{\rho}
+-\eqcommand[]{\right}
+-\eqcommand[]{\Rightarrow}
+-\eqcommand[]{\rightarrow}
+-\eqcommand[]{\rightharpoondown}
+-\eqcommand[]{\rightharpoonup}
+-\eqcommand[]{\rightleftharpoons}
+-\eqcommand[]{\rightmargin}
+-\eqcommand[]{\rmdefault}
+-\eqcommand[]{\rmfamily}
+-\eqcommand[]{\Roman}
+-\eqcommand[]{\roman}
+-\eqcommand[]{\rotatebox}
+-\eqcommand[]{\rule}
+-\eqcommand[]{\rvert}
+-\eqcommand[]{\rVert}
+-\eqcommand[]{\savebox}
+-\eqcommand[]{\sbox}
+-\eqcommand[]{\scalebox}
+-\eqcommand[]{\scdefault}
+-\eqcommand[]{\scriptscriptstyle}
+-\eqcommand[]{\scriptsize}
+-\eqcommand[]{\scripstyle}
+-\eqcommand[]{\scshape}
+-\eqcommand[]{\searrow}
+-\eqcommand[]{\sec}
+-\eqcommand[]{\section}
+-\eqcommand[]{\section*}
+-\eqcommand[]{\see}
+-\eqcommand[]{\seealso}
+-\eqcommand[]{\seename}
+-\eqcommand[]{\selectfont}
+-\eqcommand[]{\setboolean}
+-\eqcommand[]{\setcounter}
+-\eqcommand[]{\setlength}
+-\eqcommand[]{\setminus}
+-\eqcommand[]{\settodepth}
+-\eqcommand[]{\settoheight}
+-\eqcommand[]{\settowidth}
+-\eqcommand[]{\sfdefault}
+-\eqcommand[]{\sffamily}
+-\eqcommand[]{\shadowbox}
+-\eqcommand[]{\sharp}
+-\eqcommand[]{\shortstack}
+-\eqcommand[]{\sideset}
+-\eqcommand[]{\Sigma}
+-\eqcommand[]{\sigma}
+-\eqcommand[]{\signature}
+-\eqcommand[]{\sim}
+-\eqcommand[]{\simeq}
+-\eqcommand[]{\sin}
+-\eqcommand[]{\sinh}
+-\eqcommand[]{\sldefault}
+-\eqcommand[]{\sloppy}
+-\eqcommand[]{\slshape}
+-\eqcommand[]{\small}
+-\eqcommand[]{\smallskip}
+-\eqcommand[]{\smallskipamount}
+-\eqcommand[]{\smash}
+-\eqcommand[]{\smile}
+-\eqcommand[]{\spadesuit}
+-\eqcommand[]{\sqcap}
+-\eqcommand[]{\sqcup}
+-\eqcommand[]{\sqrt}
+-\eqcommand[]{\sqsubset}
+-\eqcommand[]{\sqsubseteq}
+-\eqcommand[]{\sqsupset}
+-\eqcommand[]{\sqsupseteq}
+-\eqcommand[]{\stackrel}
+-\eqcommand[]{\star}
+-\eqcommand[]{\stepcounter}
+-\eqcommand[]{\stretch}
+-\eqcommand[]{\subitem}
+-\eqcommand[]{\subparagraph}
+-\eqcommand[]{\subparagraph*}
+-\eqcommand[]{\subsection}
+-\eqcommand[]{\subsection*}
+-\eqcommand[]{\substack}
+-\eqcommand[]{\subsubitem}
+-\eqcommand[]{\subsubsection}
+-\eqcommand[]{\subsubsection*}
+-\eqcommand[]{\subset}
+-\eqcommand[]{\subseteq}
+-\eqcommand[]{\succ}
+-\eqcommand[]{\succeq}
+-\eqcommand[]{\sum}
+-\eqcommand[]{\sup}
+-\eqcommand[]{\supressfloats}
+-\eqcommand[]{\supset}
+-\eqcommand[]{\supseteq}
+-\eqcommand[]{\surd}
+-\eqcommand[]{\swarrow}
+-\eqcommand[]{\tabbingsep}
+-\eqcommand[]{\tabcolsep}
+-\eqcommand[]{\tableofcontents}
+-\eqcommand[]{\tablename}
+-\eqcommand[]{\tabularnewline}
+-\eqcommand[]{\tag}
+-\eqcommand[]{\tan}
+-\eqcommand[]{\tanh}
+-\eqcommand[]{\tau}
+-\eqcommand[]{\tbinom}
+-\eqcommand[]{\telephone}
+-\eqcommand[]{\TeX}
+-\eqcommand[]{\text}
+-\eqcommand[]{\textbullet}
+-\eqcommand[]{\textemdash}
+-\eqcommand[]{\textendash}
+-\eqcommand[]{\textexclamdown}
+-\eqcommand[]{\textperiodcentered}
+-\eqcommand[]{\textquestiondown}
+-\eqcommand[]{\textquotedblleft}
+-\eqcommand[]{\textquotedblright}
+-\eqcommand[]{\textquoteleft}
+-\eqcommand[]{\textquoteright}
+-\eqcommand[]{\textvisiblespace}
+-\eqcommand[]{\textasciicircum}
+-\eqcommand[]{\textasciitilde}
+-\eqcommand[]{\textbackslash}
+-\eqcommand[]{\textbar}
+-\eqcommand[]{\textgreater}
+-\eqcommand[]{\textless}
+-\eqcommand[]{\textbf}
+-\eqcommand[]{\textcircled}
+-\eqcommand[]{\textcolor}
+-\eqcommand[]{\textcompwordmark}
+-\eqcommand[]{\textfloatsep}
+-\eqcommand[]{\textfraction}
+-\eqcommand[]{\textheight}
+-\eqcommand[]{\textit}
+-\eqcommand[]{\textmd}
+-\eqcommand[]{\textnormal}
+-\eqcommand[]{\textregistered}
+-\eqcommand[]{\textrm}
+-\eqcommand[]{\textsc}
+-\eqcommand[]{\textsf}
+-\eqcommand[]{\textsl}
+-\eqcommand[]{\textstyle}
+-\eqcommand[]{\textsuperscript}
+-\eqcommand[]{\texttrademark}
+-\eqcommand[]{\texttt}
+-\eqcommand[]{\textup}
+-\eqcommand[]{\textwidth}
+-\eqcommand[]{\tfrac}
+-\eqcommand[]{\thanks}
+-\eqcommand[]{\Theta}
+-\eqcommand[]{\theta}
+-\eqcommand[]{\thicklines}
+-\eqcommand[]{\thickspace}
+-\eqcommand[]{\thinlines}
+-\eqcommand[]{\thinspace}
+-\eqcommand[]{\thisfancypage}
+-\eqcommand[]{\thispagestyle}
+-\eqcommand[]{\tilde}
+-\eqcommand[]{\tiny}
+-\eqcommand[]{\times}
+-\eqcommand[]{\title}
+-\eqcommand[]{\to}
+-\eqcommand[]{\today}
+-\eqcommand[]{\top}
+-\eqcommand[]{\topfigrule}
+-\eqcommand[]{\topfraction}
+-\eqcommand[]{\topmargin}
+-\eqcommand[]{\topsep}
+-\eqcommand[]{\topskip}
+-\eqcommand[]{\totalheight}
+-\eqcommand[]{\triangle}
+-\eqcommand[]{\triangleleft}
+-\eqcommand[]{\triangleright}
+-\eqcommand[]{\ttdefault}
+-\eqcommand[]{\ttfamily}
+-\eqcommand[]{\twocolumn}
+-\eqcommand[]{\typein}
+-\eqcommand[]{\typeout}
+-\eqcommand[]{\unboldmath}
+-\eqcommand[]{\underbrace}
+-\eqcommand[]{\underleftarrow}
+-\eqcommand[]{\underleftrightarrow}
+-\eqcommand[]{\underline}
+-\eqcommand[]{\underrightarrow}
+-\eqcommand[]{\underset}
+-\eqcommand[]{\unitlength}
+-\eqcommand[]{\unlhd}
+-\eqcommand[]{\unrhd}
+-\eqcommand[]{\Uparrow}
+-\eqcommand[]{\uparrow}
+-\eqcommand[]{\updefault}
+-\eqcommand[]{\Updownarrow}
+-\eqcommand[]{\updownarrow}
+-\eqcommand[]{\uplus}
+-\eqcommand[]{\upshape}
+-\eqcommand[]{\Upsilon}
+-\eqcommand[]{\upsilon}
+-\eqcommand[]{\uproot}
+-\eqcommand[]{\url}
+-\eqcommand[]{\urlstyle}
+-\eqcommand[]{\usebox}
+-\eqcommand[]{\usecounter}
+-\eqcommand[]{\usefont}
+-\eqcommand[]{\usepackage}
+-\eqcommand[]{\value}
+-\eqcommand[]{\varepsilon}
+-\eqcommand[]{\varinjlim}
+-\eqcommand[]{\varliminf}
+-\eqcommand[]{\varlimsup}
+-\eqcommand[]{\varphi}
+-\eqcommand[]{\varpi}
+-\eqcommand[]{\varprojlim}
+-\eqcommand[]{\varrho}
+-\eqcommand[]{\varsigma}
+-\eqcommand[]{\vartheta}
+-\eqcommand[]{\vdash}
+-\eqcommand[]{\vdots}
+-\eqcommand[]{\vec}
+-\eqcommand[]{\vector}
+-\eqcommand[]{\vee}
+-\eqcommand[]{\verb}
+-\eqcommand[]{\verb*}
+-\eqcommand[]{\vfill}
+-\eqcommand[]{\visible}
+-\eqcommand[]{\vline}
+-\eqcommand[]{\voffset}
+-\eqcommand[]{\vpageref}
+-\eqcommand[]{\vref}
+-\eqcommand[]{\vspace}
+-\eqcommand[]{\vspace*}
+-\eqcommand[]{\wedge}
+-\eqcommand[]{\whiledo}
+-\eqcommand[]{\widehat}
+-\eqcommand[]{\widetilde}
+-\eqcommand[]{\width}
+-\eqcommand[]{\wp}
+-\eqcommand[]{\wr}
+-\eqcommand[]{\Xi}
+-\eqcommand[]{\xi}
+-\eqcommand[]{\xleftarrow}
+-\eqcommand[]{\xrightarrow}
+-\eqcommand[]{\zeta}
++\eqcommand[\?????????????????????]{\abovedisplayshortskip}
++\eqcommand[\???????????????]{\abovedisplayskip}
++\eqcommand[\?????????]{\abstractname}
++%\eqcommand[]{\acute}
++\eqcommand[\?????????????]{\addcontentsline}
++\eqcommand[\????]{\address}
++\eqcommand[\????????????]{\addtocontents}
++\eqcommand[\??????????????]{\addtocounter}
++\eqcommand[\??????????]{\addtolength}
++\eqcommand[\????????????]{\addvspace}
++\eqcommand[\???]{\aleph}
++\eqcommand[\???????????????]{\allowdisplaybreaks}
++\eqcommand[\??????]{\Alph}
++\eqcommand[\??????]{\alph}
++%\eqcommand[]{\alpha}
++\eqcommand[\??????????]{\alsoname}
++%\eqcommand[]{\amalg}
++\eqcommand[\?]{\and}
++\eqcommand[\?????]{\angle}
++\eqcommand[\?????????]{\appendixname}
++\eqcommand[\?????]{\approx}
++\eqcommand[\????]{\arabic}
++%\eqcommand[]{\arccos}
++%\eqcommand[]{\arcsin}
++%\eqcommand[]{\arctan}
++\eqcommand[\???]{\arg}
++\eqcommand[\???????????????]{\arraycolsep}
++\eqcommand[\?????????????]{\arrayrulewidth}
++\eqcommand[\????????????]{\arraystretch}
++%\eqcommand[]{\ast}
++%\eqcommand[]{\asymp}
++\eqcommand[\?????????????]{\AtBeginDocument}
++\eqcommand[\??????????????]{\AtEndDocument}
++\eqcommand[\????????????]{\AtEndOfClass}
++\eqcommand[\????????????]{\AtEndOfPackage}
++\eqcommand[\???????]{\author}
++\eqcommand[\????????]{\backmatter}
++\eqcommand[\????????]{\backslash}
++\eqcommand[\????]{\bar}
++\eqcommand[\???????????]{\baselineskip}
++\eqcommand[\??????????????]{\baselinestretch}
++\eqcommand[\????]{\begin}
++\eqcommand[\??????????????????]{\belowdisplayshortskip}
++\eqcommand[\????????????]{\belowdisplayskip}
++%\eqcommand[]{\beta}
++\eqcommand[\????????????]{\bfdefault}
++\eqcommand[\????????]{\bfseries}
++\eqcommand[\????????????]{\bibitem}
++\eqcommand[\?????????]{\bibliography}
++\eqcommand[\?????????????]{\bibliographystyle}
++\eqcommand[\?????????????]{\bibname}
++%\eqcommand[]{\big}
++%\eqcommand[]{\Big}
++%\eqcommand[]{\bigcap}
++%\eqcommand[]{\bigcirc}
++%\eqcommand[]{\bigcup}
++%\eqcommand[]{\bigg}
++%\eqcommand[]{\Bigg}
++%\eqcommand[]{\bigodot}
++%\eqcommand[]{\bigoplus}
++%\eqcommand[]{\bigotimes}
++\eqcommand[\????????]{\bigskip}
++\eqcommand[\?????????????]{\bigskipamount}
++%\eqcommand[]{\bigsqcup}
++%\eqcommand[]{\bigtriangledown}
++%\eqcommand[]{\bigtriangleup}
++%\eqcommand[]{\biguplus}
++%\eqcommand[]{\bigvee}
++%\eqcommand[]{\bigwedge}
++%\eqcommand[]{\binom}
++%\eqcommand[]{\bmod}
++%\eqcommand[]{\boldmath}
++%\eqcommand[]{\boldsymbol}
++%\eqcommand[]{\bot}
++\eqcommand[\???????????]{\botfigrule}
++\eqcommand[\????????]{\bottomfraction}
++%\eqcommand[]{\bowtie}
++%\eqcommand[]{\Box}
++%\eqcommand[]{\boxed}
++%\eqcommand[]{\breve}
++\eqcommand[\?????]{\bullet}
++%\eqcommand[]{\cap}
++\eqcommand[\???]{\caption}
++\eqcommand[\??????]{\cc}
++\eqcommand[\??????????]{\ccname}
++\eqcommand[\????????]{\cdot}
++\eqcommand[\????????]{\cdots}
++\eqcommand[\???????]{\centering}
++\eqcommand[\??????]{\centerline}
++%\eqcommand[]{\cfrac}
++\eqcommand[\???]{\chapter}
++\eqcommand[\???????]{\chaptername}
++%\eqcommand[]{\check}
++%\eqcommand[]{\CheckCommand}
++%\eqcommand[]{\chi}
++%\eqcommand[]{\circ}
++%\eqcommand[]{\circle}
++%\eqcommand[]{\circle*}
++\eqcommand[\???]{\cite}
++%\eqcommand[]{\citep}
++%\eqcommand[]{\citet}
++\eqcommand[\?????????]{\ClassError}
++\eqcommand[\????????????]{\ClassInfo}
++\eqcommand[\?????????]{\ClassWarning}
++\eqcommand[\?????????????????]{\ClassWarningNoLine}
++\eqcommand[\??????????]{\cleardoublepage}
++\eqcommand[\????????]{\clearpage}
++\eqcommand[\????]{\cline}
++\eqcommand[\????]{\closing}
++\eqcommand[\???]{\clubsuit}
++\eqcommand[\???]{\color}
++\eqcommand[\????????]{\colorbox}
++\eqcommand[\?????????]{\columnsep}
++\eqcommand[\?????????????]{\columnseprule}
++%\eqcommand[]{\cong}
++\eqcommand[\????????]{\contentsline}
++\eqcommand[\?????????]{\contentsname}
++%\eqcommand[]{\coprod}
++\eqcommand[\????????]{\copyright}
++%\eqcommand[]{\cos}
++%\eqcommand[]{\cosh}
++%\eqcommand[]{\cot}
++%\eqcommand[]{\coth}
++%\eqcommand[]{\csc}
++%\eqcommand[]{\cup}
++\eqcommand[\??????????]{\CurrentOption}
++%\eqcommand[]{\dag}
++%\eqcommand[]{\dagger}
++\eqcommand[\???????????]{\dashbox}
++\eqcommand[\?????????]{\dashv}
++\eqcommand[\?????]{\date}
++%\eqcommand[]{\dbinom}
++\eqcommand[\????????????]{\dblfigrule}
++\eqcommand[\?????????????????]{\dblfloatpagefraction}
++\eqcommand[\??????????????]{\dblfloatsep}
++\eqcommand[\??????????????????]{\dbltextfloatsep}
++\eqcommand[\???????????]{\dbltopfraction}
++%\eqcommand[]{\ddag}
++%\eqcommand[]{\ddagger}
++%\eqcommand[]{\dddot}
++%\eqcommand[]{\ddddot}
++%\eqcommand[]{\ddot}
++%\eqcommand[]{\ddots}
++\eqcommand[\?????????????????]{\DeclareGraphicsExtensions}
++\eqcommand[\?????????????????]{\DeclareGraphicsRule}
++\eqcommand[\???????????]{\DeclareOption}
++\eqcommand[\???????????????]{\DeclareRobustCommand}
++\eqcommand[\?????????]{\definecolor}
++\eqcommand[\????]{\deg}
++%\eqcommand[]{\DeleteShortVerb}
++%\eqcommand[]{\Delta}
++%\eqcommand[]{\delta}
++\eqcommand[\???]{\depth}
++%\eqcommand[]{\det}
++%\eqcommand[]{\dfrac}
++%\eqcommand[]{\Diamond}
++%\eqcommand[]{\diamond}
++\eqcommand[\???]{\diamondsuit}
++\eqcommand[\???]{\dim}
++\eqcommand[\???????]{\discretionary}
++\eqcommand[\??????????]{\displaybreak}
++\eqcommand[\?????????]{\displaystyle}
++%\eqcommand[]{\div}
++\eqcommand[\???????????]{\documentclass}
++\eqcommand[\????]{\dot}
++\eqcommand[\??????????]{\doteq}
++\eqcommand[\??????]{\dotfill}
++\eqcommand[\????]{\dots}
++%\eqcommand[]{\dotsb}
++%\eqcommand[]{\dotsc}
++%\eqcommand[]{\dotsi}
++%\eqcommand[]{\dotsm}
++\eqcommand[\????????]{\doublebox}
++\eqcommand[\?????????????]{\doublerulesep}
++%\eqcommand[]{\Downarrow}
++\eqcommand[\?????????]{\downarrow}
++%\eqcommand[]{\ell}
++\eqcommand[\??]{\em}
++\eqcommand[\?????]{\emph}
++\eqcommand[\??????????]{\emptyset}
++%\eqcommand[]{\encl}
++%\eqcommand[]{\enclname}
++\eqcommand[\?????]{\end}
++\eqcommand[\??????????????]{\endfirsthead}
++\eqcommand[\????????]{\endfoot}
++\eqcommand[\????????]{\endhead}
++\eqcommand[\??????????????]{\endlastfoot}
++\eqcommand[\??????????????]{\enlargethispage}
++%\eqcommand[]{\ensuremath}
++%\eqcommand[]{\epsilon}
++\eqcommand[\????????]{\eqref}
++%\eqcommand[]{\equiv}
++%\eqcommand[]{\eta}
++\eqcommand[\????]{\euro}
++%\eqcommand[]{\EUR}
++\eqcommand[\??????????????]{\evensidemargin}
++\eqcommand[\??????????????]{\ExecuteOptions}
++%\eqcommand[]{\exists}
++%\eqcommand[]{\exp}
++\eqcommand[\???????????????]{\extracolsep}
++\eqcommand[\??????????]{\fancypage}
++\eqcommand[\?????]{\fbox}
++\eqcommand[\?????????]{\fboxrule}
++\eqcommand[\??????????]{\fboxsep}
++\eqcommand[\??????????]{\fcolorbox}
++\eqcommand[\???????]{\figurename}
++\eqcommand[\???]{\fill}
++\eqcommand[\???]{\flat}
++\eqcommand[\?????????????]{\floatpagefraction}
++\eqcommand[\??????????]{\floatsep}
++\eqcommand[\???????????]{\flushbottom}
++\eqcommand[\??????]{\fnsymbol}
++\eqcommand[\???????????]{\fontfamily}
++\eqcommand[\???????]{\fontseries}
++\eqcommand[\???????]{\fontshape}
++\eqcommand[\??????????]{\fontsize}
++\eqcommand[\??????????]{\LTRfootnote}
++\eqcommand[\??????]{\footnote}
++\eqcommand[\???????????]{\footnotemark}
++\eqcommand[\???????????]{\footnoterule}
++\eqcommand[\???????????]{\footnotesep}
++\eqcommand[\?????????????]{\footnotesize}
++\eqcommand[\??????????]{\footnotetext}
++\eqcommand[\??????]{\footskip}
++%\eqcommand[\???????]{\forall}
++%\eqcommand[\???]{\frac}
++\eqcommand[\????]{\frame}
++\eqcommand[\????????]{\framebox}
++\eqcommand[\???????????????????]{\frenchspacing}
++\eqcommand[\????????]{\frontmatter}
++%\eqcommand[]{\frown}
++%\eqcommand[]{\fussy}
++%\eqcommand[]{\Gamma}
++%\eqcommand[]{\gamma}
++%\eqcommand[\?????]{\gcd}
++%\eqcommand[]{\ge}
++%\eqcommand[]{\genfrac}
++%\eqcommand[\?????]{\geq}
++%\eqcommand[]{\gets}
++%\eqcommand[]{\gg}
++\eqcommand[\?????]{\glossary}
++\eqcommand[\??????????]{\glossaryentry}
++\eqcommand[\????????]{\graphpaper}
++%\eqcommand[\?????]{\grave}
++\eqcommand[\????????]{\guillemotleft}
++\eqcommand[\??????????]{\guillemotright}
++\eqcommand[\????????????]{\guilsinglleft}
++\eqcommand[\??????????????]{\guilsinglright}
++%\eqcommand[\????]{\hat}
++%\eqcommand[\??????]{\hbar}
++\eqcommand[\?????????]{\headheight}
++\eqcommand[\???????]{\headsep}
++\eqcommand[\????????]{\headtoname}
++\eqcommand[\??]{\heartsuit}
++\eqcommand[\??????]{\height}
++\eqcommand[\???]{\hfill}
++\eqcommand[\????]{\hline}
++\eqcommand[\?????]{\hoffset}
++%\eqcommand[\????]{\hom}
++%\eqcommand[]{\hookleftarrow}
++%\eqcommand[]{\hookrightarrow}
++\eqcommand[\????????]{\hrulefill}
++\eqcommand[\????]{\hspace}
++\eqcommand[\????]{\huge}
++\eqcommand[\???????]{\Huge}
++\eqcommand[\????????]{\hyperlink}
++\eqcommand[\????????????]{\hypersetup}
++\eqcommand[\???????]{\hypertarget}
++\eqcommand[\????????]{\hyphenation}
++%\eqcommand[]{\idotsint}
++\eqcommand[\???]{\iff}
++\eqcommand[\??????????????]{\IfFileExists}
++\eqcommand[\????????????]{\ifthenelse}
++%\eqcommand[]{\Im}
++%\eqcommand[]{\imath}
++%\eqcommand[\??]{\in}
++\eqcommand[\????]{\include}
++\eqcommand[\???????????]{\includegraphics}
++\eqcommand[\?????????]{\includeonly}
++\eqcommand[\??????]{\indent}
++\eqcommand[\?????]{\index}
++\eqcommand[\??????????]{\indexentry}
++\eqcommand[\?????????]{\indexname}
++\eqcommand[\??????????]{\indexspace}
++%\eqcommand[]{\inf}
++%\eqcommand[\??????]{\infty}
++\eqcommand[\????]{\input}
++\eqcommand[\??????????????????]{\InputIfFileExists}
++%\eqcommand[\???]{\int}
++%\eqcommand[\????]{\iint}
++%\eqcommand[\?????]{\iiint}
++%\eqcommand[\??????]{\iiiint}
++\eqcommand[\???????]{\intertext}
++\eqcommand[\????????????]{\intertextsep}
++\eqcommand[\????]{\invisible}
++%\eqcommand[]{\iota}
++\eqcommand[\??????????]{\itdefault}
++\eqcommand[\???]{\item}
++\eqcommand[\???????????]{\itemindent}
++\eqcommand[\????????]{\itemsep}
++\eqcommand[\??????]{\itshape}
++%\eqcommand[]{\jmath}
++%\eqcommand[]{\join}
++%\eqcommand[]{\jot}
++%\eqcommand[]{\kappa}
++%\eqcommand[]{\ker}
++\eqcommand[\????]{\kill}
++\eqcommand[\?????]{\label}
++\eqcommand[\?????????????]{\labelenumi}
++\eqcommand[\?????????????]{\labelenumii}
++\eqcommand[\?????????????]{\labelenumiii}
++\eqcommand[\?????????????]{\labelenumiv}
++\eqcommand[\??????????]{\labelitemi}
++\eqcommand[\??????????]{\labelitemii}
++\eqcommand[\??????????]{\labelitemiii}
++\eqcommand[\??????????]{\labelitemiv}
++\eqcommand[\??????????]{\labelsep}
++\eqcommand[\?????????]{\labelwidth}
++%\eqcommand[]{\Lambda}
++%\eqcommand[]{\lambda}
++%\eqcommand[\???????]{\langle}
++\eqcommand[\????]{\language}
++\eqcommand[\????]{\large}
++\eqcommand[\???????]{\Large}
++\eqcommand[\?????????]{\LARGE}
++\eqcommand[\????]{\LaTeX}
++\eqcommand[\???????]{\LaTeXe}
++%\eqcommand[\?????]{\lceil}
++\eqcommand[\??????]{\ldots}
++%\eqcommand[]{\le}
++%\eqcommand[]{\leadsto}
++\eqcommand[\??]{\left}
++%\eqcommand[\???????????]{\Leftarrow}
++%\eqcommand[\??????]{\leftarrow}
++%\eqcommand[]{\lefteqn}
++%\eqcommand[]{\leftharpoondown}
++%\eqcommand[]{\leftharpoonup}
++\eqcommand[\????????]{\leftmargin}
++%\eqcommand[\????????????????]{\Leftrightarrow}
++%\eqcommand[\???????????]{\leftrightarrow}
++%\eqcommand[\???????]{\leftroot}
++%\eqcommand[\???]{\leq}
++%\eqcommand[\????]{\lfloor}
++%\eqcommand[]{\lg}
++%\eqcommand[]{\lhd}
++%\eqcommand[\??]{\lim}
++%\eqcommand[]{\liminf}
++%\eqcommand[]{\limits}
++%\eqcommand[]{\limsup}
++\eqcommand[\??]{\line}
++\eqcommand[\???????]{\linebreak}
++\eqcommand[\????????]{\linethickness}
++\eqcommand[\??????]{\linewidth}
++\eqcommand[\????????????]{\listfigurename}
++\eqcommand[\??????????????]{\listfiles}
++\eqcommand[\???????????]{\listoffigures}
++\eqcommand[\???????????]{\listoftables}
++\eqcommand[\???????????????]{\listparindent}
++\eqcommand[\?????????????]{\listtablename}
++%\eqcommand[]{\ll}
++%\eqcommand[]{\ln}
++\eqcommand[\?????????????]{\LoadClass}
++\eqcommand[\????????????????????????]{\LoadClassWithOptions}
++\eqcommand[\????]{\location}
++%\eqcommand[]{\log}
++%\eqcommand[]{\Longleftarrow}
++%\eqcommand[]{\longleftarrow}
++%\eqcommand[]{\Longleftrightarrow}
++%\eqcommand[]{\longleftrightarrow}
++%\eqcommand[]{\longmapsto}
++%\eqcommand[]{\Longrightarrow}
++%\eqcommand[]{\longrightarrow}
++%\eqcommand[]{\lvert}
++%\eqcommand[]{\lVert}
++\eqcommand[\?????????]{\mainmatter}
++\eqcommand[\?????????]{\makebox}
++\eqcommand[\??????????]{\makeglossary}
++\eqcommand[\??????????]{\makeindex}
++\eqcommand[\??????????]{\makelabel}
++\eqcommand[\?????????????]{\makelabels}
++\eqcommand[\??????????????]{\MakeLowercase}
++%\eqcommand[]{\MakeShortVerb}
++\eqcommand[\??????????]{\maketitle}
++\eqcommand[\??????????????]{\MakeUppercase}
++%\eqcommand[]{\mapsto}
++\eqcommand[\?????????]{\marginpar}
++%\eqcommand[]{\marginparpush}
++\eqcommand[\??????????????]{\marginparsep}
++\eqcommand[\????????????]{\marginparwidth}
++\eqcommand[\?????????]{\markboth}
++\eqcommand[\?????????]{\markright}
++%\eqcommand[]{\mathbf}
++%\eqcommand[]{\mathcal}
++%\eqcommand[]{\mathindent}
++%\eqcommand[]{\mathit}
++%\eqcommand[]{\mathnormal}
++%\eqcommand[]{\mathring}
++%\eqcommand[]{\mathrm}
++%\eqcommand[]{\mathsf}
++%\eqcommand[]{\mathtt}
++%\eqcommand[]{\max}
++\eqcommand[\??????]{\mbox}
++%\eqcommand[]{\mddefault}
++%\eqcommand[]{\mdseries}
++\eqcommand[\?????????]{\medskip}
++\eqcommand[\??????????????]{\medskipamount}
++\eqcommand[\??????????]{\medspace}
++\eqcommand[\?????????]{\MessageBreak}
++%\eqcommand[]{\mho}
++%\eqcommand[]{\mid}
++%\eqcommand[]{\min}
++%\eqcommand[]{\mod}
++%\eqcommand[]{\models}
++%\eqcommand[]{\mp}
++%\eqcommand[]{\mspace}
++%\eqcommand[]{\mu}
++\eqcommand[\????????]{\multicolumn}
++%\eqcommand[]{\multiput}
++%\eqcommand[]{\multlinegap}
++%\eqcommand[]{\nabla}
++\eqcommand[\???]{\name}
++\eqcommand[\?????]{\natural}
++\eqcommand[\?????]{\nearrow}
++\eqcommand[\?????????????]{\NeedsTeXFormat}
++\eqcommand[\????]{\neg}
++\eqcommand[\???????????????]{\negmedspace}
++\eqcommand[\??????????????]{\negthickspace}
++\eqcommand[\??????????????]{\negthinspace}
++%\eqcommand[]{\neq}
++\eqcommand[\???????]{\newboolean}
++\eqcommand[\????????]{\newcommand}
++\eqcommand[\??????????]{\newcounter}
++\eqcommand[\???????]{\newenvironment}
++\eqcommand[\??????]{\newfont}
++\eqcommand[\??????]{\newlength}
++\eqcommand[\?????]{\newline}
++\eqcommand[\???????]{\newpage}
++\eqcommand[\????????????]{\newsavebox}
++\eqcommand[\???????]{\newtheorem}
++%\eqcommand[]{\ni}
++\eqcommand[\????????]{\nocite}
++\eqcommand[\???????????]{\nofiles}
++\eqcommand[\????????????]{\noindent}
++\eqcommand[\???????]{\nolimits}
++\eqcommand[\????????????]{\nolinebreak}
++\eqcommand[\??????????????????????]{\nonfrenchspacing}
++\eqcommand[\??????????]{\nonumber}
++\eqcommand[\??????????????]{\nopagebreak}
++\eqcommand[\?????????]{\normalcolor}
++\eqcommand[\?????????]{\normalfont}
++\eqcommand[\??????????????]{\normalmarginpar}
++\eqcommand[\????????????]{\normalsize}
++%\eqcommand[\??]{\not}
++\eqcommand[\??????????]{\notag}
++%\eqcommand[]{\notin}
++%\eqcommand[]{\nu}
++\eqcommand[\???????????]{\numberwithin}
++%\eqcommand[]{\nwarrow}
++\eqcommand[\????????????]{\oddsidemargin}
++%\eqcommand[]{\odot}
++%\eqcommand[]{\oint}
++%\eqcommand[]{\Omega}
++%\eqcommand[]{\omega}
++%\eqcommand[]{\ominus}
++\eqcommand[\???????]{\onecolumn}
++\eqcommand[\???????????????]{\onlynotes}
++\eqcommand[\????????????]{\onlyslides}
++%\eqcommand[]{\opening}
++%\eqcommand[]{\oplus}
++\eqcommand[\?????????????????]{\OptionNotUsed}
++%\eqcommand[]{\oslash}
++%\eqcommand[]{\otimes}
++%\eqcommand[\????]{\oval}
++%\eqcommand[\????????]{\ovalbox}
++%\eqcommand[]{\Ovalbox}
++%\eqcommand[]{\overbrace}
++%\eqcommand[]{\overleftarrow}
++%\eqcommand[]{\overleftrightarrow}
++%\eqcommand[]{\overline}
++%\eqcommand[]{\overrightarrow}
++%\eqcommand[]{\overset}
++\eqcommand[\?????????]{\PackageError}
++\eqcommand[\????????????]{\PackageInfo}
++\eqcommand[\?????????]{\PackageWarning}
++\eqcommand[\?????????????????]{\PackageWarningNoLine}
++\eqcommand[\?????????]{\pagebreak}
++\eqcommand[\????????]{\pagecolor}
++\eqcommand[\????????]{\pagename}
++\eqcommand[\????????????????]{\pagenumbering}
++\eqcommand[\??????????]{\pageref}
++\eqcommand[\????????]{\pagestyle}
++\eqcommand[\??????????]{\paperheight}
++\eqcommand[\???????]{\paperwidth}
++\eqcommand[\???]{\par}
++\eqcommand[\????????]{\paragraph}
++\eqcommand[\?????]{\parallel}
++\eqcommand[\???????]{\parbox}
++\eqcommand[\???????????]{\parindent}
++\eqcommand[\????????]{\parsep}
++\eqcommand[\???????]{\parskip}
++\eqcommand[\????]{\part}
++%\eqcommand[]{\partial}
++\eqcommand[\????????]{\partname}
++\eqcommand[\??????????????]{\partopsep}
++\eqcommand[\?????????????????]{\PassOptionToClass}
++\eqcommand[\?????????????????]{\PassOptionToPackage}
++\eqcommand[\????]{\path}
++%\eqcommand[]{\prep}
++%\eqcommand[]{\Phi}
++%\eqcommand[]{\phi}
++%\eqcommand[]{\Pi}
++%\eqcommand[]{\pi}
++%\eqcommand[]{\pm}
++%\eqcommand[]{\pmb}
++%\eqcommand[]{\pmod}
++%\eqcommand[]{\pod}
++%\eqcommand[]{\poptabs}
++%\eqcommand[]{\pounds}
++%\eqcommand[]{\Pr}
++%\eqcommand[]{\prec}
++%\eqcommand[]{\preceq}
++%\eqcommand[]{\prime}
++\eqcommand[\?????????]{\printindex}
++\eqcommand[\???????????????]{\ProcessOptions}
++%\eqcommand[]{\prod}
++%\eqcommand[]{\propto}
++\eqcommand[\?????]{\protect}
++\eqcommand[\??????????]{\providecommand}
++\eqcommand[\?????????]{\ProvidesClass}
++\eqcommand[\???????????]{\ProvidesFile}
++\eqcommand[\?????????]{\ProvidesPackage}
++%\eqcommand[]{\ps}
++%\eqcommand[]{\Psi}
++%\eqcommand[]{\psi}
++%\eqcommand[]{\pushtabs}
++%\eqcommand[]{\put}
++%\eqcommand[]{\qbezier}
++%\eqcommand[]{\qquad}
++%\eqcommand[]{\quad}
++\eqcommand[\???????????]{\raggedbottom}
++\eqcommand[\????????]{\raggedleft}
++\eqcommand[\??????????]{\raggedright}
++\eqcommand[\??????????]{\raisebox}
++\eqcommand[\???????????]{\raisetag}
++\eqcommand[\???????]{\rangle}
++\eqcommand[\?????]{\rceil}
++%\eqcommand[]{\Re}
++\eqcommand[\????]{\ref}
++\eqcommand[\???????????]{\reflectbox}
++\eqcommand[\????????]{\refname}
++\eqcommand[\????????????????]{\refstepcounter}
++\eqcommand[\??????????]{\renewcommand}
++\eqcommand[\?????????]{\renewenvironment}
++\eqcommand[\???????????]{\RequirePackage}
++\eqcommand[\???????????????????]{\RequirePackageWithOptions}
++\eqcommand[\???????????????]{\resizebox}
++\eqcommand[\??????????????]{\reversemarginpar}
++\eqcommand[\????]{\rfloor}
++%\eqcommand[]{\rhd}
++%\eqcommand[]{\rho}
++\eqcommand[\????]{\right}
++%\eqcommand[]{\Rightarrow}
++%\eqcommand[]{\rightarrow}
++%\eqcommand[]{\rightharpoondown}
++%\eqcommand[]{\rightharpoonup}
++%\eqcommand[]{\rightleftharpoons}
++%\eqcommand[]{\rightmargin}
++\eqcommand[\??????????]{\rmdefault}
++\eqcommand[\??????????]{\rmfamily}
++\eqcommand[\?????????]{\Roman}
++\eqcommand[\????]{\roman}
++\eqcommand[\????????????]{\rotatebox}
++\eqcommand[\????]{\rule}
++%\eqcommand[]{\rvert}
++%\eqcommand[]{\rVert}
++\eqcommand[\??????????]{\savebox}
++\eqcommand[\?????]{\sbox}
++\eqcommand[\?????????]{\scalebox}
++\eqcommand[\?????????????????]{\scdefault}
++\eqcommand[\???????????????????]{\scriptscriptstyle}
++\eqcommand[\??????????????]{\scriptsize}
++\eqcommand[\???????????]{\scripstyle}
++%\eqcommand[]{\scshape}
++%\eqcommand[]{\searrow}
++%\eqcommand[]{\sec}
++\eqcommand[\???]{\section}
++\eqcommand[\??????]{\see}
++\eqcommand[\?????????]{\seealso}
++\eqcommand[\??????????]{\seename}
++\eqcommand[\??????????]{\selectfont}
++\eqcommand[\??????????]{\setboolean}
++\eqcommand[\?????????????]{\setcounter}
++\eqcommand[\?????????]{\setlength}
++\eqcommand[\??????????]{\setminus}
++\eqcommand[\????????????]{\settodepth}
++\eqcommand[\???????????????]{\settoheight}
++\eqcommand[\????????????]{\settowidth}
++\eqcommand[\???????????]{\sfdefault}
++\eqcommand[\???????????]{\sffamily}
++\eqcommand[\????????????]{\shadowbox}
++\eqcommand[\???]{\sharp}
++\eqcommand[\??????????]{\shortstack}
++%\eqcommand[]{\sideset}
++%\eqcommand[]{\Sigma}
++%\eqcommand[]{\sigma}
++%\eqcommand[]{\signature}
++%\eqcommand[]{\sim}
++%\eqcommand[]{\simeq}
++%\eqcommand[]{\sin}
++%\eqcommand[]{\sinh}
++\eqcommand[\??????????]{\sldefault}
++\eqcommand[\??????]{\sloppy}
++\eqcommand[\????????]{\slshape}
++\eqcommand[\????]{\small}
++\eqcommand[\????????]{\smallskip}
++\eqcommand[\??????????????]{\smallskipamount}
++\eqcommand[\???]{\smash}
++\eqcommand[\?????]{\smile}
++\eqcommand[\???]{\spadesuit}
++%\eqcommand[]{\sqcap}
++%\eqcommand[]{\sqcup}
++%\eqcommand[\???????]{\sqrt}
++%\eqcommand[]{\sqsubset}
++%\eqcommand[]{\sqsubseteq}
++%\eqcommand[]{\sqsupset}
++%\eqcommand[]{\sqsupseteq}
++%\eqcommand[\?????????]{\stackrel}
++\eqcommand[\?????]{\star}
++\eqcommand[\???????????]{\stepcounter}
++\eqcommand[\???]{\stretch}
++\eqcommand[\??????]{\subitem}
++\eqcommand[\???????????]{\subparagraph}
++\eqcommand[\??????]{\subsection}
++\eqcommand[\???????]{\substack}
++\eqcommand[\?????????]{\subsubitem}
++\eqcommand[\?????????]{\subsubsection}
++\eqcommand[\?????????]{\subset}
++\eqcommand[\????????????]{\subseteq}
++%\eqcommand[]{\succ}
++%\eqcommand[]{\succeq}
++%\eqcommand[]{\sum}
++%\eqcommand[]{\sup}
++%\eqcommand[]{\supressfloats}
++%\eqcommand[]{\supset}
++%\eqcommand[]{\supseteq}
++%\eqcommand[]{\surd}
++%\eqcommand[]{\swarrow}
++\eqcommand[\??????????????]{\tabbingsep}
++\eqcommand[\??????????????]{\tabcolsep}
++\eqcommand[\???????????]{\tableofcontents}
++\eqcommand[\???????]{\tablename}
++\eqcommand[\?????????]{\tabularnewline}
++\eqcommand[\?????]{\tag}
++%\eqcommand[]{\tan}
++%\eqcommand[]{\tanh}
++%\eqcommand[]{\tau}
++%\eqcommand[]{\tbinom}
++\eqcommand[\????]{\telephone}
++\eqcommand[\??]{\TeX}
++\eqcommand[\????]{\text}
++\eqcommand[\??????????]{\textbullet}
++\eqcommand[\??????????]{\textemdash}
++\eqcommand[\??????????]{\textendash}
++\eqcommand[\????????????????]{\textexclamdown}
++\eqcommand[\?????????????]{\textperiodcentered}
++\eqcommand[\????????????????]{\textquestiondown}
++\eqcommand[\????????????????]{\textquotedblleft}
++\eqcommand[\??????????????????]{\textquotedblright}
++\eqcommand[\???????????]{\textquoteleft}
++\eqcommand[\?????????????]{\textquoteright}
++\eqcommand[\?????????????????]{\textvisiblespace}
++%\eqcommand[]{\textasciicircum}
++%\eqcommand[]{\textasciitilde}
++\eqcommand[\??????????????]{\textbackslash}
++\eqcommand[\?????????]{\textbar}
++\eqcommand[\????????????]{\textgreater}
++\eqcommand[\?????????]{\textless}
++\eqcommand[\????????]{\textbf}
++\eqcommand[\?????????]{\textcircled}
++\eqcommand[\???????]{\textcolor}
++\eqcommand[\??????????????????]{\textcompwordmark}
++\eqcommand[\?????????????]{\textfloatsep}
++\eqcommand[\??????]{\textfraction}
++\eqcommand[\??????????]{\textheight}
++\eqcommand[\???????????]{\textit}
++\eqcommand[\????????]{\textmd}
++\eqcommand[\?????????]{\textnormal}
++\eqcommand[\?????????]{\textregistered}
++\eqcommand[\????????]{\textrm}
++\eqcommand[\?????????????]{\textsc}
++\eqcommand[\????????????]{\textsf}
++\eqcommand[\???????????]{\textsl}
++\eqcommand[\????????]{\textstyle}
++\eqcommand[\?????????????]{\textsuperscript}
++\eqcommand[\????????????????]{\texttrademark}
++\eqcommand[\????????]{\texttt}
++\eqcommand[\????????]{\textup}
++\eqcommand[\???????]{\textwidth}
++%\eqcommand[]{\tfrac}
++\eqcommand[\????]{\thanks}
++%\eqcommand[]{\Theta}
++%\eqcommand[]{\theta}
++\eqcommand[\?????????]{\thicklines}
++\eqcommand[\???????]{\thickspace}
++\eqcommand[\?????????]{\thinlines}
++\eqcommand[\???????]{\thinspace}
++\eqcommand[\??????????????]{\thisfancypage}
++\eqcommand[\????????????]{\thispagestyle}
++\eqcommand[\??]{\tilde}
++\eqcommand[\???]{\tiny}
++\eqcommand[\???]{\times}
++\eqcommand[\?????]{\title}
++\eqcommand[\??]{\to}
++\eqcommand[\?????]{\today}
++\eqcommand[\????]{\top}
++\eqcommand[\?????????????]{\topfigrule}
++\eqcommand[\????????]{\topfraction}
++\eqcommand[\??????????]{\topmargin}
++\eqcommand[\?????????]{\topsep}
++\eqcommand[\????????]{\topskip}
++\eqcommand[\??????????]{\totalheight}
++\eqcommand[\????]{\triangle}
++%\eqcommand[]{\triangleleft}
++%\eqcommand[]{\triangleright}
++\eqcommand[\????????????]{\ttdefault}
++\eqcommand[\????????????]{\ttfamily}
++\eqcommand[\??????]{\twocolumn}
++%\eqcommand[]{\typein}
++%\eqcommand[]{\typeout}
++%\eqcommand[]{\unboldmath}
++%\eqcommand[]{\underbrace}
++%\eqcommand[]{\underleftarrow}
++%\eqcommand[]{\underleftrightarrow}
++\eqcommand[\?????]{\underline}
++%\eqcommand[]{\underrightarrow}
++%\eqcommand[]{\underset}
++%\eqcommand[]{\unitlength}
++%\eqcommand[]{\unlhd}
++%\eqcommand[]{\unrhd}
++%\eqcommand[]{\Uparrow}
++%\eqcommand[]{\uparrow}
++\eqcommand[\???????????????]{\updefault}
++%\eqcommand[]{\Updownarrow}
++%\eqcommand[]{\updownarrow}
++%\eqcommand[]{\uplus}
++%\eqcommand[]{\upshape}
++%\eqcommand[]{\Upsilon}
++%\eqcommand[]{\upsilon}
++%\eqcommand[]{\uproot}
++%\eqcommand[]{\url}
++%\eqcommand[]{\urlstyle}
++\eqcommand[\????????????]{\usebox}
++\eqcommand[\???????????????]{\usecounter}
++\eqcommand[\????????????]{\usefont}
++\eqcommand[\????????????]{\usepackage}
++\eqcommand[\????]{\value}
++%\eqcommand[]{\varepsilon}
++%\eqcommand[]{\varinjlim}
++%\eqcommand[]{\varliminf}
++%\eqcommand[]{\varlimsup}
++%\eqcommand[]{\varphi}
++%\eqcommand[]{\varpi}
++%\eqcommand[]{\varprojlim}
++%\eqcommand[]{\varrho}
++%\eqcommand[]{\varsigma}
++%\eqcommand[]{\vartheta}
++%\eqcommand[]{\vdash}
++%\eqcommand[]{\vdots}
++%\eqcommand[]{\vec}
++%\eqcommand[]{\vector}
++%\eqcommand[]{\vee}
++\eqcommand[\???]{\verb}
++\eqcommand[\????]{\vfill}
++\eqcommand[\??????]{\visible}
++\eqcommand[\????]{\vline}
++\eqcommand[\?????]{\voffset}
++\eqcommand[\????????????]{\vpageref}
++\eqcommand[\???????]{\vref}
++\eqcommand[\??????]{\vspace}
++%\eqcommand[]{\wedge}
++\eqcommand[\?????????]{\whiledo}
++\eqcommand[\????????]{\widehat}
++\eqcommand[\?????]{\widetilde}
++\eqcommand[\???]{\width}
++%\eqcommand[]{\wp}
++%\eqcommand[]{\wr}
++%\eqcommand[]{\Xi}
++%\eqcommand[]{\xi}
++%\eqcommand[]{\xleftarrow}
++%\eqcommand[]{\xrightarrow}
++%\eqcommand[]{\zeta}
+ %    \end{macrocode}
+ % \iffalse
+ %</commands-ltx.def>
+@@ -1546,68 +1525,68 @@
+ % \fi
+ % \part{environments-ltx.def}
+ %    \begin{macrocode}
+-\eqenvironment[]{abstract}
+-\eqenvironment[]{align}
+-\eqenvironment[]{alignat}
+-\eqenvironment[]{aligned}
+-\eqenvironment[]{appendix}
+-\eqenvironment[]{array}
+-\eqenvironment[]{center}
+-\eqenvironment[]{alltt}
+-\eqenvironment[]{bmatrix}
+-\eqenvironment[]{Bmatrix}
+-\eqenvironment[]{cases}
+-\eqenvironment[]{description}
+-\eqenvironment[]{displaymath}
+-\eqenvironment[]{enumerate}
+-\eqenvironment[]{eqnarray}
+-\eqenvironment[]{eqnarray*}
+-\eqenvironment[]{equation}
+-\eqenvironment[]{equation*}
+-\eqenvironment[]{falign}
+-\eqenvironment[]{figure}
+-\eqenvironment[]{figure*}
+-\eqenvironment[]{filecontents}
+-\eqenvironment[]{filecontents*}
+-\eqenvironment[]{flushleft}
+-\eqenvironment[]{flushright}
+-\eqenvironment[]{gather}
+-\eqenvironment[]{gathered}
+-\eqenvironment[]{itemize}
+-\eqenvironment[]{letter}
+-\eqenvironment[]{list}
+-\eqenvironment[]{longtable}
+-\eqenvironment[]{lrbox}
+-\eqenvironment[]{math}
+-\eqenvironment[]{matrix}
+-\eqenvironment[]{minipage}
+-\eqenvironment[]{multicols}
+-\eqenvironment[]{multline}
+-\eqenvironment[]{note}
+-\eqenvironment[]{overlay}
+-\eqenvironment[]{picture}
+-\eqenvironment[]{pmatrix}
+-\eqenvironment[]{quotation}
+-\eqenvironment[]{quote}
+-\eqenvironment[]{slide}
+-\eqenvironment[]{sloppypar}
+-\eqenvironment[]{split}
+-\eqenvironment[]{subarray}
+-\eqenvironment[]{subequations}
+-\eqenvironment[]{tabbing}
+-\eqenvironment[]{table}
+-\eqenvironment[]{table*}
+-\eqenvironment[]{tabular}
+-\eqenvironment[]{tabular*}
+-\eqenvironment[]{thebibliography}
+-\eqenvironment[]{theindex}
+-\eqenvironment[]{titlepage}
+-\eqenvironment[]{trivlist}
+-\eqenvironment[]{verbatim}
+-\eqenvironment[]{verbatim*}
+-\eqenvironment[]{verse}
+-\eqenvironment[]{vmatrix}
+-\eqenvironment[]{Vmatrix}
++\eqenvironment[?????]{abstract}
++%\eqenvironment[]{align}
++%\eqenvironment[]{alignat}
++%\eqenvironment[]{aligned}
++\eqenvironment[?????]{appendix}
++\eqenvironment[?????]{array}
++\eqenvironment[???]{center}
++%\eqenvironment[]{alltt}
++%\eqenvironment[]{bmatrix}
++%\eqenvironment[]{Bmatrix}
++%\eqenvironment[]{cases}
++\eqenvironment[?????]{description}
++%\eqenvironment[]{displaymath}
++\eqenvironment[??????????]{enumerate}
++%\eqenvironment[]{eqnarray}
++%\eqenvironment[]{eqnarray*}
++%\eqenvironment[]{equation}
++%\eqenvironment[]{equation*}
++%\eqenvironment[]{falign}
++\eqenvironment[???]{figure}
++\eqenvironment[???*]{figure*}
++\eqenvironment[??????????????]{filecontents}
++\eqenvironment[??????????????*]{filecontents*}
++\eqenvironment[??????]{flushleft}
++\eqenvironment[????????]{flushright}
++%\eqenvironment[]{gather}
++%\eqenvironment[]{gathered}
++\eqenvironment[??????]{itemize}
++\eqenvironment[????]{letter}
++\eqenvironment[????]{list}
++\eqenvironment[?????????]{longtable}
++\eqenvironment[??????]{lrbox}
++\eqenvironment[?????]{math}
++\eqenvironment[??????]{matrix}
++\eqenvironment[?????????]{minipage}
++\eqenvironment[???????????]{multicols}
++\eqenvironment[??????]{multline}
++\eqenvironment[???????]{note}
++\eqenvironment[???????]{overlay}
++\eqenvironment[?????]{picture}
++%\eqenvironment[]{pmatrix}
++\eqenvironment[??????]{quotation}
++\eqenvironment[???]{quote}
++\eqenvironment[??????]{slide}
++\eqenvironment[?????????]{sloppypar}
++\eqenvironment[??????]{split}
++\eqenvironment[????????]{subarray}
++%\eqenvironment[]{subequations}
++\eqenvironment[?????????]{tabbing}
++\eqenvironment[???]{table}
++\eqenvironment[???*]{table*}
++\eqenvironment[????]{tabular}
++\eqenvironment[????*]{tabular*}
++\eqenvironment[????????????????]{thebibliography}
++\eqenvironment[????????????]{theindex}
++\eqenvironment[??????????]{titlepage}
++%\eqenvironment[]{trivlist}
++\eqenvironment[????????????]{verbatim}
++\eqenvironment[????????????*]{verbatim*}
++\eqenvironment[???]{verse}
++%\eqenvironment[]{vmatrix}
++%\eqenvironment[]{Vmatrix}
+ %    \end{macrocode}
+ % \iffalse
+ %</environments-ltx.def>
+
+
+
+From vafa at mail.berlios.de  Fri Sep 11 19:07:29 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Fri, 11 Sep 2009 19:07:29 +0200
+Subject: [Xepersian-development] r97 - trunk
+Message-ID: <200909111707.n8BH7TaF025111@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-11 19:07:12 +0200 (Fri, 11 Sep 2009)
+New Revision: 97
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+deleting unnecessary macros for localising commands
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-11 14:13:27 UTC (rev 96)
++++ trunk/xepersian.dtx	2009-09-11 17:07:12 UTC (rev 97)
+@@ -162,7 +162,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 96}
++\def\xepersianrevision{revision 97}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -649,25 +649,9 @@
+ % \fi
+ % \part{localise-xepersian.def}
+ %    \begin{macrocode}
+-\catcode`\?=3
+ \catcode`?=11
+ \newcommand\eqcommand[2][]{\let#1=#2}
+ \newcommand\eqenvironment[2][]{\newenvironment{#1}{\begin{#2}}{\end{#2}}}
+-\define at key[zf]{options}{?????}{%
+-  \edef\@tempa{#1}%
+-  \edef\@tempb{MatchLowercase}%
+-  \ifx\@tempa\@tempb
+-    \zf at calc@scale{5}%
+-  \else
+-    \edef\@tempb{MatchUppercase}%
+-    \ifx\@tempa\@tempb
+-      \zf at calc@scale{8}%
+-    \else
+-      \edef\zf at scale{#1}%
+-    \fi
+-  \fi
+-  \zf at update@family{+scale:\zf at scale}%
+-  \edef\zf at scale{s*[\zf at scale]}}
+ \input{commands-ltx.def}
+ \input{commands-xepersian.def}
+ \input{environments-ltx.def}
+
+
+
+From vafa at mail.berlios.de  Fri Sep 11 19:21:37 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Fri, 11 Sep 2009 19:21:37 +0200
+Subject: [Xepersian-development] r98 - trunk
+Message-ID: <200909111721.n8BHLbhm012287@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-11 19:21:24 +0200 (Fri, 11 Sep 2009)
+New Revision: 98
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+changed translation
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-11 17:07:12 UTC (rev 97)
++++ trunk/xepersian.dtx	2009-09-11 17:21:24 UTC (rev 98)
+@@ -162,7 +162,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 97}
++\def\xepersianrevision{revision 98}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -1684,8 +1684,8 @@
+ % \fi
+ % \part{misccommandsenvironments-ltx.def}
+ %    \begin{macrocode}
+-\eqcommand[\???]{\document}
+-\eqcommand[\end???]{\enddocument}
++\eqcommand[\??????]{\document}
++\eqcommand[\end??????]{\enddocument}
+ %    \end{macrocode}
+ % \iffalse
+ %</misccommandsenvironments-ltx.def>
+
+
+
+From vafa at mail.berlios.de  Sat Sep 12 08:11:15 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 12 Sep 2009 08:11:15 +0200
+Subject: [Xepersian-development] r99 - trunk
+Message-ID: <200909120611.n8C6BFsD026446@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-12 08:11:09 +0200 (Sat, 12 Sep 2009)
+New Revision: 99
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+the options needs to be executed at the end of the package once all modifications are done, otherwise we will still use the old definitions
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-11 17:21:24 UTC (rev 98)
++++ trunk/xepersian.dtx	2009-09-12 06:11:09 UTC (rev 99)
+@@ -162,14 +162,10 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 98}
++\def\xepersianrevision{revision 99}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+-\DeclareOption{Kashida}{\input{kashida-xepersian.def}}
+-\DeclareOption{localise}{\input{localise-xepersian.def}}
+-\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{bidi}}
+-\ProcessOptions\relax
+ \newcommand\xepersian at isloaded[2][]{
+   \expandafter\ifx\csname if at xepersian@#2loaded@\endcsname\relax
+     \expandafter\newif\csname if at xepersian@#2loaded@\endcsname
+@@ -415,6 +411,9 @@
+ \@ifclassloaded{refrep}{\input{refrep-xepersian.def}}{}
+ \@ifclassloaded{bidibeamer}{\input{bidibeamer-xepersian.def}}{}
+ \@ifclassloaded{memoir}{\input{memoir-xepersian.def}}{}
++\DeclareOption{Kashida}{\input{kashida-xepersian.def}}
++\DeclareOption{localise}{\input{localise-xepersian.def}}
++\ProcessOptions
+ %    \end{macrocode}
+ % \iffalse
+ %</xepersian.sty>
+
+
+
+From vafa at mail.berlios.de  Sat Sep 12 21:15:17 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 12 Sep 2009 21:15:17 +0200
+Subject: [Xepersian-development] r100 - trunk
+Message-ID: <200909121915.n8CJFHpk030968@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-12 21:15:11 +0200 (Sat, 12 Sep 2009)
+New Revision: 100
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added support for breqn
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-12 06:11:09 UTC (rev 99)
++++ trunk/xepersian.dtx	2009-09-12 19:15:11 UTC (rev 100)
+@@ -75,6 +75,7 @@
+ \generate{\file{bidimoderncv-xepersian.def}{\from{xepersian.dtx}{bidimoderncv-xepersian.def}}}
+ \generate{\file{bookest-xepersian.def}{\from{xepersian.dtx}{bookest-xepersian.def}}}
+ \generate{\file{book-xepersian.def}{\from{xepersian.dtx}{book-xepersian.def}}}
++\generate{\file{breqn-xepersian.def}{\from{xepersian.dtx}{breqn-xepersian.def}}}
+ \generate{\file{footnote-bidi-xepersian.def}{\from{xepersian.dtx}{footnote-bidi-xepersian.def}}}
+ \generate{\file{localise-xepersian.def}{\from{xepersian.dtx}{localise-xepersian.def}}}
+ \generate{\file{commands-ltx.def}{\from{xepersian.dtx}{commands-ltx.def}}}
+@@ -162,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 99}
++\def\xepersianrevision{revision 100}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -285,12 +286,12 @@
+   \normalfont}
+ \def\lr#1{\begingroup\beginL\latinfont#1\endL\endgroup}
+ \def\rl#1{\begingroup\beginR\persianfont#1\endR\endgroup}
+-\def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@RTL at footnotefalse\let\normalfont\latinfont\latinfont}
++\def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@Latintrue\@RTL at footnotefalse\let\normalfont\latinfont\latinfont}
+ \def\endlatin{\par\egroup}
+ \def\persian{\bgroup\PersianAlphs\par\@RTLtrue\@RTL at footnotetrue\let\normalfont\persianfont\persianfont}
+ \def\endpersian{\par\egroup}
+-\def\Latin{\if at RTL\par\LatinAlphs\@RTLfalse\@RTL at footnotefalse\let\normalfont\latinfont\latinfont\fi}
+-\def\Persian{\if at RTL\relax\else\par\PersianAlphs\@RTLtrue\@RTL at footnotetrue\let\normalfont\persianfont\persianfont\fi}
++\def\Latin{\if at RTL\par\LatinAlphs\@RTLfalse\@Latintrue\@RTL at footnotefalse\let\normalfont\latinfont\latinfont\fi}
++\def\Persian{\if at RTL\relax\else\par\PersianAlphs\@RTLtrue\@Latintfalse\@RTL at footnotetrue\let\normalfont\persianfont\persianfont\fi}
+ \let\originaltoday=\today
+ \def\today{\lr{\originaltoday}}
+ \let\latintoday\today
+@@ -392,6 +393,7 @@
+ \@ifpackageloaded{algorithm}{\input{algorithm-xepersian.def}}{}
+ \@ifpackageloaded{backref}{\input{backref-xepersian.def}}{}
+ \@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
++\@ifpackageloaded{breqn}{\input{breqn-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
+ \@ifpackageloaded{minitoc}{\input{minitoc-xepersian.def}}{}
+ \@ifpackageloaded{tocloft}{\@ifclassloaded{memoir}{}{\input{tocloft-xepersian.def}}}{}
+@@ -489,7 +491,7 @@
+ % \part{bidibeamer-xepersian.def}
+ %    \begin{macrocode}
+ \def\familydefault{\rmdefault}
+-\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@RTL at footnotefalse\let\normalfont\latinfont\latinfont}
++\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@RTL at footnotefalse\let\normalfont\latinfont\latinfont}
+ \def\endlatin{\par\egroup}
+ \def\persian{\bgroup\PersianAlphs\par\raggedleft\@RTLtrue\@RTL at footnotetrue\let\normalfont\persianfont\persianfont}
+ \def\endpersian{\par\egroup}
+@@ -553,6 +555,52 @@
+ %    \end{macrocode}
+ % \iffalse
+ %</book-xepersian.def>
++%<*breqn-xepersian.def>
++% \fi
++% \part{breqn-xepersian.def}
++%    \begin{macrocode}
++\def\@dmath[#1]{\if at RTL\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
++  \everydisplay\expandafter{\the\everydisplay \display at setup}%
++  \if at noskipsec \leavevmode \fi
++  \if at inlabel \leavevmode \global\@inlabelfalse \fi
++  \if\eq at group\else\eq at prelim\fi
++  \setkeys{breqn}{#1}%
++  \the\eqstyle
++  \eq at setnumber
++  \begingroup
++  \eq at setup@a
++  \eq at startup
++}
++\def\@dgroup[#1]{\if at RTL\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
++  \let\eq at group\@True \global\let\eq at GRP@first at dmath\@True
++  \global\GRP at queue\@emptytoks \global\setbox\GRP at box\box\voidb at x
++  \global\let\GRP at label\@empty
++  \global\grp at wdL\z@\global\grp at wdR\z@\global\grp at wdT\z@
++  \global\grp at linewidth\z@\global\grp at wdNum\z@
++  \global\let\grp at eqs@numbered\@False
++  \global\let\grp at aligned\@True
++  \global\let\grp at shiftnumber\@False
++  \eq at prelim
++  \setkeys{breqn}{#1}%
++  \if\grp at hasNumber \grp at setnumber \fi
++}
++\def\@dseries[#1]{\if at RTL\@RTLfalse\addfontfeatures{Mapping=farsidigits}\fi%
++  \let\display at setup\dseries at display@setup
++  % Question: should this be the default for dseries???
++  \global\eq at wdCond\z@
++  \@dmath[layout={M},#1]%
++  \mathsurround\z@\@@math \penalty\@Mi
++  \let\endmath\ends at math
++  \def\premath{%
++    \ifdim\lastskip<.3em \unskip
++    \else\ifnum\lastpenalty<\@M \dquad\fi\fi
++}%
++  \def\postmath{\unpenalty\eq at addpunct \penalty\intermath at penalty \dquad \@ignoretrue}%
++\ignorespaces
++}
++%    \end{macrocode}
++% \iffalse
++%</breqn-xepersian.def>
+ %<*footnote-bidi-xepersian.def>
+ % \fi
+ % \part{footnote-bidi-xepersian.def}
+
+
+
+From vafa at mail.berlios.de  Sun Sep 13 03:23:25 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 13 Sep 2009 03:23:25 +0200
+Subject: [Xepersian-development] r101 - trunk
+Message-ID: <200909130123.n8D1NP5G013250@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-13 03:23:21 +0200 (Sun, 13 Sep 2009)
+New Revision: 101
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+remove the error message
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-12 19:15:11 UTC (rev 100)
++++ trunk/xepersian.dtx	2009-09-13 01:23:21 UTC (rev 101)
+@@ -163,23 +163,10 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 100}
++\def\xepersianrevision{revision 101}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+-\newcommand\xepersian at isloaded[2][]{
+-  \expandafter\ifx\csname if at xepersian@#2loaded@\endcsname\relax
+-    \expandafter\newif\csname if at xepersian@#2loaded@\endcsname
+-  \fi
+-  \@ifpackageloaded{#2}
+-    {\csname @xepersian@#2loaded at true\endcsname #1}
+-    {\csname @xepersian@#2loaded at false\endcsname}}
+-\xepersian at isloaded{xunicode}
+-\AtBeginDocument{
+-  \if at xepersian@xunicodeloaded@
+-    \xepersian at isloaded[\PackageError{xepersian}{Oops! you have loaded package xunicode before xepersian package. Please load package xunicode after xepersian package, and then try to run xelatex on your document again}{}]{xunicode}
+-  \fi%
+-}
+ \AtBeginDocument{\ifdefined\persianfont\relax\else%
+ \PackageError{xepersian}{Oops! you have not specified any font for the main text of the document. Please specify a font for the main text of the document by using \settextfont\space CS, and then try to run xelatex on your document again}%
+ \fi}
+
+
+
+From vafa at mail.berlios.de  Fri Sep 18 16:44:57 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Fri, 18 Sep 2009 16:44:57 +0200
+Subject: [Xepersian-development] r102 - trunk
+Message-ID: <200909181444.n8IEivLv008754@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-18 16:44:41 +0200 (Fri, 18 Sep 2009)
+New Revision: 102
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+reimplementation of bifont handling; it is not still complete but usable
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-13 01:23:21 UTC (rev 101)
++++ trunk/xepersian.dtx	2009-09-18 14:44:41 UTC (rev 102)
+@@ -163,19 +163,10 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 101}
++\def\xepersianrevision{revision 102}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+-\AtBeginDocument{\ifdefined\persianfont\relax\else%
+-\PackageError{xepersian}{Oops! you have not specified any font for the main text of the document. Please specify a font for the main text of the document by using \settextfont\space CS, and then try to run xelatex on your document again}%
+-\fi}
+-\AtBeginDocument{\ifdefined\latinfont\relax\else%
+-\PackageError{xepersian}{Oops! you have not specified any font for the Latin texts of the document. Please specify a font for the Latin texts of the document by using \setlatintextfont\space CS, and then try to run xelatex on your document again}%
+-\fi}
+-\AtBeginDocument{\ifdefined\decimalseparator\relax\else%
+-\PackageWarning{xepersian}{?You have not specified any font for the digits in maths mode and so the digits in maths mode will appear Latin. If you would like to have Persian digits in maths mode, then please specify a font for the digits in maths mode by using \setdigitfont\space CS, and then try to run xelatex on your document again?}%
+-\fi}
+ \RequirePackage[RTLdocument]{bidi}
+ \RequirePackage{fontspec}
+ \RequirePackage{xepersian-persiancal}
+@@ -199,17 +190,32 @@
+ \def\plq{?}
+ \newfontscript{Persian}{arab}
+ \newfontlanguage{Persian}{ARA}
++\let\latinnormalfont=\normalfont%
++\let\latinrmfamily=\rmfamily%
++\let\latinsffamily=\sffamily%
++\let\latinttfamily=\ttfamily%
++\def\resetlatinfont{%
++   \let\rmfamily=\latinrmfamily%
++   \let\sffamily=\latinsffamily%
++   \let\ttfamily=\latinttfamily%
++   \latinnormalfont}
+ \newcommand*\settextfont[2][]{%
+-\newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}
+-\let\rmdefault\zf at family
+-  \normalfont
+-}
++\newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}}
++\def\setpersianfont{%
++   \persianfont%
++   \let\normalfont=\persianfont%
++   \let\rmfamily=\persianfont%
++   \let\sffamily=\persianfont at sf%
++   \let\ttfamily=\persianfont at tt%
++   \def\reset at font{\normalfont}}
++\AtBeginDocument{\setpersianfont}
+ \newcommand*\settxtmathfont[2][]{%
+ \newfontfamily\TXTmath[Mapping=txt2maths,#1]{#2}
+ }
+ \newcommand*\setlatintextfont[2][]{%
+-\newfontfamily\latinfont[Mapping=tex-text,#1]{#2}
+-}
++  \zf at fontspec{Mapping=tex-text,#1}{#2}%
++  \let\rmdefault\zf at family
++  \normalfont}
+ \newcommand*\defpersianfont[1]{%
+   \@ifnextchar[{\defpersianfont at i#1}{\defpersianfont at i#1[]}}
+ \def\defpersianfont at i#1[#2]#3{%
+@@ -226,17 +232,9 @@
+     \noexpand\DeclareRobustCommand\noexpand#1
+       {\noexpand\fontfamily{\zf at family}\noexpand\selectfont}}%
+   \@tempa}
+-\newcommand\persiansfdefault{}
+-\newcommand\persianttdefault{}
+ \newcommand\navardefault{}
+ \newcommand\pookdefault{}
+ \newcommand\sayehdefault{}
+-\DeclareRobustCommand\persiansffamily
+-        {\not at math@alphabet\persiansffamily\mathpersiansf
+-         \fontfamily\persiansfdefault\selectfont}
+-\DeclareRobustCommand\persianttfamily
+-        {\not at math@alphabet\persianttfamily\mathpersiantt
+-         \fontfamily\persianttdefault\selectfont}
+ \DeclareRobustCommand\navarfamily
+         {\not at math@alphabet\navarfamily\mathnavar
+          \fontfamily\navardefault\selectfont}
+@@ -246,19 +244,13 @@
+ \DeclareRobustCommand\sayehfamily
+         {\not at math@alphabet\sayehfamily\mathsayeh
+          \fontfamily\sayehdefault\selectfont}
+-\DeclareTextFontCommand{\textpersiansf}{\persiansffamily}
+-\DeclareTextFontCommand{\textpersiantt}{\persianttfamily}
+ \DeclareTextFontCommand{\textnavar}{\navarfamily}
+ \DeclareTextFontCommand{\textpook}{\pookfamily}
+ \DeclareTextFontCommand{\textsayeh}{\sayehfamily}
+ \newcommand*\setpersiansansfont[2][]{%
+-  \zf at fontspec{Script=Persian,Mapping=parsidigits,#1}{#2}%
+-  \let\persiansfdefault\zf at family
+-  \normalfont}
++\newfontfamily\persianfont at sf[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \newcommand*\setpersianmonofont[2][]{%
+-  \zf at fontspec{Script=Persian,Mapping=parsidigits,#1}{#2}%
+-  \let\persianttdefault\zf at family
+-  \normalfont}
++\newfontfamily\persianfont at tt[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \newcommand*\setnavarfont[2][]{%
+   \zf at fontspec{Script=Persian,Mapping=parsidigits,#1}{#2}%
+   \let\navardefault\zf at family
+@@ -271,14 +263,14 @@
+   \zf at fontspec{Script=Persian,Mapping=parsidigits,#1}{#2}%
+   \let\sayehdefault\zf at family
+   \normalfont}
+-\def\lr#1{\begingroup\beginL\latinfont#1\endL\endgroup}
+-\def\rl#1{\begingroup\beginR\persianfont#1\endR\endgroup}
+-\def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@Latintrue\@RTL at footnotefalse\let\normalfont\latinfont\latinfont}
++\def\lr#1{\begingroup\beginL\resetlatinfont#1\endL\endgroup}
++\def\rl#1{\begingroup\beginR\setpersianfont#1\endR\endgroup}
++\def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@Latintrue\@RTL at footnotefalse\resetlatinfont}
+ \def\endlatin{\par\egroup}
+-\def\persian{\bgroup\PersianAlphs\par\@RTLtrue\@RTL at footnotetrue\let\normalfont\persianfont\persianfont}
++\def\persian{\bgroup\PersianAlphs\par\@RTLtrue\@RTL at footnotetrue\setpersianfont}
+ \def\endpersian{\par\egroup}
+-\def\Latin{\if at RTL\par\LatinAlphs\@RTLfalse\@Latintrue\@RTL at footnotefalse\let\normalfont\latinfont\latinfont\fi}
+-\def\Persian{\if at RTL\relax\else\par\PersianAlphs\@RTLtrue\@Latintfalse\@RTL at footnotetrue\let\normalfont\persianfont\persianfont\fi}
++\def\Latin{\if at RTL\par\LatinAlphs\@RTLfalse\@Latintrue\@RTL at footnotefalse\resetlatinfont\fi}
++\def\Persian{\if at RTL\relax\else\par\PersianAlphs\@RTLtrue\@Latintfalse\@RTL at footnotetrue\setpersianfont\fi}
+ \let\originaltoday=\today
+ \def\today{\lr{\originaltoday}}
+ \let\latintoday\today
+@@ -478,9 +470,9 @@
+ % \part{bidibeamer-xepersian.def}
+ %    \begin{macrocode}
+ \def\familydefault{\rmdefault}
+-\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@RTL at footnotefalse\let\normalfont\latinfont\latinfont}
++\def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@RTL at footnotefalse\resetlatinfont}
+ \def\endlatin{\par\egroup}
+-\def\persian{\bgroup\PersianAlphs\par\raggedleft\@RTLtrue\@RTL at footnotetrue\let\normalfont\persianfont\persianfont}
++\def\persian{\bgroup\PersianAlphs\par\raggedleft\@RTLtrue\@RTL at footnotetrue\setpersianfont}
+ \def\endpersian{\par\egroup}
+ \def\biditheoremname{????}
+ \def\bidicorollaryname{?????}
+@@ -602,7 +594,7 @@
+     \hsize\columnwidth \@parboxrestore
+     \bidi at footnotetext@dir{#1}%
+     \protected at edef\@currentlabel{\csname p at footnote\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\if at RTL@footnote#1\else\latinfont#1\fi\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\if at RTL@footnote#1\else\resetlatinfont#1\fi\strut}}%
+      \bidi at footnotetext@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -616,7 +608,7 @@
+     \hsize\columnwidth \@parboxrestore
+     \bidi at footnotetext@dir{#1}%
+     \protected at edef\@currentlabel{\csname p at footnote\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\persianfont #1\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\setpersianfont #1\strut}}%
+      \bidi at footnotetext@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -630,7 +622,7 @@
+     \hsize\columnwidth \@parboxrestore
+     \bidi at footnotetext@dir{#1}%
+     \protected at edef\@currentlabel{\csname p at footnote\endcsname\@thefnmark}\@makefntext
+-    {\rule{\z@}{\footnotesep}\ignorespaces\latinfont #1\strut}}%
++    {\rule{\z@}{\footnotesep}\ignorespaces\resetlatinfont #1\strut}}%
+      \bidi at footnotetext@after
+     \insert\footins{\unvbox\footins}%
+     \endgroup}
+@@ -646,7 +638,7 @@
+      \bidi at footnotetext@dir{#1}
+     \if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi
+       \@makefntext{
+-        \rule\z@\footnotesep\ignorespaces\if at RTL@footnote#1\else\latinfont#1\fi\@finalstrut\strutbox}
++        \rule\z@\footnotesep\ignorespaces\if at RTL@footnote#1\else\resetlatinfont#1\fi\@finalstrut\strutbox}
+     \color at endgroup}}
+ \long\def\@mpRTLfootnotetext#1{
+   \global\setbox\@mpfootins\vbox{\@RTLtrue
+@@ -660,7 +652,7 @@
+      \bidi at footnotetext@dir{#1}
+     \if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi
+       \@makefntext{
+-        \rule\z@\footnotesep\ignorespaces\persianfont#1\@finalstrut\strutbox}
++        \rule\z@\footnotesep\ignorespaces\setpersianfont#1\@finalstrut\strutbox}
+     \color at endgroup}}
+ \long\def\@mpLTRfootnotetext#1{
+   \global\setbox\@mpfootins\vbox{\@RTLfalse
+@@ -674,7 +666,7 @@
+      \bidi at footnotetext@dir{#1}
+     \if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi
+       \@makefntext{
+-        \rule\z@\footnotesep\ignorespaces\latinfont#1\@finalstrut\strutbox}
++        \rule\z@\footnotesep\ignorespaces\resetlatinfont#1\@finalstrut\strutbox}
+     \color at endgroup}}
+ %    \end{macrocode}
+ % \iffalse
+@@ -1770,13 +1762,6 @@
+ % \fi
+ % \part{scrartcl-xepersian.def}
+ %    \begin{macrocode}
+-\renewcommand*\descfont{\if at RTL\persiansffamily\else\sffamily\fi\bfseries}
+-\DeclareOldFontCommand{\sf}{\normalfont\if at RTL\persiansffamily\else\sffamily\fi}{\mathsf}
+-\DeclareOldFontCommand{\tt}{\normalfont\if at RTL\persianttfamily\else\ttfamily\fi}{\mathtt}
+-\DeclareOldFontCommand{\sfb}{\normalfont\if at RTL\persiansffamily\else\sffamily\fi\bfseries}{%
+-  \@nomath\sfb}
+-\renewcommand*\sectfont{\normalcolor\if at RTL\persiansffamily\else\sffamily\fi\bfseries}
+-\newkomafont{dictum-xepersian}{\normalfont\normalcolor\if at RTL\persiansffamily\else\sffamily\fi\small}
+ \renewcommand*{\thepart}{\@tartibi\c at part}
+ \renewcommand*\appendix{\par%
+   \setcounter{section}{0}%
+@@ -1812,13 +1797,6 @@
+ % \fi
+ % \part{scrbook-xepersian.def}
+ %    \begin{macrocode}
+-\renewcommand*\descfont{\if at RTL\persiansffamily\else\sffamily\fi\bfseries}
+-\DeclareOldFontCommand{\sf}{\normalfont\if at RTL\persiansffamily\else\sffamily\fi}{\mathsf}
+-\DeclareOldFontCommand{\tt}{\normalfont\if at RTL\persianttfamily\else\ttfamily\fi}{\mathtt}
+-\DeclareOldFontCommand{\sfb}{\normalfont\if at RTL\persiansffamily\else\sffamily\fi\bfseries}{%
+-  \@nomath\sfb}
+-\renewcommand*\sectfont{\normalcolor\if at RTL\persiansffamily\else\sffamily\fi\bfseries}
+-\newkomafont{dictum-xepersian}{\normalfont\normalcolor\if at RTL\persiansffamily\else\sffamily\fi\small}
+ \renewcommand*\frontmatter{%
+   \if at twoside\cleardoubleoddpage\else\clearpage\fi
+   \@mainmatterfalse\pagenumbering{harfi}%
+@@ -1859,13 +1837,6 @@
+ % \fi
+ % \part{scrreprt-xepersian.def}
+ %    \begin{macrocode}
+-\renewcommand*\descfont{\if at RTL\persiansffamily\else\sffamily\fi\bfseries}
+-\DeclareOldFontCommand{\sf}{\normalfont\if at RTL\persiansffamily\else\sffamily\fi}{\mathsf}
+-\DeclareOldFontCommand{\tt}{\normalfont\if at RTL\persianttfamily\else\ttfamily\fi}{\mathtt}
+-\DeclareOldFontCommand{\sfb}{\normalfont\if at RTL\persiansffamily\else\sffamily\fi\bfseries}{%
+-  \@nomath\sfb}
+-\renewcommand*\sectfont{\normalcolor\if at RTL\persiansffamily\else\sffamily\fi\bfseries}
+-\newkomafont{dictum-xepersian}{\normalfont\normalcolor\if at RTL\persiansffamily\else\sffamily\fi\small}
+ \renewcommand*{\thepart}{\@tartibi\c at part}
+ \renewcommand*\appendix{\par%
+   \setcounter{chapter}{0}%
+
+
+
+From vafa at mail.berlios.de  Fri Sep 18 18:23:49 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Fri, 18 Sep 2009 18:23:49 +0200
+Subject: [Xepersian-development] r103 - trunk
+Message-ID: <200909181623.n8IGNnIY015797@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-18 18:23:44 +0200 (Fri, 18 Sep 2009)
+New Revision: 103
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added forgotten macro
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-18 14:44:41 UTC (rev 102)
++++ trunk/xepersian.dtx	2009-09-18 16:23:44 UTC (rev 103)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 102}
++\def\xepersianrevision{revision 103}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -195,10 +195,11 @@
+ \let\latinsffamily=\sffamily%
+ \let\latinttfamily=\ttfamily%
+ \def\resetlatinfont{%
++   \let\normalfont=\latinnormalfont%
+    \let\rmfamily=\latinrmfamily%
+    \let\sffamily=\latinsffamily%
+    \let\ttfamily=\latinttfamily%
+-   \latinnormalfont}
++   \normalfont}
+ \newcommand*\settextfont[2][]{%
+ \newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \def\setpersianfont{%
+
+
+
+From vafa at mail.berlios.de  Fri Sep 18 18:38:50 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Fri, 18 Sep 2009 18:38:50 +0200
+Subject: [Xepersian-development] r104 - trunk
+Message-ID: <200909181638.n8IGcnmc021304@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-18 18:38:40 +0200 (Fri, 18 Sep 2009)
+New Revision: 104
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+now we should have the correct bifont mechanism
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-18 16:23:44 UTC (rev 103)
++++ trunk/xepersian.dtx	2009-09-18 16:38:40 UTC (rev 104)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 103}
++\def\xepersianrevision{revision 104}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -199,16 +199,17 @@
+    \let\rmfamily=\latinrmfamily%
+    \let\sffamily=\latinsffamily%
+    \let\ttfamily=\latinttfamily%
++   \let\reset at font\normalfont%
+    \normalfont}
+ \newcommand*\settextfont[2][]{%
+ \newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \def\setpersianfont{%
+-   \persianfont%
+    \let\normalfont=\persianfont%
+    \let\rmfamily=\persianfont%
+    \let\sffamily=\persianfont at sf%
+    \let\ttfamily=\persianfont at tt%
+-   \def\reset at font{\normalfont}}
++   \let\reset at font\normalfont%
++   \normalfont}
+ \AtBeginDocument{\setpersianfont}
+ \newcommand*\settxtmathfont[2][]{%
+ \newfontfamily\TXTmath[Mapping=txt2maths,#1]{#2}
+
+
+
+From vafa at mail.berlios.de  Sat Sep 19 01:37:17 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 19 Sep 2009 01:37:17 +0200
+Subject: [Xepersian-development] r105 - trunk
+Message-ID: <200909182337.n8INbHIC032272@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-19 01:37:04 +0200 (Sat, 19 Sep 2009)
+New Revision: 105
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added extra font commands
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-18 16:38:40 UTC (rev 104)
++++ trunk/xepersian.dtx	2009-09-18 23:37:04 UTC (rev 105)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 104}
++\def\xepersianrevision{revision 105}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -218,6 +218,11 @@
+   \zf at fontspec{Mapping=tex-text,#1}{#2}%
+   \let\rmdefault\zf at family
+   \normalfont}
++\newcommand*\setlatinsansfont[2][]{%
++  \zf at fontspec{Mapping=tex-text,#1}{#2}%
++  \let\sfdefault\zf at family
++  \normalfont}
++\let\setlatinmonofont\setmonofont
+ \newcommand*\defpersianfont[1]{%
+   \@ifnextchar[{\defpersianfont at i#1}{\defpersianfont at i#1[]}}
+ \def\defpersianfont at i#1[#2]#3{%
+@@ -234,9 +239,13 @@
+     \noexpand\DeclareRobustCommand\noexpand#1
+       {\noexpand\fontfamily{\zf at family}\noexpand\selectfont}}%
+   \@tempa}
++\newcommand\iranicdefault{}
+ \newcommand\navardefault{}
+ \newcommand\pookdefault{}
+ \newcommand\sayehdefault{}
++\DeclareRobustCommand\iranicfamily
++        {\not at math@alphabet\iranicfamily\mathiranic
++         \fontfamily\iranicdefault\selectfont}
+ \DeclareRobustCommand\navarfamily
+         {\not at math@alphabet\navarfamily\mathnavar
+          \fontfamily\navardefault\selectfont}
+@@ -246,6 +255,7 @@
+ \DeclareRobustCommand\sayehfamily
+         {\not at math@alphabet\sayehfamily\mathsayeh
+          \fontfamily\sayehdefault\selectfont}
++\DeclareTextFontCommand{\textiranic}{\iranicfamily}
+ \DeclareTextFontCommand{\textnavar}{\navarfamily}
+ \DeclareTextFontCommand{\textpook}{\pookfamily}
+ \DeclareTextFontCommand{\textsayeh}{\sayehfamily}
+@@ -265,6 +275,10 @@
+   \zf at fontspec{Script=Persian,Mapping=parsidigits,#1}{#2}%
+   \let\sayehdefault\zf at family
+   \normalfont}
++\newcommand*\setiranicfont[2][]{%
++  \zf at fontspec{Script=Persian,Mapping=parsidigits,#1}{#2}%
++  \let\iranicdefault\zf at family
++  \normalfont}
+ \def\lr#1{\begingroup\beginL\resetlatinfont#1\endL\endgroup}
+ \def\rl#1{\begingroup\beginR\setpersianfont#1\endR\endgroup}
+ \def\latin{\bgroup\LatinAlphs\par\@RTLfalse\@Latintrue\@RTL at footnotefalse\resetlatinfont}
+
+
+
+From vafa at mail.berlios.de  Sat Sep 19 08:18:46 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 19 Sep 2009 08:18:46 +0200
+Subject: [Xepersian-development] r106 - trunk
+Message-ID: <200909190618.n8J6IkLJ010546@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-19 08:18:29 +0200 (Sat, 19 Sep 2009)
+New Revision: 106
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+git rid of the annoying \AtBeginDocument
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-18 23:37:04 UTC (rev 105)
++++ trunk/xepersian.dtx	2009-09-19 06:18:29 UTC (rev 106)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 105}
++\def\xepersianrevision{revision 106}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -210,7 +210,8 @@
+    \let\ttfamily=\persianfont at tt%
+    \let\reset at font\normalfont%
+    \normalfont}
+-\AtBeginDocument{\setpersianfont}
++\g at addto@macro\document{%
++\setpersianfont}
+ \newcommand*\settxtmathfont[2][]{%
+ \newfontfamily\TXTmath[Mapping=txt2maths,#1]{#2}
+ }
+
+
+
+From vafa at mail.berlios.de  Sat Sep 19 09:04:16 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 19 Sep 2009 09:04:16 +0200
+Subject: [Xepersian-development] r107 - trunk
+Message-ID: <200909190704.n8J74GmD017554@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-19 09:04:09 +0200 (Sat, 19 Sep 2009)
+New Revision: 107
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+another useless \AtBeginDocument
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-19 06:18:29 UTC (rev 106)
++++ trunk/xepersian.dtx	2009-09-19 07:04:09 UTC (rev 107)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 106}
++\def\xepersianrevision{revision 107}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -172,7 +172,8 @@
+ \RequirePackage{xepersian-persiancal}
+ \RequirePackage{xepersian-mathsdigitspec}
+ \RequirePackage{etoolbox}
+-\AtBeginDocument{\special{pdf: docinfo <<
++\g at addto@macro\document{%
++\special{pdf: docinfo <<
+ 	/Creator (X?Persian \xepersianversion\space <\xepersianrevision> Copyright ? 2008-2010 Vafa Khalighi)
+          >>}}
+ \gdef\@latex at error#1#2{%
+
+
+
+From vafa at mail.berlios.de  Sat Sep 19 11:02:41 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 19 Sep 2009 11:02:41 +0200
+Subject: [Xepersian-development] r108 - trunk
+Message-ID: <200909190902.n8J92fuT029532@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-19 11:02:36 +0200 (Sat, 19 Sep 2009)
+New Revision: 108
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+fixed the typo
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-19 07:04:09 UTC (rev 107)
++++ trunk/xepersian.dtx	2009-09-19 09:02:36 UTC (rev 108)
+@@ -163,7 +163,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 107}
++\def\xepersianrevision{revision 108}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -288,7 +288,7 @@
+ \def\persian{\bgroup\PersianAlphs\par\@RTLtrue\@RTL at footnotetrue\setpersianfont}
+ \def\endpersian{\par\egroup}
+ \def\Latin{\if at RTL\par\LatinAlphs\@RTLfalse\@Latintrue\@RTL at footnotefalse\resetlatinfont\fi}
+-\def\Persian{\if at RTL\relax\else\par\PersianAlphs\@RTLtrue\@Latintfalse\@RTL at footnotetrue\setpersianfont\fi}
++\def\Persian{\if at RTL\relax\else\par\PersianAlphs\@RTLtrue\@Latinfalse\@RTL at footnotetrue\setpersianfont\fi}
+ \let\originaltoday=\today
+ \def\today{\lr{\originaltoday}}
+ \let\latintoday\today
+
+
+
+From vafa at mail.berlios.de  Sat Sep 19 11:47:00 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sat, 19 Sep 2009 11:47:00 +0200
+Subject: [Xepersian-development] r109 - trunk
+Message-ID: <200909190947.n8J9l0On006105@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-19 11:46:56 +0200 (Sat, 19 Sep 2009)
+New Revision: 109
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added bilingual captions for hyperref package
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-19 09:02:36 UTC (rev 108)
++++ trunk/xepersian.dtx	2009-09-19 09:46:56 UTC (rev 109)
+@@ -77,6 +77,7 @@
+ \generate{\file{book-xepersian.def}{\from{xepersian.dtx}{book-xepersian.def}}}
+ \generate{\file{breqn-xepersian.def}{\from{xepersian.dtx}{breqn-xepersian.def}}}
+ \generate{\file{footnote-bidi-xepersian.def}{\from{xepersian.dtx}{footnote-bidi-xepersian.def}}}
++\generate{\file{hyperref-xepersian.def}{\from{xepersian.dtx}{hyperref-xepersian.def}}}
+ \generate{\file{localise-xepersian.def}{\from{xepersian.dtx}{localise-xepersian.def}}}
+ \generate{\file{commands-ltx.def}{\from{xepersian.dtx}{commands-ltx.def}}}
+ \generate{\file{commands-xepersian.def}{\from{xepersian.dtx}{commands-xepersian.def}}}
+@@ -163,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 108}
++\def\xepersianrevision{revision 109}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -298,15 +299,8 @@
+     \small
+     \@starttoc{toc}%
+   \end{multicols}}
+-\def\XePersian{\lr{\leavevmode$\smash{\hbox{X\lower.5ex
+-  \hbox{\kern-.125em\reflect{E}}Persian}}$}}
+-\def\TeX{\lr{\@@TeX}}
+-\def\LaTeX{\lr{\@@LaTeX}}
+-\def\LaTeXe{\lr{\@@LaTeXe}}
+-\let\origin at XeTeX\XeTeX
+-\def\XeTeX{\lr{\origin at XeTeX}}
+-\let\origin at XeLaTeX\XeLaTeX
+-\def\XeLaTeX{\lr{\origin at XeLaTeX}}
++\def\XePersian{\leavevmode$\smash{\hbox{X\lower.5ex
++  \hbox{\kern-.125em\reflect{E}}Persian}}$}
+ \def\figurename{\if at RTL ???\else Figure\fi}
+ \def\tablename{\if at RTL ????\else Table\fi}
+ \def\contentsname{\if at RTL ????? ?????\else Contents\fi}
+@@ -392,6 +386,7 @@
+ \@ifpackageloaded{bidi}{\input{footnote-bidi-xepersian.def}}{}
+ \@ifpackageloaded{breqn}{\input{breqn-xepersian.def}}{}
+ \@ifpackageloaded{enumerate}{\input{enumerate-xepersian.def}}{}
++\@ifpackageloaded{hyperref}{\input{hyperref-xepersian.def}}{}
+ \@ifpackageloaded{minitoc}{\input{minitoc-xepersian.def}}{}
+ \@ifpackageloaded{tocloft}{\@ifclassloaded{memoir}{}{\input{tocloft-xepersian.def}}}{}
+ \@ifclassloaded{article}{\input{article-xepersian.def}}{}
+@@ -1649,6 +1644,29 @@
+ %    \end{macrocode}
+ % \iffalse
+ %</extbook-xepersian.def>
++%<*hyperref-xepersian.def>
++% \fi
++% \part{hyperref-xepersian.def}
++%    \begin{macrocode}
++  \def\equationautorefname{\if at RTL ??????\else Equation\fi}%
++  \def\footnoteautorefname{\if at RTL ???????\else footnote\fi}%
++  \def\itemautorefname{\if at RTL ????\else item\fi}%
++  \def\figureautorefname{\if at RTL ???\else Figure\fi}%
++  \def\tableautorefname{\if at RTL ????\else Table\fi}%
++  \def\partautorefname{\if at RTL ???\else Part\fi}%
++  \def\appendixautorefname{\if at RTL ?????\else Appendix\fi}%
++  \def\chapterautorefname{\if at RTL ???\else chapter\fi}%
++  \def\sectionautorefname{\if at RTL ????\else section\fi}%
++  \def\subsectionautorefname{\if at RTL ???????\else subsection\fi}%
++  \def\subsubsectionautorefname{\if at RTL ??????????\else subsubsection\fi}%
++  \def\paragraphautorefname{\if at RTL ????????\else paragraph\fi}%
++  \def\subparagraphautorefname{\if at RTL ???????????\else subparagraph\fi}%
++  \def\FancyVerbLineautorefname{\if at RTL ???\else line\fi}%
++  \def\theoremautorefname{\if at RTL ????\else Theorem\fi}%
++  \def\pageautorefname{\if at RTL ????\else page\fi}%
++%    \end{macrocode}
++% \iffalse
++%</hyperref-xepersian.def>
+ %<*kashida-xepersian.def>
+ % \fi
+ % \part{kashida-xepersian.def}
+
+
+
+From vafa at mail.berlios.de  Sun Sep 20 15:53:06 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 20 Sep 2009 15:53:06 +0200
+Subject: [Xepersian-development] r110 - trunk
+Message-ID: <200909201353.n8KDr6G5005879@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-20 15:53:00 +0200 (Sun, 20 Sep 2009)
+New Revision: 110
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+added automatics mathsdigits, Defualt maths digits and persian maths digits support
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-19 09:46:56 UTC (rev 109)
++++ trunk/xepersian.dtx	2009-09-20 13:53:00 UTC (rev 110)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 109}
++\def\xepersianrevision{revision 110}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -2838,6 +2838,7 @@
+   \DeclareMathAlphabet      {\mathit}{EU1}{\zf at family}{m}{it}
+   \DeclareSymbolFontAlphabet{\mathrm}    {OPERATORS}
+   \DeclareMathAlphabet      {\mathbf}{EU1}{\zf at family}{bx}{n}
++  \def\persianmathsdigits{%
+   \SetMathCode{`0}{\mathalpha}{OPERATORS}{"06F0}
+   \SetMathCode{`1}{\mathalpha}{OPERATORS}{"06F1}
+   \SetMathCode{`2}{\mathalpha}{OPERATORS}{"06F2}
+@@ -2848,7 +2849,7 @@
+   \SetMathCode{`7}{\mathalpha}{OPERATORS}{"06F7}
+   \SetMathCode{`8}{\mathalpha}{OPERATORS}{"06F8}
+   \SetMathCode{`9}{\mathalpha}{OPERATORS}{"06F9}
+-  \SetMathCharDef{\decimalseparator}{\mathpunct}{OPERATORS}{"066B}
++  \SetMathCharDef{\decimalseparator}{\mathpunct}{OPERATORS}{"066B}}
+ }
+ \ifx\newcommand\undefined\else
+   \newcommand{\ZifferAn}{}
+@@ -2881,6 +2882,12 @@
+   \fi}
+ \mathcode`.="8000\relax
+ \def\ZifferLeer{\ifx\decimalseparator\undefied .\else \decimalseparator\fi}
++\def\DefaultMathsDigits{\def\SetMathsDigits{}\SetMathsDigits}
++\def\PersianMathsDigits{\def\SetMathsDigits{\persianmathsdigits}\SetMathsDigits}
++\def\AutoMathsDigits{\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}\SetMathsDigits}
++\everymath{\SetMathsDigits}
++\everydisplay{\SetMathsDigits}
++\AutoMathsDigits
+ %    \end{macrocode}
+ % \iffalse
+ %</xepersian-mathsdigitspec.sty>
+
+
+
+From vafa at mail.berlios.de  Sun Sep 20 16:12:02 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 20 Sep 2009 16:12:02 +0200
+Subject: [Xepersian-development] r111 - trunk
+Message-ID: <200909201412.n8KEC1OM011692@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-20 16:11:55 +0200 (Sun, 20 Sep 2009)
+New Revision: 111
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+fixed the typo
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-20 13:53:00 UTC (rev 110)
++++ trunk/xepersian.dtx	2009-09-20 14:11:55 UTC (rev 111)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 110}
++\def\xepersianrevision{revision 111}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -2882,12 +2882,12 @@
+   \fi}
+ \mathcode`.="8000\relax
+ \def\ZifferLeer{\ifx\decimalseparator\undefied .\else \decimalseparator\fi}
+-\def\DefaultMathsDigits{\def\SetMathsDigits{}\SetMathsDigits}
+-\def\PersianMathsDigits{\def\SetMathsDigits{\persianmathsdigits}\SetMathsDigits}
+-\def\AutoMathsDigits{\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}\SetMathsDigits}
++\def\DefaultMathsDigits{\def\SetMathsDigits{}}
++\def\PersianMathsDigits{\def\SetMathsDigits{\persianmathsdigits}}
++\def\AutoMathsDigits{\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}}
++\AutoMathsDigits
+ \everymath{\SetMathsDigits}
+ \everydisplay{\SetMathsDigits}
+-\AutoMathsDigits
+ %    \end{macrocode}
+ % \iffalse
+ %</xepersian-mathsdigitspec.sty>
+
+
+
+From vafa at mail.berlios.de  Sun Sep 20 16:22:55 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 20 Sep 2009 16:22:55 +0200
+Subject: [Xepersian-development] r112 - trunk
+Message-ID: <200909201422.n8KEMtle014070@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-20 16:22:47 +0200 (Sun, 20 Sep 2009)
+New Revision: 112
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+needs to care whether persianmathsdigits is defined or not
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-20 14:11:55 UTC (rev 111)
++++ trunk/xepersian.dtx	2009-09-20 14:22:47 UTC (rev 112)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 111}
++\def\xepersianrevision{revision 112}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -2883,8 +2883,8 @@
+ \mathcode`.="8000\relax
+ \def\ZifferLeer{\ifx\decimalseparator\undefied .\else \decimalseparator\fi}
+ \def\DefaultMathsDigits{\def\SetMathsDigits{}}
+-\def\PersianMathsDigits{\def\SetMathsDigits{\persianmathsdigits}}
+-\def\AutoMathsDigits{\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}}
++\def\PersianMathsDigits{\ifx\persianmathsdigits\undefied\else\def\SetMathsDigits{\persianmathsdigits}\fi}
++\def\AutoMathsDigits{\ifx\persianmathsdigits\undefied\else\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}\fi}
+ \AutoMathsDigits
+ \everymath{\SetMathsDigits}
+ \everydisplay{\SetMathsDigits}
+
+
+
+From vafa at mail.berlios.de  Sun Sep 20 16:26:15 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 20 Sep 2009 16:26:15 +0200
+Subject: [Xepersian-development] r113 - trunk
+Message-ID: <200909201426.n8KEQFCM014495@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-20 16:26:10 +0200 (Sun, 20 Sep 2009)
+New Revision: 113
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+more care required
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-20 14:22:47 UTC (rev 112)
++++ trunk/xepersian.dtx	2009-09-20 14:26:10 UTC (rev 113)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 112}
++\def\xepersianrevision{revision 113}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -2883,8 +2883,8 @@
+ \mathcode`.="8000\relax
+ \def\ZifferLeer{\ifx\decimalseparator\undefied .\else \decimalseparator\fi}
+ \def\DefaultMathsDigits{\def\SetMathsDigits{}}
+-\def\PersianMathsDigits{\ifx\persianmathsdigits\undefied\else\def\SetMathsDigits{\persianmathsdigits}\fi}
+-\def\AutoMathsDigits{\ifx\persianmathsdigits\undefied\else\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}\fi}
++\def\PersianMathsDigits{\ifx\persianmathsdigits\undefied\def\SetMathsDigits{}\else\def\SetMathsDigits{\persianmathsdigits}\fi}
++\def\AutoMathsDigits{\ifx\persianmathsdigits\undefied\def\SetMathsDigits{}\else\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}\fi}
+ \AutoMathsDigits
+ \everymath{\SetMathsDigits}
+ \everydisplay{\SetMathsDigits}
+
+
+
+From vafa at mail.berlios.de  Sun Sep 20 17:01:08 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 20 Sep 2009 17:01:08 +0200
+Subject: [Xepersian-development] r114 - trunk
+Message-ID: <200909201501.n8KF18Sn019534@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-20 17:01:02 +0200 (Sun, 20 Sep 2009)
+New Revision: 114
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+the feature should be working properly now
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-20 14:26:10 UTC (rev 113)
++++ trunk/xepersian.dtx	2009-09-20 15:01:02 UTC (rev 114)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 113}
++\def\xepersianrevision{revision 114}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -2883,8 +2883,8 @@
+ \mathcode`.="8000\relax
+ \def\ZifferLeer{\ifx\decimalseparator\undefied .\else \decimalseparator\fi}
+ \def\DefaultMathsDigits{\def\SetMathsDigits{}}
+-\def\PersianMathsDigits{\ifx\persianmathsdigits\undefied\def\SetMathsDigits{}\else\def\SetMathsDigits{\persianmathsdigits}\fi}
+-\def\AutoMathsDigits{\ifx\persianmathsdigits\undefied\def\SetMathsDigits{}\else\def\SetMathsDigits{\if at RTL\persianmathsdigits\fi}\fi}
++\def\PersianMathsDigits{\def\SetMathsDigits{\ifx\persianmathsdigits\undefied\else\persianmathsdigits\fi}}
++\def\AutoMathsDigits{\def\SetMathsDigits{\ifx\persianmathsdigits\undefied\else\if at RTL\persianmathsdigits\fi\fi}}
+ \AutoMathsDigits
+ \everymath{\SetMathsDigits}
+ \everydisplay{\SetMathsDigits}
+
+
+
+From vafa at mail.berlios.de  Sun Sep 20 17:18:52 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Sun, 20 Sep 2009 17:18:52 +0200
+Subject: [Xepersian-development] r115 - trunk
+Message-ID: <200909201518.n8KFIq6Z021136@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-20 17:18:47 +0200 (Sun, 20 Sep 2009)
+New Revision: 115
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+use Latin conditional instead RTL conditional to follow our general rule of not changing fonts in Plain LTR mode
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-20 15:01:02 UTC (rev 114)
++++ trunk/xepersian.dtx	2009-09-20 15:18:47 UTC (rev 115)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 114}
++\def\xepersianrevision{revision 115}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -2884,7 +2884,7 @@
+ \def\ZifferLeer{\ifx\decimalseparator\undefied .\else \decimalseparator\fi}
+ \def\DefaultMathsDigits{\def\SetMathsDigits{}}
+ \def\PersianMathsDigits{\def\SetMathsDigits{\ifx\persianmathsdigits\undefied\else\persianmathsdigits\fi}}
+-\def\AutoMathsDigits{\def\SetMathsDigits{\ifx\persianmathsdigits\undefied\else\if at RTL\persianmathsdigits\fi\fi}}
++\def\AutoMathsDigits{\def\SetMathsDigits{\ifx\persianmathsdigits\undefied\else\if at Latin\else\persianmathsdigits\fi\fi}}
+ \AutoMathsDigits
+ \everymath{\SetMathsDigits}
+ \everydisplay{\SetMathsDigits}
+
+
+
+From vafa at mail.berlios.de  Mon Sep 21 02:06:51 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Mon, 21 Sep 2009 02:06:51 +0200
+Subject: [Xepersian-development] r116 - trunk
+Message-ID: <200909210006.n8L06pcY026315@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-21 02:06:46 +0200 (Mon, 21 Sep 2009)
+New Revision: 116
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+now various fonts can be used
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-20 15:18:47 UTC (rev 115)
++++ trunk/xepersian.dtx	2009-09-21 00:06:46 UTC (rev 116)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 115}
++\def\xepersianrevision{revision 116}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -206,6 +206,7 @@
+ \newcommand*\settextfont[2][]{%
+ \newfontfamily\persianfont[Script=Persian,Mapping=parsidigits,#1]{#2}}
+ \def\setpersianfont{%
++   \fontencoding{EU1}%
+    \let\normalfont=\persianfont%
+    \let\rmfamily=\persianfont%
+    \let\sffamily=\persianfont at sf%
+
+
+
+From vafa at mail.berlios.de  Mon Sep 21 13:01:03 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Mon, 21 Sep 2009 13:01:03 +0200
+Subject: [Xepersian-development] r117 - trunk
+Message-ID: <200909211101.n8LB13Kp025058@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-21 13:00:55 +0200 (Mon, 21 Sep 2009)
+New Revision: 117
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+Bug ID 016078 (\autofootnoterule does not work in minipage) has been fixed
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-21 00:06:46 UTC (rev 116)
++++ trunk/xepersian.dtx	2009-09-21 11:00:55 UTC (rev 117)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 116}
++\def\xepersianrevision{revision 117}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -650,7 +650,7 @@
+          {\csname p at mpfootnote\endcsname\@thefnmark}
+     \color at begingroup
+      \bidi at footnotetext@dir{#1}
+-    \if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi
++    \ifnum\c at mpfootnote=1\if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi\fi
+       \@makefntext{
+         \rule\z@\footnotesep\ignorespaces\if at RTL@footnote#1\else\resetlatinfont#1\fi\@finalstrut\strutbox}
+     \color at endgroup}}
+@@ -664,7 +664,7 @@
+          {\csname p at mpfootnote\endcsname\@thefnmark}
+     \color at begingroup
+      \bidi at footnotetext@dir{#1}
+-    \if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi
++    \ifnum\c at mpfootnote=1\if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi\fi
+       \@makefntext{
+         \rule\z@\footnotesep\ignorespaces\setpersianfont#1\@finalstrut\strutbox}
+     \color at endgroup}}
+@@ -678,7 +678,7 @@
+          {\csname p at mpfootnote\endcsname\@thefnmark}
+     \color at begingroup
+      \bidi at footnotetext@dir{#1}
+-    \if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi
++    \ifnum\c at mpfootnote=1\if at RTL\global\let\bidi at footnoterule\right at footnote\else\global\let\bidi at footnoterule\left at footnote\fi\fi
+       \@makefntext{
+         \rule\z@\footnotesep\ignorespaces\resetlatinfont#1\@finalstrut\strutbox}
+     \color at endgroup}}
+
+
+
+From vafa at mail.berlios.de  Tue Sep 22 17:15:33 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Tue, 22 Sep 2009 17:15:33 +0200
+Subject: [Xepersian-development] r118 - trunk
+Message-ID: <200909221515.n8MFFXUc002165@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-22 17:15:27 +0200 (Tue, 22 Sep 2009)
+New Revision: 118
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+in beamer we should have sans font not roman font
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-21 11:00:55 UTC (rev 117)
++++ trunk/xepersian.dtx	2009-09-22 15:15:27 UTC (rev 118)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 117}
++\def\xepersianrevision{revision 118}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -483,7 +483,7 @@
+ % \fi
+ % \part{bidibeamer-xepersian.def}
+ %    \begin{macrocode}
+-\def\familydefault{\rmdefault}
++\def\familydefault{\sfdefault}
+ \def\latin{\bgroup\LatinAlphs\par\raggedright\@RTLfalse\@Latintrue\@RTL at footnotefalse\resetlatinfont}
+ \def\endlatin{\par\egroup}
+ \def\persian{\bgroup\PersianAlphs\par\raggedleft\@RTLtrue\@RTL at footnotetrue\setpersianfont}
+
+
+
+From vafa at mail.berlios.de  Tue Sep 29 05:47:45 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Tue, 29 Sep 2009 05:47:45 +0200
+Subject: [Xepersian-development] r119 - trunk
+Message-ID: <200909290347.n8T3ljEC002920@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-29 05:47:40 +0200 (Tue, 29 Sep 2009)
+New Revision: 119
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+there should be no more isuue with fonts
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-22 15:15:27 UTC (rev 118)
++++ trunk/xepersian.dtx	2009-09-29 03:47:40 UTC (rev 119)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 118}
++\def\xepersianrevision{revision 119}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -295,6 +295,63 @@
+ \def\today{\lr{\originaltoday}}
+ \let\latintoday\today
+ \def\today{\rl{\persiantoday}}
++\def\@outputpage{%
++\begingroup           % the \endgroup is put in by \aftergroup
++  \let \protect \noexpand
++  \@resetactivechars
++  \global\let\@@if at newlist\if at newlist
++  \global\@newlistfalse
++  \@parboxrestore
++  \shipout \vbox{%
++    \set at typeset@protect
++    \aftergroup \endgroup
++    \aftergroup \set at typeset@protect
++                                % correct? or just restore by ending
++                                % the group?
++  \if at specialpage
++    \global\@specialpagefalse\@nameuse{ps@\@specialstyle}%
++  \fi
++  \if at twoside
++    \ifodd\count\z@ \let\@thehead\@oddhead \let\@thefoot\@oddfoot
++         \let\@themargin\oddsidemargin
++    \else \let\@thehead\@evenhead
++       \let\@thefoot\@evenfoot \let\@themargin\evensidemargin
++    \fi
++  \fi
++  \reset at font
++  \normalsize
++  \if at RTLmain\setpersianfont\else\resetlatinfont\fi
++  \normalsfcodes
++  \let\label\@gobble
++  \let\index\@gobble
++  \let\glossary\@gobble
++  \baselineskip\z at skip \lineskip\z at skip \lineskiplimit\z@
++    \@begindvi
++    \vskip \topmargin
++    \moveright\@themargin \vbox {%
++      \setbox\@tempboxa \vbox to\headheight{%
++        \vfil
++        \color at hbox
++          \normalcolor
++          \hb at xt@\textwidth{\@thehead}%
++        \color at endbox
++        }%                        %% 22 Feb 87
++      \dp\@tempboxa \z@
++      \box\@tempboxa
++      \vskip \headsep
++      \box\@outputbox
++      \baselineskip \footskip
++      \color at hbox
++        \normalcolor
++        \hb at xt@\textwidth{\@thefoot}%
++      \color at endbox
++      }%
++    }%
++  \global\let\if at newlist\@@if at newlist
++  \global \@colht \textheight
++  \stepcounter{page}%
++  \let\firstmark\botmark
++}
+ \newcommand\twocolumnstableofcontents{%
+   \begin{multicols}{2}[\section*{\contentsname}]%
+     \small
+
+
+
+From vafa at mail.berlios.de  Tue Sep 29 20:17:02 2009
+From: vafa at mail.berlios.de (vafa at mail.berlios.de)
+Date: Tue, 29 Sep 2009 20:17:02 +0200
+Subject: [Xepersian-development] r120 - trunk
+Message-ID: <200909291817.n8TIH2A5003845@sheep.berlios.de>
+
+Author: vafa
+Date: 2009-09-29 20:16:55 +0200 (Tue, 29 Sep 2009)
+New Revision: 120
+
+Modified:
+   trunk/xepersian.dtx
+Log:
+complete the fnt section
+
+Modified: trunk/xepersian.dtx
+===================================================================
+--- trunk/xepersian.dtx	2009-09-29 03:47:40 UTC (rev 119)
++++ trunk/xepersian.dtx	2009-09-29 18:16:55 UTC (rev 120)
+@@ -164,7 +164,7 @@
+ %    \begin{macrocode}
+ \NeedsTeXFormat{LaTeX2e}
+ \def\xepersianversion{v1.0.4}
+-\def\xepersianrevision{revision 119}
++\def\xepersianrevision{revision 120}
+ \def\xepersiandate{2010/03/01}
+ \ProvidesPackage{xepersian}[\xepersiandate\space \xepersianversion\space <\xepersianrevision>
+ 	Persian typesetting in XeLaTeX]
+@@ -214,6 +214,8 @@
+    \let\reset at font\normalfont%
+    \normalfont}
+ \g at addto@macro\document{%
++\ifx\persianfont at sf\undefined\let\persianfont at sf\persianfont\fi%
++\ifx\persianfont at tt\undefined\let\persianfont at tt\persianfont\fi%
+ \setpersianfont}
+ \newcommand*\settxtmathfont[2][]{%
+ \newfontfamily\TXTmath[Mapping=txt2maths,#1]{#2}
+
+
+
